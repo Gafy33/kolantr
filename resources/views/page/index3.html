@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>test</title>
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../../bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .bg-violet{
+        background-color: #201c33;
+      }
+
+      .highcharts-figure, .highcharts-data-table table {
+ 		width: 80%;
+  		margin: 1em auto;
+	  }
+
+	  .dropdown-itemArmand{display:block;width:100%;padding:.25rem 1rem;clear:both;font-weight:400;color:#212529;text-align:inherit;text-decoration:none;white-space:nowrap;background-color:transparent;border:0}
+
+		.nav-linkArmand{display:block;padding:.1rem 0.5rem;text-decoration:none;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out}
+
+		.dropdown-itemArmand:focus,.dropdown-itemArmand:hover {
+			color:#1e2125;
+			background-color:#BA8989;
+		}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="../../bootstrap/carousel.css" rel="stylesheet">
+  </head>
+  <body class="bg-dark">
+
+  		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-violet" aria-label="Eighth navbar example">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">KOLANTR</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#">Mes campagnes de mesure</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav me_auto mb-2 mb-lg-0">
+          	<li class="nav-item dropdown">  
+          	<a class="nav-linkArmand" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+          	  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+			  <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+			  <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+           	  <ul class="dropdown-menu bg-violet shadow p-3 mb-5" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="#"><span class="text-muted">Information</span></a></li>
+              <li><a class="dropdown-itemArmand" href="../../connection/index.html" style="color: red;">Déconnexion</a></li>
+              </ul>
+          	  </li>
+		  	</svg>
+		  	</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row featurette shadow p-3 mb-5">
+      <div class="col-md-12">
+        <h2 class="featurette-heading"><span class="text-muted">Campagne de mesure</span> </h2>
+        <br>
+        <p> Adresse de la campagne : ... </p>
+        <p> Ville de la campagne : ... </p>
+        <p> Code postal de la campagne : ... </p>
+       	<p> Statut de la campagne : ... </p>
+    </div>
+</div>
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette shadow p-3 mb-5">
+      <div class="col-md-6">
+        <h2 class="featurette-heading"><span class="text-muted">Type de la mesure</span> Camion
+        <span class="text-muted"> <i class='fas fa-truck' width="40" height="40" fill="currentColor"></i></span></h2>
+        <br>	
+        <p> Date début de la campagne : ... </p>
+        <p> Date fin de la campagne : ... </p>
+        <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+    	<div class="container-fluid">
+      	<h2 class="navbar-brand"><span class="text-muted">Détails :</span></h2>
+      	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      	</button>
+
+		</div>
+		</nav>
+        <br>
+        <div class="collapse navbar-collapse" id="navbarsExample01">
+        <div class="row">
+	        <div class="col-lg-4">
+		       <img src="image/limite30.png" class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+		        	<h2 class="featurette-heading" style="font-size: 1.2em;"> Limité à <span class="text-muted">30 km/h </span></h2>
+	      	</div><!-- /.col-lg-4 -->
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Nombre de véhicule</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="30%" dy=".3em">Nombre</text>
+		        <text x="50%" y="50%" dy=".3em">De</text><text x="50%" y="70%" dy=".3em">Véhicule</text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Vitesse moyenne</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="40%" dy=".3em">Vitesse</text>
+		        <text x="50%" y="60%" dy=".3em">Moyenne</text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse égale ou inférieur </title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> = ou < </text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse inférieur à 20 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> - 20 </text></svg>
+		        	<h2>...</h2>
+	      	</div>
+			 <div class="col-lg-4">
+			        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse supérieur à 20 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> + 20 </text></svg>
+			        	<h2>...</h2>
+		     </div>
+	        <div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse supérieur à 30 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%"dy=".3em"> + 30 </text></svg>
+		        	<h2>...</h2>
+	      	</div><!-- /.col-lg-4 -->
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse inférieur à 40 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> + 40 </text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse supérieur à 50 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> + 50 </text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	 	</div>
+	 	</div>
+      </div>
+      <div class="col-md-6">
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+      	<hr class="featurette-divider">
+      <figure class="highcharts-figure">
+		  <div id="container"></div>
+	  </figure>
+	  	<hr class="featurette-divider">
+      </div>
+	</div>
+</div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette shadow p-3 mb-5">
+      <div class="col-md-6">
+        <h2 class="featurette-heading"><span class="text-muted">Type de la mesure</span> Voiture
+        <span class="text-muted"> <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i></span></h2>
+        <p> Date début de la campagne : ... </p>
+        <p> Date fin de la campagne : ... </p>
+        <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+    	<div class="container-fluid">
+      	<h2 class="navbar-brand"><span class="text-muted">Détails :</span></h2>
+      	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      	</button>
+      	</div>
+  		</nav>
+  		<br>
+		<div class="collapse navbar-collapse" id="navbarsExample02">
+        <div class="row">
+	        <div class="col-lg-4">
+		       <img src="image/limite50.png" class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"> <h2 class="featurette-heading" style="font-size: 1.2em;"> Limité à <span class="text-muted">50 km/h </span></h2>
+	      	</div><!-- /.col-lg-4 -->
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Nombre de véhicule</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="30%" dy=".3em">Nombre</text>
+		        <text x="50%" y="50%" dy=".3em">De</text><text x="50%" y="70%" dy=".3em">Véhicule</text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Vitesse moyenne</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="40%" dy=".3em">Vitesse</text>
+		        <text x="50%" y="60%" dy=".3em">Moyenne</text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse égale ou inférieur </title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> = ou < </text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse inférieur à 20 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> - 20 </text></svg>
+		        	<h2>...</h2>
+	      	</div>
+			 <div class="col-lg-4">
+			        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse supérieur à 20 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> + 20 </text></svg>
+			        	<h2>...</h2>
+		     </div>
+	        <div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse supérieur à 30 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%"dy=".3em"> + 30 </text></svg>
+		        	<h2>...</h2>
+	      	</div><!-- /.col-lg-4 -->
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse inférieur à 40 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> + 40 </text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	      	<div class="col-lg-4">
+		        <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse supérieur à 50 km/h</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" dy=".3em"> + 50 </text></svg>
+		        	<h2>...</h2>
+	      	</div>
+	     </div>	
+      </div>
+  </div>
+      <div class="col-md-6">
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+      <hr class="featurette-divider">
+      <figure class="highcharts-figure">
+		  <div id="container2"></div>
+		</figure>
+	  <hr class="featurette-divider">
+	</div>
+    </div>
+</div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette shadow p-3 mb-5">
+      <div class="col-md-13">
+        <h2 class="featurette-heading">Googles Maps</h2>
+        <br>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=marcheprime&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+      </div>
+    </div>
+
+      <footer class="container ">
+    	<p class="float-end"><a href="#">Back to top</a></p>
+ 	  </footer>
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+</main>
+
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/scriptGraphique.js"></script>
+    <script src="../../js/scriptGraphique2.js"></script>
+      
+  </body>
+</html>
