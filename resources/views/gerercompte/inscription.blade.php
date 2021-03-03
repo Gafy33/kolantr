@@ -129,13 +129,20 @@
 
           <hr class="my-4 text-muted">
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Crée le compte</button>
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Créer le compte</button>
         </form>
         <hr class="my-4 text-muted">
       </div>
     </div>
     
   </main>
+
+
+  @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien') or $title != "Home" )
+
+@include('layouts.partials.footer') 
+    
+@endif
 </div>
 @stop
 

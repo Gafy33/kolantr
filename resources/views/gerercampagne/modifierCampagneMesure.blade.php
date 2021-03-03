@@ -1,4 +1,4 @@
-@extends('layouts.home', ['title' => 'Création Campagne Mesure'])
+@extends('layouts.home', ['title' => 'Modifier Campagne Mesure'])
 
 
 @section('style')
@@ -10,7 +10,7 @@
 <div class="containerForm-Validation">
   <main>
     <div class="py-5 text-center">
-      <h2 class="mx-auto mb-1 py-5 featurette-heading"><span class="text-muted"> <i class="fas fa-user"  width="75" height="75" fill="currentColor" ></i>  Création Campagne Mesure <i class="fas fa-user"  width="75" height="75" fill="currentColor"></i> </span></h2>
+      <h2 class="mx-auto mb-1 py-5 featurette-heading"><span class="text-muted"> <i class="fas fa-user"  width="75" height="75" fill="currentColor" ></i>  Modifier Campagne Mesure <i class="fas fa-user"  width="75" height="75" fill="currentColor"></i> </span></h2>
 
     </div>
     <div class="row g-3   shadow p-3">
@@ -70,7 +70,7 @@
 
             <div class="col-12">
               <label for="email" class="form-label text-muted">Date Début</label>
-              <input type="date" class="form-control" id="telephone" name="DebutCampagne" placeholder="" value="{{ $campagne->DebutCampagne }}">
+              <input type="date" class="form-control" id="telephone" name="DebutCampagne" placeholder="" value="{{ $campagne->DébutCampagne }}">
               <div class="invalid-feedback">
                 Veuillez saisir un numéro de téléphone valide.
               </div>
@@ -123,16 +123,25 @@
             </div>
           </div>
 
-            <hr class="my-4  text-muted">
+          <hr class="my-4  text-muted">
 
          	<div class="col-12">
               <label for="address" class="form-label text-muted">Associer client</label>
                 <select name="id_user" id="user" class="form-control">
-                <option value="{{ $clientdefault->id }}">{{ $clientdefault->name }} {{$clientdefault->prenom }}</option>
+                @if(!empty($clientdefault->id)) <option value="{{ $clientdefault->id }}">{{ $clientdefault->name }} {{$clientdefault->prenom }}</option> @endif
+                <option value=""> Aucun client </option>
+                
                 @foreach ($client as $client)
+
+                @if(!empty($client))
+                @if($client->role->name == "user")
+                <option value="{{ $client->id }}"> {{ $client->name }} {{ $client->prenom }}</option>
+                @endif
+                @else
                 @if($client->role->name == "user")
                 @if($client->name != $clientdefault->name)
                 <option value="{{ $client->id }}"> {{ $client->name }} {{ $client->prenom }}</option>
+                @endif
                 @endif
                 @endif
                 @endforeach
@@ -141,6 +150,36 @@
               <div class="invalid-feedback">
                 Veuillez saisir un nom d'entreprise valide.
               </div>
+            </div>
+
+          <hr class="my-4  text-muted">
+
+          <div class="col-12">
+              <label for="address" class="form-label text-muted">Associer Boitier</label>
+                <select name="id_boitier" id="boitier" class="form-control">
+
+                @if(!empty($boitierdefault))
+                <option value="{{ $boitierdefault->id }}">{{ $boitierdefault->sigfox }}</option>
+                @endif
+
+                <option value=""> Aucun boitier </option>
+
+                @foreach ($boitier as $boitier)
+
+                @if(!empty($boitierdefault))
+                  @if($boitier->sigfox != $boitierdefault->sigfox)
+                  @if($boitier->statut == "non utilisé")
+                    <option value="{{ $boitier->id }}"> {{ $boitier->sigfox }}</option>
+                  @endif
+                  @endif
+                @else
+                  @if($boitier->statut == "non utilisé")
+                    <option value="{{ $boitier->id }}"> {{ $boitier->sigfox }}</option>
+                  @endif
+                @endif
+
+                @endforeach
+                </select> 
             </div>
 
           <hr class="my-4 text-muted">
@@ -159,6 +198,12 @@
     </div>
 
   </main>
+
+  @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien') or $title != "Home" )
+
+@include('layouts.partials.footer') 
+    
+@endif
 </div>
 @stop
 

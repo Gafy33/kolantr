@@ -46,6 +46,11 @@
                   <a class="nav-linkArmand" href="{{ route('listeBoitier_path') }}" id="dropdown03" style="color: white;"> Gestion Boitier
                   </a>
                 </li>
+
+                <li class="nav-item dropdown">  
+                  <a class="nav-linkArmand" href="{{ route('liste') }}" id="dropdown03" style="color: white;"> Liste
+                  </a>
+                </li>
               </ul>
               <!--
                 <li class="nav-item">
@@ -61,7 +66,7 @@
             <div class="collapse navbar-collapse" id="navbarsExample07">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#">Mes campagnes de mesure</a>
+                <a class="nav-link" aria-current="page" href="{{ route('clientmescampagnes_path') }}">Mes campagnes de mesure</a>
                 </li>
               </ul>
 
@@ -79,6 +84,7 @@
                     <ul class="dropdown-menu bg-violet shadow p-3 mb-5" aria-labelledby="dropdown03">
                     @if(Auth::user()->hasRole('admin'))
                       <li><a class="dropdown-itemArmand" href="{{ route('listeAdminTechnicien_path') }}">Gérer Compte Admin / Technicien</a></li>
+                      <li><a class="dropdown-itemArmand" href="{{ route('liste') }}">Liste</a></li>
                     @endif
                       <li><a class="dropdown-itemArmand" href="{{ route('informationCompte') }}">Information</a></li>
                       <li><a class="dropdown-itemArmand"  style="color: red;" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Déconnexion') }} </a>

@@ -122,7 +122,7 @@
             </div>
           </div>
 
-            <hr class="my-4  text-muted">
+         <hr class="my-4  text-muted">
 
          	<div class="col-12">
               <label for="address" class="form-label text-muted">Associer client ( rien choisir si client introuvable )</label>
@@ -134,10 +134,18 @@
                 @endif
                 @endforeach
                 </select> 
-              <!--<input type="option" class="form-control" id="address" name="nomEntreprise" placeholder="">-->
-              <div class="invalid-feedback">
-                Veuillez saisir un nom d'entreprise valide.
-              </div>
+            </div>
+
+          <hr class="my-4  text-muted">
+
+          <div class="col-12">
+              <label for="address" class="form-label text-muted">Associer Boitier ( rien choisir si boitier introuvable )</label>
+                <select name="id_boitier" id="boitier" class="form-control">
+                <option value="">Défault</option>
+                @foreach ($boitier as $boitier)
+                <option value="{{ $boitier->id }}"> {{ $boitier->sigfox }}</option>
+                @endforeach
+                </select> 
             </div>
 
           <hr class="my-4 text-muted">
@@ -149,6 +157,12 @@
     </div>
     
   </main>
+
+  @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien') or $title != "Home" )
+
+@include('layouts.partials.footer') 
+    
+@endif
 </div>
 @stop
 

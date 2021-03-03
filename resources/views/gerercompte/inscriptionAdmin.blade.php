@@ -88,6 +88,12 @@
     </div>
     
   </main>
+
+  @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien') or $title != "Home" )
+
+@include('layouts.partials.footer') 
+    
+@endif
 </div>
 @stop
 

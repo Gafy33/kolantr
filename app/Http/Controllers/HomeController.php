@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\campagnemesure;
 use App\Models\boitier;
-
-
 use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
@@ -43,371 +41,100 @@ class HomeController extends Controller
         ]);
     }
 
-    public function listeClientmodifier()
+    public function informationCompte()
     {
-        $listeclient = User::all();
-        return view('/gerercompte/ListeClient')->with('client', $listeclient);
+        return view('/Compte');
     }
 
-    public function listeClientalert($alert)
+    public function informationCompteMAJ()
     {
-        $listeclient = User::all();
-
-
-        if($alert == 1)
-        {
-            $alert = 1;
-            $messagealert = "Le compte client a bien été crée !";
-        } else if($alert == 2)
-        {
-            $alert = 1;
-            $messagealert = "Le compte client a bien été modifiée !";
-        } else if($alert == 3)
-        {
-            $alert = 1;
-            $messagealert = "Le compte client a bien été supprimée !";
-        }
-
-        return view('/gerercompte/ListeClient')->with('client', $listeclient)->with('alert', $alert)->with('messagealert', $messagealert);
-    }
-
-    public function ajouterClient()
-    {
-
-        $client = new User;
-        $client->email = request('email');
-        $client->role_id = 2;
-        $client->name = request('name');
-        $client->password = Hash::make(request('password'));
-        $client->prenom = request('prenom');
-        $client->identifiant = request('identifiant');
-        $client->numeroTel = request('numeroTel');
-        $client->adresseClient = request('adresseClient');
-        $client->codePostal = request('codePostal');
-        $client->ville = request('ville');
-        $client->region = request('region');
-        $client->preference = "theme_dark";
-
-        if( request('entreprise') == "oui") {
-            $client->nomEntreprise = request('entreprise');
-            $client->nomEntreprise = request('nomEntreprise');
-        }
-
-        $client->save();
-
-        return redirect()->route('listeClientalert_path', ['alert' => 1]);
-    }
-
-    public function supprimerClient($id)
-    {
-
-        $client = User::find($id);
-
-        $client->delete();
-
-        return redirect()->route('listeClientalert_path', ['alert' => 3]);
-    }
-
-
-     public function modifierClient($id)
-    {
-
-        $client = User::find($id);
-
-        return view('/gerercompte/ModifierClient')->with('client', $client);
-
-    }
-
-    public function modifierClientConfirm($id)
-    {
-
-        $client = User::find($id);
-        $client->email = request('email');
-        $client->name = request('name');
-        $client->prenom = request('prenom');
-
-
-        if( !empty(request('numeroTel'))){
-            $client->numeroTel = request('numeroTel');
-        }
-
-        if(!empty(request('adresseClient'))){
-            $client->adresseClient = request('adresseClient');
-        }
-
-        if(!empty(request('codePostal'))){
-            $client->codePostal = request('codePostal');
-        }
-        
-        if(!empty(request('ville'))){
-            $client->ville = request('ville');
-        }
-
-        if(!empty(request('region'))){
-        $client->region = request('region');
-        }
-
-        if(!empty(request('nomEntreprise'))){
-            $client->nomEntreprise = request('nomEntreprise');
-        } else{
-            $client->nomEntreprise = "NULL";
-        }
-
+        $client = User::find(request('id_user'));
+        $client->preference = request('preference');
         $client->update();
 
-        return redirect()->route('listeClientalert_path', ['alert' => 2]);
-    }
-
-    public function listeAdminTechnicienmodifier()
-    {
-        $listeclient = User::all();
-        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient);
-    }
-
-    public function ajouterAdminTechnicien()
-    {
-
-        $client = new User;
-        $client->email = request('email');
-        $client->role_id = request('role');
-        $client->name = request('name');
-        $client->prenom = request('prenom');
-        $client->password = Hash::make(request('password'));
-        $client->identifiant = request('identifiant');
-        $client->preference = "theme_dark";
-
-        $client->save();
-
-        $alert = 1;
-        $messagealert = "Le compte Admin / Technicien a bien été crée !";
-
-        $listeclient = User::all();
-        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient)->with('alert', $alert)->with('messagealert', $messagealert);
-    }
-
-    public function supprimerAdminTechnicien($id)
-    {
-
-        $client = User::find($id);
-
-        if(!empty($client))
-        {
-        $client->delete();
-
-        $alert = 1;
-        $messagealert = "Le compte Admin / Technicien a bien été supprimé !";
-
-        $listeclient = User::all();
-        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient)->with('alert', $alert)->with('messagealert', $messagealert);
-        } else {
-
-        $listeclient = User::all();
-        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient);
-        }
+        return redirect()->route('informationCompte');
     }
 
 
-     public function modifierAdminTechnicien($id)
-    {
-
-        $client = User::find($id);
-
-        return view('/gerercompte/ModifierAdminTechnicien')->with('client', $client);
-
-    }
-
-    public function modifierAdminTechnicienConfirm($id)
-    {
-
-        $client = User::find($id);
-        $client->email = request('email');
-        $client->name = request('name');
-        $client->prenom = request('prenom');
-
-        $client->update();
-
-        $alert = 1;
-        $messagealert = "Le compte Admin / Technicien a bien été modifié !";
-
-        $listeclient = User::all();
-        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient)->with('alert', $alert)->with('messagealert', $messagealert);
-    }
-
-    public function listeCampagneMesure()
+    public function liste()
     {
         $listecampagne = campagnemesure::all();
-        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne);
-    }
-
-    public function creationCampagneMesure()
-    {
+        $listeboitier = boitier::all();
         $listeclient = User::all();
-        return view('/gerercampagne/creationCampagneMesure')->with('client', $listeclient);
+
+        return view('/liste')->with('campagne', $listecampagne)->with('listeboitier', $listeboitier)->with('listeclient', $listeclient);
     }
 
-
-    public function ajouterCampagneMesure()
+    public function boitierdelete($id)
     {
-        
-        $campagne = new campagnemesure;
-        $campagne->adresseCampagne = request('adresseCampagne');
-        $campagne->statut = request('statut');
-        $campagne->codePostal = request('codePostal');
-        $campagne->ville = request('ville');
-        $campagne->numeroRoute = request('numeroRoute');
-        $campagne->Direction = request('Direction');
-        $campagne->DébutCampagne = request('DebutCampagne');
-        $campagne->FinCampagne = request('FinCampagne');
-        $campagne->limitationvitesse = request('limitationvitesse');
-        $campagne->id_user = request('id_user');
 
-        $campagne->save();
-
-        $alert = 1;
-        $messagealert = "Le compte Admin / Technicien a bien été crée !";
-
-        $listecampagne = campagnemesure::all();
-        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne)->with('alert', $alert)->with('messagealert', $messagealert);
-    }
-
-    public function supprimerCampagneMesure($id)
-    {
-        
-        $campagne = campagnemesure::find($id);
-
+        $campagne = campagnemesure::where('id_boitier', $id)->first();
         if(!empty($campagne))
         {
-        $campagne->delete();
-
-        $alert = 1;
-        $messagealert = "Le compte client a bien été supprimé !";
-
-        $listecampagne = campagnemesure::all();
-        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne)->with('alert', $alert)->with('messagealert', $messagealert);
-        } else {
-
-        $listecampagne = campagnemesure::all();
-        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne);
-        }
-
-    }
-
-
-    public function modifierCampagneMesure($id)
-    {
-
-        $client = User::all();
-        $campagne = campagnemesure::find($id);
-        $user = $campagne->id_user;
-
-        $clientdefault = User::find($user);
-
-        return view('/gerercampagne/modifierCampagneMesure')->with('client', $client)->with('campagne', $campagne)->with('clientdefault', $clientdefault);
-
-    }
-
-
-    public function modifierCampagneMesureConfirm($id)
-    {
-
-        $campagne = campagnemesure::find($id);
-        $campagne->adresseCampagne = request('adresseCampagne');
-        $campagne->statut = request('statut');
-        $campagne->codePostal = request('codePostal');
-        $campagne->ville = request('ville');
-        $campagne->numeroRoute = request('numeroRoute');
-        $campagne->Direction = request('Direction');
-        $campagne->DébutCampagne = request('DebutCampagne');
-        $campagne->FinCampagne = request('FinCampagne');
-        $campagne->limitationvitesse = request('limitationvitesse');
-        $campagne->id_user = request('id_user');
-
+        $campagne->id_boitier = NULL;
         $campagne->update();
 
-        $alert = 1;
-        $messagealert = "Le compte Admin / Technicien a bien été modifié !";
-
-        $listecampagne = campagnemesure::all();
-        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne)->with('alert', $alert)->with('messagealert', $messagealert);
-    }
-
-
-    public function listeBoitier()
-    {
-        $listeboitier = boitier::all();
-        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier);
-    }
-
-    public function creationBoitier()
-    {
-        return view('/gererboitier/creationBoitier');
-    }
-
-
-    public function ajouterBoitier()
-    {
-        
-        $boitier = new boitier;
-        $boitier->sigfox = request('sigfox');
-        $boitier->statut = request('statut');
-
-        $boitier->save();
-
-        $alert = 1;
-        $messagealert = "Le compte Admin / Technicien a bien été crée !";
-
-        $listeboitier = boitier::all();
-        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier)->with('alert', $alert)->with('messagealert', $messagealert);
-    }
-
-    public function supprimerBoitier($id)
-    {
-        
         $boitier = boitier::find($id);
-
-        if(!empty($boitier))
-        {
-        $boitier->delete();
-
-        $alert = 1;
-        $messagealert = "Le compte client a bien été supprimé !";
-
-        $listeboitier = boitier::all();
-        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier)->with('alert', $alert)->with('messagealert', $messagealert);
-        } else {
-
-        $listeboitier = boitier::all();
-        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier);
+        $boitier->statut = "non utilisé";
+        $boitier->update();
         }
 
+
+		return redirect()->route('liste');
     }
 
-
-    public function modifierBoitier($id)
+    public function campagnedelete($id)
     {
+        $campagne = campagnemesure::find($id);
 
-        $boitier = boitier::find($id);
+        $campagne->delete();
 
-        return view('/gererboitier/modifierBoitier')->with('boitier', $boitier);
-
+        return redirect()->route('liste');
     }
 
-
-    public function modifierBoitierConfirm($id)
+    public function userdelete($id)
     {
+        $campagne = campagnemesure::where('id_user', $id)->first();
+        if(!empty($campagne))
+        {
+        $campagne->id_user = NULL;
+        $campagne->update();
+        }
 
-        $boitier = boitier::find($id);
-        $boitier->sigfox = request('sigfox');
-        $boitier->alarmeBatterie = request('alarmeBatterie');
-        $boitier->statut = request('statut');
+        return redirect()->route('liste');
+    }
 
+    public function listemodifierstatutEncours($id)
+    {
+        $campagne = campagnemesure::find($id);
+        $campagne->statut = "en cours";
+        $campagne->update();
+
+        return redirect()->route('liste');
+    }
+
+    public function listemodifierstatutfini($id)
+    {
+        $campagne = campagnemesure::find($id);
+        $campagne->statut = "fini";
+        $campagne->update();
+
+
+        return redirect()->route('liste');
+    }
+
+    public function listeajouterboitier($id_campagne, $id_boitier)
+    {
+        $campagne = campagnemesure::find($id_campagne);
+        $campagne->id_boitier = $id_boitier;
+        $campagne->update();
+
+        $boitier = boitier::find($id_boitier);
+        $boitier->statut = "utilisé";
         $boitier->update();
 
-        $alert = 1;
-        $messagealert = "Le compte Admin / Technicien a bien été modifié !";
 
-        $listeboitier = boitier::all();
-        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier)->with('alert', $alert)->with('messagealert', $messagealert);
+        return redirect()->route('liste');
     }
 
 }

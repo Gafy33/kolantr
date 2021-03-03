@@ -39,6 +39,12 @@
 
     .nav-linkArmand{display:block;padding:.1rem 0.5rem;text-decoration:none;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out}
 
+    .dropdown-itemblack{display:block;width:100%;padding:.25rem 1rem;clear:both;font-weight:400;color: black;text-align:inherit;text-decoration:none;white-space:nowrap;background-color:transparent;border:0}
+    .dropdown-itemblack:focus,.dropdown-itemblack:hover {
+      color: white;
+      background-color:#BA8989;
+    }
+   
     .dropdown-itemArmand:focus,.dropdown-itemArmand:hover {
       color: white;
       background-color:#BA8989;
@@ -86,6 +92,11 @@
         height:400px;
         }
 
+    #bloc
+    {
+      display: none;
+    }
+
 
 
   </style>
@@ -101,15 +112,11 @@
   @yield('content')
   
   <script src="{{ asset('/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ asset('/js/bootstrap.bundle.js')}}"></script>
 
   @yield('scriptAlert')
   @yield('script')
 
-  @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien') or $title != "Home" )
-
-    @include('layouts.partials.footer') 
-    
-  @endif
   </body>
 
 

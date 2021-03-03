@@ -152,6 +152,8 @@
     
   </main>
 </div>
+
+@include('layouts.partials.footer')
 @stop
 
 
