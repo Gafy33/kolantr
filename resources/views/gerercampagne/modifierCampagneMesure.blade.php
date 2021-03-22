@@ -188,14 +188,14 @@
         </form>
         <hr class="my-4 text-muted">
 
-        <div class="border border-dark">
-        <div id="map">
-
-        <!-- Ici s'affichera la carte -->
+        <div class="row featurette shadow p-3 mb-5">
+            <div class="col-md-13">
+              <h2 class="featurette-heading">Googles Maps</h2>
+              <br>
+              <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{$campagne->adresseCampagne}}{{$campagne->ville}}{{$campagne->codePostal}}&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+              </div>
+          </div>
         </div>
-        </div>
-      </div>
-    </div>
 
   </main>
 
@@ -209,38 +209,5 @@
 
 @section('script')
 	<script src="{{ asset('/js/form-validation.js')}}"></script>
-    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-    integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-    crossorigin=""></script>
-
-    <script type="text/javascript">
-    // On initialise la latitude et la longitude du centre de la France
-    var lat = 47;
-    var lon = 2.349903;
-    var macarte = null;
-    var zoom =  8;
-
-    // Fonction d'initialisation de la carte
-    function initMap() {
-        // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
-        macarte = L.map('map').setView([lat, lon], zoom);
-        // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
-        L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-            // Il est toujours bien de laisser le lien vers la source des données
-            attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
-            minZoom: 1,
-            maxZoom: 20
-        }).addTo(macarte);
-
-        var marker = L.marker([47, 2.34]).addTo(macarte);
-        //marker.bindPopup(balise);
-
-    }
-    window.onload = function(){
-        // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
-        initMap();
-    };
-
-    </script>
 
 @stop

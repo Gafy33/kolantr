@@ -66,7 +66,11 @@ Route::post('/gerercampagne/modifierCampagneMesure/{id}', [App\Http\Controllers\
 Route::get('/gerercampagne/creationCampagneMesure', [App\Http\Controllers\gestioncampagnemesureController::class, 'creationCampagneMesure'])->name('creationCampagneMesure_path');
 Route::post('/gerercampagne/creationCampagneMesure', [App\Http\Controllers\gestioncampagnemesureController::class, 'ajouterCampagneMesure'])->name('creationCampagneMesure_path');
 
+Route::get('/test', function () {
+    return view('/test');
+})->name('test');
 
+Route::post('/test/coordonne', [App\Http\Controllers\gestioncampagnemesureController::class, 'get_lat_lng'])->name('coordonnes_patch');
 
 //
 //
@@ -83,11 +87,9 @@ Route::get('/gererboitier/modifierBoitier/{id}', [App\Http\Controllers\gestionbo
 Route::post('/gererboitier/modifierBoitier/{id}', [App\Http\Controllers\gestionboitierController::class, 'modifierBoitierConfirm'])->name('modifierBoitier_path');
 
 
-//Ajouter CampagneMesure
+//Ajouter CampagneMBoitier
 Route::get('/gererboitier/creationBoitier', [App\Http\Controllers\gestionboitierController::class, 'creationBoitier'])->name('creationBoitier_path');
 Route::post('/gererboitier/creationBoitier', [App\Http\Controllers\gestionboitierController::class, 'ajouterBoitier'])->name('creationBoitier_path');
-
-
 //
 //
 // Gestion Alert
@@ -135,8 +137,6 @@ Route::get('/liste/ajouter/{id_campagne}/{id_boitier}', [App\Http\Controllers\Ho
 //
 Route::get('/client/listecampagneclient', [App\Http\Controllers\clientController::class, 'mescampagnesliste'])->name('clientmescampagnes_path');
 Route::get('/client/consultationcampagne/{id}', [App\Http\Controllers\clientController::class, 'campagneconsultation'])->name('clientconsultation_path');
-
-
 
 //
 //

@@ -14,7 +14,10 @@
 
     <!-- Bootstrap core CSS -->
   <link href="{{ asset('/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script
+		src="https://kit.fontawesome.com/64d58efce2.js"
+		crossorigin="anonymous"
+		></script>
 
   <style>
       .bd-placeholder-img {
@@ -97,7 +100,48 @@
       display: none;
     }
 
+    .avance
+    {
+        animation: roule 3s linear infinite;
+    }
 
+    .avance2
+    {
+        opacity: 0;
+        animation: roule2 8s linear infinite;
+    }
+    
+    @keyframes roule {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(1250px);
+    }}
+
+    @keyframes roule2 {
+    49%{
+      opacity: 0;
+    }
+    50%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(1200px);
+        opacity: 1;
+    }}
+
+    @keyframes roule3 {
+    0%{
+      transform: translateX(0);
+    }
+    50%{
+        transform: translateX(600px);
+    }
+    100%{
+        transform: translateX(1200px);
+    }}
 
   </style>
 

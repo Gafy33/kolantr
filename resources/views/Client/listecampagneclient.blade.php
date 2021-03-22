@@ -65,11 +65,11 @@
               <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $listecampagne->ville !!} </label>
         </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample??" aria-controls="navbarsExample??" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample{{$listecampagne->id}}" aria-controls="navbarsExample{{$listecampagne->id}}" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExample??">
+        <div class="collapse navbar-collapse" id="navbarsExample{{$listecampagne->id}}">
         <div class="col-md-5">
               <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $listecampagne->DébutCampagne !!} </label>
         </div>

@@ -3,15 +3,32 @@
 
 @section('style')
   <link href="{{ asset('/bootstrap/form-validation.css')}}" rel="stylesheet">
+
+  <SCRIPT language="javascript">
+ function permut();
+ {
+  setTimeout (document.images["rouge"].item="feu rouge.bmp",500);
+  setTimeout (document.images["orange"].item="feu orange.bmp",1000);
+  setTimeout (document.images["vert"].item="feu vert.bmp",1500);
+  
+ }
+ </SCRIPT>
 @stop
 
 @section('content')
 
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-		<script src="https://code.highcharts.com/modules/exporting.js"></script>
-		<script src="https://code.highcharts.com/modules/export-data.js"></script>
-		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/data.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+		
         
 <main>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -36,10 +53,18 @@
 		<p class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Date début de la campagne : {{ $campagne->DébutCampagne }} </p> 
 		<p class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Limitation vitesse : {{ $campagne->limitationvitesse }} </p>
       </div>
+	  <div >
+				<a class="w-100" href="{{ asset('csv/resultcmesure.csv')}}"> <button type="button" class="w-100 btn btn-sm btn-outline-secondary"> Télécharger le CSV </button> </a>
+			</div>
 	</div>
 
 
     <!-- START THE FEATURETTES -->
+
+	<h2>
+	<i class='fas fa-car-side avance' style="@if(Auth::user()->preference == 'theme_dark') color: white @else tx-white @endif" width="80" height="80" fill="currentColor"></i>
+	<i class='fas fa-truck avance2' style="@if(Auth::user()->preference == 'theme_dark') color:white @else tx-white @endif" width="40" height="40" fill="currentColor"></i>
+	</h2>
 
     <hr class="featurette-divider @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif">
 
@@ -137,23 +162,78 @@
       <div class="collapse navbar-collapse" id="navbarsExample{{$stats->id}}">
       	<hr class="featurette-divider">
 		  <div class="row">
-		  <div class="col-lg-4">
-		        <svg class="bd-placeholder-img rounded-circle" style="display: block; margin-left: auto; margin-right: auto;" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse supérieur à 50 km/h</title><rect width="100%" height="100%" fill="#777"/>
-				<text x="50%" y="40%" dy=".3em">{{ $stats->VitesseLimitMoins50 }}</text>
-		        <text x="50%" y="60%" dy=".3em">véhicules</text></svg>
-				<h2 class=" text-center @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;">Véhicules</h2>
-					<h2 class=" text-center @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> > à {{ $campagne->limitationvitesse + 50 }} km/h</h2>
+		  <br>
+		  	<div class="col-lg-4" style="width: 100%;">
+			  <img src="@if($campagne->limitationvitesse == 30) {{ asset('image/limite30.png') }} @elseif($campagne->limitationvitesse == 50) {{ asset('image/limite50.png') }} @elseif($campagne->limitationvitesse == 70) {{ asset('image/limite70.png') }} @elseif($campagne->limitationvitesse == 80) {{ asset('image/limite80.png') }} @elseif($campagne->limitationvitesse == 90) {{ asset('image/limite90.png') }} @elseif($campagne->limitationvitesse == 110) {{ asset('image/limite110.png') }} @elseif($campagne->limitationvitesse == 130) {{ asset('image/limite130.png') }} @endif" 	  
+			   		class="bd-placeholder-img rounded-circle" style="display: block; margin-left: auto; margin-right: auto;" width="100" height="100" xmlns="" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+					<br>
+					<h2 class=" text-center featurette-heading @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Limité à {{ $campagne->limitationvitesse }} km/h </h2>
+					<br>
 	      	</div>
-			</div>	
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> > à {{ $campagne->limitationvitesse + 50 }} km/h</h2>
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> > à {{ $campagne->limitationvitesse + 50 }} km/h</h2>
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> > à {{ $campagne->limitationvitesse + 50 }} km/h</h2>
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> > à {{ $campagne->limitationvitesse + 50 }} km/h</h2>
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> > à {{ $campagne->limitationvitesse + 50 }} km/h</h2>
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> > à {{ $campagne->limitationvitesse + 50 }} km/h</h2>
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> > à {{ $campagne->limitationvitesse + 50 }} km/h</h2>
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> > à {{ $campagne->limitationvitesse + 50 }} km/h</h2>
-	  	<hr class="featurette-divider">
+			<hr  class="featurette-divider @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif">
+			<hr>
+		</div>
+		<div class="row" style="text-align: center;">
+			<div class="col-lg-4" style="width: 70%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicule qui sont passés : </h2>
+			</div>
+			<div class="col-lg-4" style="width: 30%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->NbVehicule }}  @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
+			</div>
+			<hr>
+			<div class="col-lg-4" style="width: 70%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> La vitesse Moyenne des véhicules : </h2>
+			</div>
+			<div class="col-lg-4" style="width: 30%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->vitMoyenne }} km/h </h2>
+			</div>
+			<hr>
+			<div class="col-lg-4" style="width: 70%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicules inférieure ou égale à {{$campagne->limitationvitesse}} km/h : </h2>
+			</div>
+			<div class="col-lg-4" style="width: 30%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->VitesseInferieurOuEgale }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif </h2>
+			</div>
+			<hr>
+			<div class="col-lg-4" style="width: 70%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicules inférieure à {{$campagne->limitationvitesse - 20 }} km/h : </h2>
+			</div>
+			<div class="col-lg-4" style="width: 30%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->VitesseLimitMoins20 }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
+			</div>
+			<hr>
+			<div class="col-lg-4" style="width: 70%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicules supérieur à {{$campagne->limitationvitesse + 20 }} km/h : </h2>
+			</div>
+			<div class="col-lg-4" style="width: 30%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->VitesseLimitplus20 }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
+			</div>
+			<hr>
+			<div class="col-lg-4" style="width: 70%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicules supérieur à {{$campagne->limitationvitesse + 30 }} km/h : </h2>
+			</div>
+			<div class="col-lg-4" style="width: 30%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->VitesseLimitMoins30 }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
+			</div>
+			<hr>
+			<div class="col-lg-4" style="width: 70%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicules supérieur à {{$campagne->limitationvitesse + 40 }} km/h : </h2>
+			</div>
+			<div class="col-lg-4" style="width: 30%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->VitesseLimitMoins40 }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
+			</div>
+			<hr>
+			<div class="col-lg-4" style="width: 70%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicules supérieur à {{$campagne->limitationvitesse + 50 }} km/h : </h2>
+			</div>
+			<div class="col-lg-4" style="width: 30%;">
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->VitesseLimitMoins50 }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
+			</div>
+			<br><br>
+			<hr class="featurette-divider @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif">
+			
+	  	</div>
+		  <hr class="featurette-divider @if(Auth::user()->preference == 'theme_dark') tx-black @else tx-white @endif">
       </div>
 	</div>
 	</div>
@@ -163,24 +243,18 @@
 
     <hr class="featurette-divider">
 
-	<!--
+	
     <div class="row featurette shadow p-3 mb-5">
       <div class="col-md-13">
-        <h2 class="featurette-heading">Googles Maps</h2>
+        <h2 class="featurette-heading @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif">Googles Maps</h2>
         <br>
-        <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=marcheprime&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
-      </div>
-    </div>-->
-	
-	<div class="row featurette shadow p-3 mb-5">
-      <div class="col-md-13">
-        <h2 class="featurette-heading @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> Grapique </h2>
-        <hr>
-		<figure class="highcharts-figure">
-		  <div id="container"></div>
-	  	</figure>
-        </div>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{$campagne->adresseCampagne}}{{$campagne->ville}}{{$campagne->codePostal}}&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+              </div>
     </div>
+	
+	<hr class="featurette-divider">
+
+	@include('Client/graphiques_ligne_basic')
 	
     @include('layouts.partials.footer') 
 
@@ -195,6 +269,5 @@
 @section('script')
 
   <script src="{{ asset('/js/form-validation.js')}}"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="{{ asset('/js/scriptGraphique.js')}}"></script>
+
 @stop

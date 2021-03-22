@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\campagnemesure;
 use App\Models\boitier;
+use Geocoder\Laravel\ProviderAndDumperAggregator as Geocoder;
 
 class gestioncampagnemesureController extends Controller
 {

@@ -9,13 +9,17 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "consoletvs/charts": "7.*",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
+        "geocoder-php/nominatim-provider": "^5.4",
+        "guzzlehttp/guzzle": "^6.0",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
-        "tcg/voyager": "^1.4"
+        "php-http/guzzle6-adapter": "^2.0",
+        "tcg/voyager": "^1.4",
+        "toin0u/geocoder-laravel": "^4.4"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

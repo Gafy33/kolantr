@@ -1,4 +1,4 @@
-Highcharts.chart('container', {
+Highcharts.chart('graphiques_id', {
   chart: {
     type: 'column'
   },
