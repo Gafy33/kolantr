@@ -9,6 +9,8 @@ class Statistique extends Model
 {
     protected $fillable = [
         'typeV',
+        'VitMax',
+        'NbEssieux',
         'DateStat',
         'HeureStat',
         'vitMoyenne',

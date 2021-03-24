@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('/auth/login');
 })->name('login');
 
+
+Route::get('/popup', function () {
+    return view('/Client/popup_highscore');
+})->name('popup');
+
 //
 //
 // Gestion Compte

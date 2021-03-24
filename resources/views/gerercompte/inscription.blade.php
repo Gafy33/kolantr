@@ -6,6 +6,17 @@
 @stop
 
 @section('content')
+
+@if(!empty($alert))
+    <div class="alert error text-center" id="alert">
+        <span class="closebtn">&times;</span>  
+        <strong>Succés !</strong> 
+        <hr>
+        {!! $messagealert !!}
+    </div>
+@endif
+
+
 <div class="containerForm-Validation">
   <main>
     <div class="py-5 text-center">
@@ -60,7 +71,7 @@
 
             <div class="col-12">
               <label for="email" class="form-label text-muted">Adresse Mail</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+              <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="you@example.com" required>
               <div class="invalid-feedback">
                 Veuillez saisir une adresse e-mail valide.
               </div>

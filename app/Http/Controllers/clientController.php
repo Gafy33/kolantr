@@ -49,29 +49,51 @@ class clientController extends Controller
 
         foreach($stat as $data){
             if($data->id_CampagneMesure == $campagne->id)
-            $texte = $data->typeV .';' . $data->HeureStat .';'. $data->NbVehicule .';'. $campagne->limitationvitesse .';'.  $data->vitMoyenne .';'. $data->VitesseInferieurOuEgale .';'. $data->VitesseLimitMoins20 .';'. $data->VitesseLimitplus20 .';'. $data->VitesseLimitMoins30 .';'. $data->VitesseLimitMoins40 .';'. $data->VitesseLimitMoins50 . "\n";
+            $texte = $data->typeV .';' . $data->HeureStat .';'. $campagne->limitationvitesse .';'. $data->NbVehicule .';'.  $data->vitMoyenne .';'. $data->VitesseInferieurOuEgale .';'. $data->VitesseLimitMoins20 .';'. $data->VitesseLimitPlus20 .';'. $data->VitesseLimitPlus30 .';'. $data->VitesseLimitPLus40 .';'. $data->VitesseLimitPlus50 . "\n";
             fputs($f, $texte );
         }
         // fermeture
         fclose($f);
 
+        $vitmax = 0;
+
+        foreach($stat as $data)
+        {
+            if($data->VitMax > $vitmax )
+            {
+                $vitmax = $data->VitMax;
+            }
+        }
 
         foreach($stat as $data){
             if($data->id_CampagneMesure == $campagne->id)
             {
-                $statVitMoyen[] = $data->vitMoyenne;
-                $statHeureStat[] = $data->HeureStat;
-                $statVitesseInferieurOuEgale[] = $data->VitesseInferieurOuEgale;
-                $statVitesseLimitMoins20[] = $data->VitesseLimitMoins20;
-                $statVitesseLimitplus20[] = $data->VitesseLimitplus20;
-                $statVitesseLimitMoins30[] = $data->VitesseLimitMoins30;
-                $statVitesseLimitMoins40[] = $data->VitesseLimitMoins40;
-                $statVitesseLimitMoins50[] = $data->VitesseLimitMoins50;
+                if($data->typeV == "camion")
+                {
+                    $statVitMoyen_PL[] = $data->vitMoyenne;
+                    $statHeureStat_PL[] = $data->HeureStat;
+                    $statVitesseInferieurOuEgale_PL[] = $data->VitesseInferieurOuEgale;
+                    $statVitesseLimitMoins20_PL[] = $data->VitesseLimitMoins20;
+                    $statVitesseLimitPlus20_PL[] = $data->VitesseLimitPlus20;
+                    $statVitesseLimitPlus30_PL[] = $data->VitesseLimitPlus30;
+                    $statVitesseLimitPlus40_PL[] = $data->VitesseLimitPlus40;
+                    $statVitesseLimitPlus50_PL[] = $data->VitesseLimitPlus50;
+                } elseif($data->typeV == "voiture")
+                {
+                    $statVitMoyen_VL[] = $data->vitMoyenne;
+                    $statHeureStat_VL[] = $data->HeureStat;
+                    $statVitesseInferieurOuEgale_VL[] = $data->VitesseInferieurOuEgale;
+                    $statVitesseLimitMoins20_VL[] = $data->VitesseLimitMoins20;
+                    $statVitesseLimitPlus20_VL[] = $data->VitesseLimitPlus20;
+                    $statVitesseLimitPlus30_VL[] = $data->VitesseLimitPlus30;
+                    $statVitesseLimitPlus40_VL[] = $data->VitesseLimitPlus40;
+                    $statVitesseLimitPlus50_VL[] = $data->VitesseLimitPlus50;
+                }
             }
         }
 
 
-        return view('/Client/consultationcampagne')->with('campagne', $campagne)->with('statDate', $statDate)->with('statVitMoyen', $statVitMoyen)->with('statHeureStat', $statHeureStat)->with('statVitesseInferieurOuEgale', $statVitesseInferieurOuEgale)->with('statVitesseLimitMoins20', $statVitesseLimitMoins20)->with('statVitesseLimitplus20', $statVitesseLimitplus20)->with('statVitesseLimitMoins30', $statVitesseLimitMoins30)->with('statVitesseLimitMoins40', $statVitesseLimitMoins40)->with('statVitesseLimitMoins50', $statVitesseLimitMoins50);
+        return view('/Client/consultationcampagne')->with('campagne', $campagne)->with('vitmax', $vitmax)->with('stat', $stat)->with('statVitMoyen_PL', $statVitMoyen_PL)->with('statHeureStat_PL', $statHeureStat_PL)->with('statVitesseInferieurOuEgale_PL', $statVitesseInferieurOuEgale_PL)->with('statVitesseLimitMoins20_PL', $statVitesseLimitMoins20_PL)->with('statVitesseLimitPlus20_PL', $statVitesseLimitPlus20_PL)->with('statVitesseLimitPlus30_PL', $statVitesseLimitPlus30_PL)->with('statVitesseLimitPlus40_PL', $statVitesseLimitPlus40_PL)->with('statVitesseLimitPlus50_PL', $statVitesseLimitPlus50_PL)->with('statVitMoyen_VL', $statVitMoyen_VL)->with('statHeureStat_VL', $statHeureStat_VL)->with('statVitesseInferieurOuEgale_VL', $statVitesseInferieurOuEgale_VL)->with('statVitesseLimitMoins20_VL', $statVitesseLimitMoins20_VL)->with('statVitesseLimitPlus20_VL', $statVitesseLimitPlus20_VL)->with('statVitesseLimitPlus30_VL', $statVitesseLimitPlus30_VL)->with('statVitesseLimitPlus40_VL', $statVitesseLimitPlus40_VL)->with('statVitesseLimitPlus50_VL', $statVitesseLimitPlus50_VL);
 
     }
 }

@@ -28,7 +28,6 @@ class AlertController extends Controller
             $alert = 1;
             $messagealert = "Le compte client a bien été supprimée !";
         }
-
         return view('/gerercompte/ListeClient')->with('client', $listeclient)->with('alert', $alert)->with('messagealert', $messagealert);
     }
 

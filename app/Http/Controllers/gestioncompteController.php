@@ -54,6 +54,17 @@ class gestioncompteController extends Controller
     public function ajouterClient()
     {
 
+        $email_existant = User::where('email', request('email'))->first();
+
+        if(!empty($email_existant))
+        {
+            $alert = 1;
+            $messagealert = "L'adresse mail existe deja !";
+
+            return view('/gerercompte/inscription')->with('alert', $alert)->with('messagealert', $messagealert);
+
+        }
+
         $client = new User;
         $client->email = request('email');
         $client->role_id = 2;
