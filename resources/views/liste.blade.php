@@ -104,7 +104,7 @@
               <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">
               @foreach($listeboitier as $listeboitiers)
                 @if($campagne->id_boitier == $listeboitiers->id)
-                        {{ $listeboitiers->sigfox }}
+                        {{ $listeboitiers->adrSigfox }}
                 @endif
               @endforeach
               <a href="{{ route('modifierBoitier_path', ['id' => $campagne->id_boitier])}}"><i class="far fa-edit"></i></a>
@@ -118,7 +118,7 @@
                     <ul class="dropdown-menu mb-5" aria-labelledby="dropdown03">
                     @foreach($listeboitier as $listeboitiers)
                       @if($listeboitiers->statut == "non utilisé")
-                        <li><a class="dropdown-itemblack" href="{{ route('listeajouterboitier_path', ['id_campagne' => $campagne->id, 'id_boitier' => $listeboitiers ])}}"> {{ $listeboitiers->sigfox }}</a></li>
+                        <li><a class="dropdown-itemblack" href="{{ route('listeajouterboitier_path', ['id_campagne' => $campagne->id, 'id_boitier' => $listeboitiers ])}}"> {{ $listeboitiers->adrSigfox }}</a></li>
                       @endif
                     @endforeach
                     </ul>

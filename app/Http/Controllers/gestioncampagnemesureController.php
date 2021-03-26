@@ -22,7 +22,17 @@ class gestioncampagnemesureController extends Controller
     public function listeCampagneMesure()
     {
         $listecampagne = campagnemesure::all();
-        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne);
+        $alarme = boitier::all();
+
+        $alarme_popup = NULL;
+        foreach($alarme as $alarmes)
+        {
+            if(!empty($alarmes->alarmeBatterie))
+            {
+                $alarme_popup = 1;
+            }
+        }
+        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
 

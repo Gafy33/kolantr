@@ -28,7 +28,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('/accueil');
+        $alarme = boitier::all();
+
+        $alarme_popup = NULL;
+        foreach($alarme as $alarmes)
+        {
+            if(!empty($alarmes->alarmeBatterie))
+            {
+                $alarme_popup = 1;
+            }
+        }
+
+        return view('/accueil')->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
 
@@ -62,7 +73,18 @@ class HomeController extends Controller
         $listeboitier = boitier::all();
         $listeclient = User::all();
 
-        return view('/liste')->with('campagne', $listecampagne)->with('listeboitier', $listeboitier)->with('listeclient', $listeclient);
+        $alarme = boitier::all();
+
+        $alarme_popup = NULL;
+        foreach($alarme as $alarmes)
+        {
+            if(!empty($alarmes->alarmeBatterie))
+            {
+                $alarme_popup = 1;
+            }
+        }
+
+        return view('/liste')->with('campagne', $listecampagne)->with('listeboitier', $listeboitier)->with('listeclient', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
     public function boitierdelete($id)

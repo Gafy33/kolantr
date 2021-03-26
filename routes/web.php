@@ -95,6 +95,8 @@ Route::post('/gererboitier/modifierBoitier/{id}', [App\Http\Controllers\gestionb
 //Ajouter CampagneMBoitier
 Route::get('/gererboitier/creationBoitier', [App\Http\Controllers\gestionboitierController::class, 'creationBoitier'])->name('creationBoitier_path');
 Route::post('/gererboitier/creationBoitier', [App\Http\Controllers\gestionboitierController::class, 'ajouterBoitier'])->name('creationBoitier_path');
+
+Route::get('/gererboitier/BoitierAlarmeBatterie/{id}', [App\Http\Controllers\gestionboitierController::class, 'BoitierAlarmeBatterie'])->name('modifierBoitier_alarmebatterie_path');
 //
 //
 // Gestion Alert
@@ -156,6 +158,7 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 
+Route::get('/Statistiques', [ App\Http\Controllers\CollecteSigfoxController::class, 'index'])->name('Statistiques');
 
 //
 //

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class boitier extends Model
 {
     protected $fillable = [
-        'sigfox',
+        'adrSigfox',
         'alarmeBatterie',
         'statut'
     ];

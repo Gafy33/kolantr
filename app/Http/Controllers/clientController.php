@@ -45,11 +45,11 @@ class clientController extends Controller
         $f = fopen('csv/' . $nom_file, "x+");
         $texte = 'Type de véhicule ; Heure ; Limité à ' . 'km/h;Nombre de véhicule qui sont passés :;La vitesse Moyenne des véhicules :;Nombre de véhicules inférieure ou égale à ' . $campagne->limitationvitesse . ' km/h :;Nombre de véhicules inférieure à ' . $vit_m_20 . 'km/h :;Nombre de véhicules supérieur à ' . $vit_p_20 . ' km/h :;Nombre de véhicules supérieur à ' . $vit_p_30 .' km/h :;Nombre de véhicules supérieur à ' . $vit_p_40 . ' km/h :;Nombre de véhicules supérieur à ' . $vit_p_50 . ' km/h :' . "\n";
         // écriture
-        fputs($f, $texte );
+        fputs($f, $texte);
 
         foreach($stat as $data){
-            if($data->id_CampagneMesure == $campagne->id)
-            $texte = $data->typeV .';' . $data->HeureStat .';'. $campagne->limitationvitesse .';'. $data->NbVehicule .';'.  $data->vitMoyenne .';'. $data->VitesseInferieurOuEgale .';'. $data->VitesseLimitMoins20 .';'. $data->VitesseLimitPlus20 .';'. $data->VitesseLimitPlus30 .';'. $data->VitesseLimitPLus40 .';'. $data->VitesseLimitPlus50 . "\n";
+            if($data->campagneId == $campagne->id)
+            $texte = $data->typeV .';' . $data->created_at .';'. $campagne->limitationvitesse .';'. $data->NbVehicule .';'.  $data->VitMoyenne .';'. $data->VitesseInferieureOuEgale .';'. $data->VitesseLimitMoins20 .';'. $data->VitesseLimitPlus20 .';'. $data->VitesseLimitPlus30 .';'. $data->VitesseLimitPLus40 .';'. $data->VitesseLimitPlus50 . "\n";
             fputs($f, $texte );
         }
         // fermeture
@@ -66,13 +66,13 @@ class clientController extends Controller
         }
 
         foreach($stat as $data){
-            if($data->id_CampagneMesure == $campagne->id)
+            if($data->campagneId == $campagne->id)
             {
                 if($data->typeV == "camion")
                 {
-                    $statVitMoyen_PL[] = $data->vitMoyenne;
-                    $statHeureStat_PL[] = $data->HeureStat;
-                    $statVitesseInferieurOuEgale_PL[] = $data->VitesseInferieurOuEgale;
+                    $statVitMoyen_PL[] = $data->VitMoyenne;
+                    $statHeureStat_PL[] = $data->created_at;
+                    $statVitesseInferieurOuEgale_PL[] = $data->VitesseInferieureOuEgale;
                     $statVitesseLimitMoins20_PL[] = $data->VitesseLimitMoins20;
                     $statVitesseLimitPlus20_PL[] = $data->VitesseLimitPlus20;
                     $statVitesseLimitPlus30_PL[] = $data->VitesseLimitPlus30;
@@ -80,9 +80,9 @@ class clientController extends Controller
                     $statVitesseLimitPlus50_PL[] = $data->VitesseLimitPlus50;
                 } elseif($data->typeV == "voiture")
                 {
-                    $statVitMoyen_VL[] = $data->vitMoyenne;
-                    $statHeureStat_VL[] = $data->HeureStat;
-                    $statVitesseInferieurOuEgale_VL[] = $data->VitesseInferieurOuEgale;
+                    $statVitMoyen_VL[] = $data->VitMoyenne;
+                    $statHeureStat_VL[] = $data->created_at;
+                    $statVitesseInferieurOuEgale_VL[] = $data->VitesseInferieureOuEgale;
                     $statVitesseLimitMoins20_VL[] = $data->VitesseLimitMoins20;
                     $statVitesseLimitPlus20_VL[] = $data->VitesseLimitPlus20;
                     $statVitesseLimitPlus30_VL[] = $data->VitesseLimitPlus30;

@@ -72,9 +72,87 @@
       margin-bottom: 15px;
     }
 
+
+    .alertbatterie {
+      position:fixed;
+      margin: 50px 50px;
+      width: auto;
+      padding: 10px;
+      color: white;
+      margin-bottom: 15px;
+      z-index: 5;
+      color: rgb(236, 39, 72);
+      text-align: center;
+    }
+
+      .charging-container {
+      max-width: 150px;
+      width: 120px;
+      height: 50px;
+      border: 4px solid rgb(236, 39, 72);
+      border-radius: 5px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .charging-container::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 16px;
+    background: rgb(236, 39, 72);
+    right: -9px;
+    top: 50%;
+    margin-top: -8px;
+    border-radius: 2px;
+    }
+
+  .charging-container::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    /* right: 10px; */
+    background: rgb(236, 39, 72);
+    transition: all .3s;
+    -webkit-animation: charging 1s infinite;
+    -moz-animation: charging 1s infinite;
+    animation: charging 1s infinite;
+    animation: charging 1s infinite;
+  }
+
+  @-webkit-keyframes charging {
+    from {
+      width: 15%;
+    } 
+    to {
+      width: 5%;
+    }
+  }
+
+  @-moz-keyframes charging {
+    from {
+      width: 15%;
+    } 
+    to {
+      width: 5%;
+    }
+  }
+  @keyframes charging {
+    from {
+      width: 15%;
+    } 
+    to {
+      width: 5%;
+    }
+  }
+
+
+
     .alert.success {background-color: #4CAF50; float: right;}
     .alert.info {background-color: #2196F3;}
-    .alert.warning {background-color: #ff9800;}
+    .alert.warning {background-color: #ff0000;}
 
     .closebtn {
       margin-left: 15px;
@@ -100,49 +178,88 @@
       display: none;
     }
 
-    .avance
-    {
-        animation: roule 3s linear infinite;
-    }
+      .box {
+        width: 40%;
+        margin: 0 auto;
+        background: rgba(255,255,255,0.2);
+        padding: 35px;
+        border: 2px solid #fff;
+        border-radius: 20px/50px;
+        background-clip: padding-box;
+        text-align: center;
+      }
 
-    .avance2
-    {
+      .button {
+        font-size: 1em;
+        padding: 10px;
+        color: #fff;
+        border: 2px solid #06D85F;
+        border-radius: 20px/50px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+      }
+      .button:hover {
+        background: #06D85F;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
         opacity: 0;
-        animation: roule2 8s linear infinite;
-    }
-    
-    @keyframes roule {
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(1250px);
-    }}
-
-    @keyframes roule2 {
-    49%{
-      opacity: 0;
-    }
-    50%{
-        transform: translateX(0);
+      }
+      .overlay:target {
+        visibility: visible;
         opacity: 1;
-    }
-    100%{
-        transform: translateX(1200px);
-        opacity: 1;
-    }}
+      }
 
-    @keyframes roule3 {
-    0%{
-      transform: translateX(0);
-    }
-    50%{
-        transform: translateX(600px);
-    }
-    100%{
-        transform: translateX(1200px);
-    }}
+      .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 30%;
+        position: relative;
+        transition: all 5s ease-in-out;
+      }
 
+      .popup h2 {
+        margin-top: 0;
+        color: #333;
+        font-family: Tahoma, Arial, sans-serif;
+      }
+      .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+      }
+      .popup .close:hover {
+        color: #06D85F;
+      }
+      .popup .content {
+        max-height: 30%;
+        overflow: auto;
+      }
+
+      @media screen and (max-width: 700px){
+        .box{
+          width: 70%;
+        }
+        .popup{
+          width: 70%;
+        }
+      }
   </style>
 
   @yield('style')
@@ -153,6 +270,12 @@
 
   @include('layouts.partials.navbar')
 
+  @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien'))
+    @if(!empty($alarme_popup))
+      @include('alertbatterie')
+    @endif
+  @endif
+
   @yield('content')
   
   <script src="{{ asset('/js/bootstrap.bundle.min.js')}}"></script>
@@ -160,6 +283,22 @@
 
   @yield('scriptAlert')
   @yield('script')
+
+  <script>
+    let elBtn = document.getElementById("modal-btn");
+    let elModal = document.getElementById("modal");
+    let close = document.getElementById("btn-close");
+
+    elBtn.onclick = function() {
+        console.log('click: btn: ' + this.id + ', modal: ' + elModal.id);
+        elModal.classList.toggle('show-popup');
+
+        }
+        /* to dispose the popup on click */
+        close.onclick = function() {
+        elModal.classList.toggle('show-popup');
+        }
+  </script>
 
   </body>
 

@@ -47,6 +47,10 @@ class AlertController extends Controller
         {
             $alert = 1;
             $messagealert = "Le boitier a bien été supprimée !";
+        } else if($alert == 5)
+        {
+            $alert = 1;
+            $messagealert = "L'alarme de la batterie à bien été modifié";
         }
 
         

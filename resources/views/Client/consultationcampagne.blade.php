@@ -44,7 +44,7 @@ text-align: center;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Source Sans Pro";
-  font-size: 5em;
+  font-size: 75px;
   font-weight: 1000;
   -webkit-user-select: none;
   user-select: none;
@@ -57,7 +57,7 @@ text-align: center;
   transform: translate(-50%, -50%);
   color: #fff;
   font-family: 'Chango', cursive;
-  font-size: 5em;
+  font-size: 75px;
   font-weight: 900;
   -webkit-user-select: none;
   user-select: none;
@@ -72,7 +72,7 @@ text-align: center;
   outline: none;
   text-decoration: none;
   font-family: "Source Sans Pro";
-  font-size: 1.5em;
+  font-size: 35px;
   font-weight: 900;
   -webkit-user-select: none;
   user-select: none;
@@ -85,11 +85,13 @@ text-align: center;
 }
 
 .iframe h6 {
+  top: 65%;
   font-size: 2em;
   font-weight: 900;
 }
 
 .iframe a{
+  top: 73%;
   font-size: 1.5em;
   font-weight: 900;
 }
@@ -167,15 +169,10 @@ text-align: center;
 
     <!-- START THE FEATURETTES -->
 
-	<h2>
-	<i class='fas fa-car-side avance' style="@if(Auth::user()->preference == 'theme_dark') color: white @else tx-white @endif" width="80" height="80" fill="currentColor"></i>
-	<i class='fas fa-truck avance2' style="@if(Auth::user()->preference == 'theme_dark') color:white @else tx-white @endif" width="40" height="40" fill="currentColor"></i>
-	</h2>
-
     <hr class="featurette-divider @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif">
 
 	@foreach($stat as $stats)
-	@if($stats->id_CampagneMesure == $campagne->id)
+	@if($stats->campagneId == $campagne->id)
     <div class="row featurette shadow p-3 mb-5">
       <div class="col-md-6">
         <h2 class="featurette-heading @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif">Type de la mesure {{ $stats->typeV }} 
@@ -185,9 +182,8 @@ text-align: center;
 		<i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>
 		@endif
 		</h2>
-        <br>	
-        <p class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Date début de la stat : {{ $stats->DateStat }}</p>
-        <p class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Date fin de la stat : {{ $stats->HeureStat }} </p>
+        <br>
+        <p class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Date stat : @if(!empty($stats->created_at)) {{ $stats->created_at }} @endif </p>
         <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
     	<div class="container-fluid">
       	<h2 class="navbar-brand @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif">Détails :</h2>
@@ -214,14 +210,14 @@ text-align: center;
 	      			<hr>
 			  </div>
 	      	<div class="col-lg-4" >
-		        <svg class="bd-placeholder-img rounded-circle" style="display: block; margin-left: auto; margin-right: auto;" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Vitesse moyenne</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="40%" dy=".3em">{{ $stats->vitMoyenne }}</text>
+		        <svg class="bd-placeholder-img rounded-circle" style="display: block; margin-left: auto; margin-right: auto;" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Vitesse moyenne</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="40%" dy=".3em">{{ $stats->VitMoyenne }}</text>
 		        <text x="50%" y="60%" dy=".3em"> km/h </text></svg>
 		        	<h2 class=" text-center @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;">Vitesse moyenne</h2>
 	      			<hr>
 			  </div>
 	      	<div class="col-lg-4">
 		        <svg class="bd-placeholder-img rounded-circle" style="display: block; margin-left: auto; margin-right: auto;" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>vitesse égale ou inférieur </title><rect width="100%" height="100%" fill="#777"/>
-				<text x="50%" y="40%" dy=".3em">{{ $stats->VitesseInferieurOuEgale }}</text>
+				<text x="50%" y="40%" dy=".3em">{{ $stats->VitesseInferieureOuEgale }}</text>
 		        <text x="50%" y="60%" dy=".3em">véhicules</text></svg>
 		        	<h2 class=" text-center @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;">Véhicules</h2>
 					<h2 class=" text-center @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;">< ou = à {{ $campagne->limitationvitesse }} km/h</h2>
@@ -291,7 +287,7 @@ text-align: center;
 			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> La vitesse Moyenne des véhicules : </h2>
 			</div>
 			<div class="col-lg-4" style="width: 30%;">
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->vitMoyenne }} km/h </h2>
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->VitMoyenne }} km/h </h2>
 			</div>
 			<hr>
 			<div class="col-lg-4" style="width: 70%;">
@@ -312,7 +308,7 @@ text-align: center;
 			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicules inférieure ou égale à {{$campagne->limitationvitesse}} km/h : </h2>
 			</div>
 			<div class="col-lg-4" style="width: 30%;">
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->VitesseInferieurOuEgale }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif </h2>
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> {{ $stats->VitesseInferieureOuEgale }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif </h2>
 			</div>
 			<hr>
 			<div class="col-lg-4" style="width: 70%;">

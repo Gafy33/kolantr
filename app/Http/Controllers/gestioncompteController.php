@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\boitier;
 
 class gestioncompteController extends Controller
 {
@@ -47,7 +48,17 @@ class gestioncompteController extends Controller
     public function listeClient()
     {
         $listeclient = User::all();
-        return view('/gerercompte/ListeClient')->with('client', $listeclient);
+        $alarme = boitier::all();
+
+        $alarme_popup = NULL;
+        foreach($alarme as $alarmes)
+        {
+            if(!empty($alarmes->alarmeBatterie))
+            {
+                $alarme_popup = 1;
+            }
+        }
+        return view('/gerercompte/ListeClient')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
     //Ajouter Client avec Eloquent
@@ -166,7 +177,17 @@ class gestioncompteController extends Controller
     public function listeAdminTechnicienmodifier()
     {
         $listeclient = User::all();
-        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient);
+        $alarme = boitier::all();
+
+        $alarme_popup = NULL;
+        foreach($alarme as $alarmes)
+        {
+            if(!empty($alarmes->alarmeBatterie))
+            {
+                $alarme_popup = 1;
+            }
+        }
+        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
 

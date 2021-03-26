@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBoitiersTable extends Migration
+class CreateSigfoxmessageTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateBoitiersTable extends Migration
      */
     public function up()
     {
-        Schema::create('boitiers', function (Blueprint $table) {
+        Schema::create('sigfoxmessage', function (Blueprint $table) {
             $table->id();
-            $table->string('adrSigfox')->nullable();
-            $table->string('alarmeBatterie')->nullable();
-            $table->string('statut')->nullable();
+            $table->string('device');
+            $table->string('data');
+            $table->string('time');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateBoitiersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('boitiers');
+        Schema::dropIfExists('sigfoxmessage');
     }
 }

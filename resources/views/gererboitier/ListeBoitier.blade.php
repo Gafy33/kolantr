@@ -17,18 +17,8 @@
     </div>
 @endif
 
-<div class="containerForm-Validation" id="chargement">
-  <main>
 
-    <div class="py-5 text-center">
-      <label for="firstName" class="mx-auto mb-1 py-5 featurette-heading"><div class="spinner-border text-light" role="status" id="bar">
-      <span class="visually-hidden">Loading...</span>
-      </div></label>
-    </div>
-  </main>
-</div>
-
-<div class="containerForm-Validation" id="bloc">
+<div class="containerForm-Validation">
   <main>
 
     <div class="py-5 text-center">
@@ -96,17 +86,20 @@
         <div class="container">
 
         <div class="col-md-3">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">{!! $boitier->sigfox !!}</label>
+              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">{!! $boitier->adrSigfox !!}</label>
         </div>
 
         <div class="col-md-3">
               <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">
               @if(!empty($boitier->alarmeBatterie))
-              {!! $boitier->alarmeBatterie !!}
+                  <span style="color: red"> Batterie Faible </span>
+              <a href="{{ route('modifierBoitier_alarmebatterie_path', ['id' => $boitier->id ])}}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-battery-full" viewBox="0 0 16 16">
+              <path d="M2 6h10v4H2V6z"/>
+              <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h10zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z"/>
+              </svg> </a>
               @else
-              <div class="spinner-border text-light" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
+              <span style="color: green"> Batterie Correct </span>
               @endif
             </label>
         </div>
@@ -180,11 +173,4 @@
 
 	<script src="{{ asset('/js/form-validation.js')}}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $("#chargement").fadeOut(1500, function(){
-        $("#bloc").fadeIn(1000)
-      });
-    });
-  </script>
 @stop

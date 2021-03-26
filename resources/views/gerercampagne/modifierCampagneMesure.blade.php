@@ -159,7 +159,7 @@
                 <select name="id_boitier" id="boitier" class="form-control">
 
                 @if(!empty($boitierdefault))
-                <option value="{{ $boitierdefault->id }}">{{ $boitierdefault->sigfox }}</option>
+                <option value="{{ $boitierdefault->id }}">{{ $boitierdefault->adrSigfox }}</option>
                 @endif
 
                 <option value=""> Aucun boitier </option>
@@ -167,14 +167,14 @@
                 @foreach ($boitier as $boitier)
 
                 @if(!empty($boitierdefault))
-                  @if($boitier->sigfox != $boitierdefault->sigfox)
+                  @if($boitier->adrSigfox != $boitierdefault->adrSigfox)
                   @if($boitier->statut == "non utilisé")
-                    <option value="{{ $boitier->id }}"> {{ $boitier->sigfox }}</option>
+                    <option value="{{ $boitier->id }}"> {{ $boitier->adrSigfox }}</option>
                   @endif
                   @endif
                 @else
                   @if($boitier->statut == "non utilisé")
-                    <option value="{{ $boitier->id }}"> {{ $boitier->sigfox }}</option>
+                    <option value="{{ $boitier->id }}"> {{ $boitier->adrSigfox }}</option>
                   @endif
                 @endif
 

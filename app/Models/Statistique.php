@@ -11,16 +11,14 @@ class Statistique extends Model
         'typeV',
         'VitMax',
         'NbEssieux',
-        'DateStat',
-        'HeureStat',
-        'vitMoyenne',
-        'nbVehicule',
-        'VitesseInferieurOuEgale',
+        'VitMoyenne',
+        'NbVehicule',
+        'VitesseInferieureOuEgale',
         'VitesseLimitMoins20',
-        'VitesseLimitplus20',
-        'VitesseLimitMoins30',
-        'VitesseLimitMoins40',
-        'VitesseLimitMoins50',
-        'id_CampagneMesure'
+        'VitesseLimitPlus20',
+        'VitesseLimitPlus30',
+        'VitesseLimitPlus40',
+        'VitesseLimitPlus50',
+        'campagneId'
     ];
 }

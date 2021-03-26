@@ -21,7 +21,7 @@
             <div class="row g-3">
             <div class="col-sm-12">
               <label for="firstName" class="form-label text-muted">Adresse @sigfox</label>
-              <input type="text" class="form-control" id="sigfox" name="sigfox" placeholder="e641221" value="{{ $boitier->sigfox }}">
+              <input type="text" class="form-control" id="sigfox" name="sigfox" placeholder="e641221" value="{{ $boitier->adrSigfox }}">
               <div class="invalid-feedback">
                 Un prénom nom valide est requis.
               </div>

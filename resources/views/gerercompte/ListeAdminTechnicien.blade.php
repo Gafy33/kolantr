@@ -17,18 +17,8 @@
     </div>
 @endif
 
-<div class="containerForm-Validation" id="chargement">
-  <main>
 
-    <div class="py-5 text-center">
-      <label for="firstName" class="mx-auto mb-1 py-5 featurette-heading"><div class="spinner-border text-light" role="status" id="bar">
-      <span class="visually-hidden">Loading...</span>
-      </div></label>
-    </div>
-  </main>
-</div>
-
-<div class="containerForm-Validation" id="bloc">
+<div class="containerForm-Validation">
   <main>
     <div class="py-5 text-center">
       <h2 class="mx-auto mb-1 py-5 featurette-heading"><span class="text-muted"> <i class="fas fa-user"  width="75" height="75" fill="currentColor" ></i>  Gérer Compte Admin / Technicien  <i class="fas fa-user"  width="75" height="75" fill="currentColor"></i> </span></h2>
@@ -181,11 +171,4 @@
 
 	<script src="{{ asset('/js/form-validation.js')}}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $("#chargement").fadeOut(1500, function(){
-        $("#bloc").fadeIn(1000)
-      });
-    });
-  </script>
 @stop

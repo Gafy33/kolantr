@@ -21,7 +21,17 @@ class gestionboitierController extends Controller
      public function listeBoitier()
     {
         $listeboitier = boitier::all();
-        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier);
+        $alarme = boitier::all();
+
+        $alarme_popup = NULL;
+        foreach($alarme as $alarmes)
+        {
+            if(!empty($alarmes->alarmeBatterie))
+            {
+                $alarme_popup = 1;
+            }
+        }
+        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
     //Affiche la page d'ajout des boitiers
@@ -35,7 +45,7 @@ class gestionboitierController extends Controller
     {
         
         $boitier = new boitier;
-        $boitier->sigfox = request('sigfox');
+        $boitier->adrSigfox = request('sigfox');
         $boitier->statut = request('statut');
 
         $boitier->save();
@@ -82,12 +92,25 @@ class gestionboitierController extends Controller
     {
 
         $boitier = boitier::find($id);
-        $boitier->sigfox = request('sigfox');
+        $boitier->adrSigfox = request('sigfox');
         $boitier->alarmeBatterie = request('alarmeBatterie');
-        $boitier->statut = request('statut');
+        if(!empty(request('statut'))){
+            $boitier->statut = request('statut');
+        }
 
         $boitier->update();
 
        return redirect()->route('listeboitieralert_path', ['alert' => 2]);
+    }
+
+    public function BoitierAlarmeBatterie($id)
+    {
+
+        $boitier = boitier::find($id);
+        $boitier->alarmeBatterie = NULL;
+
+        $boitier->update();
+
+       return redirect()->route('listeboitieralert_path', ['alert' => 5]);
     }
 }

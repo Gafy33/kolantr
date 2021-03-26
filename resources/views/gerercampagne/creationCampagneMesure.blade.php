@@ -143,9 +143,11 @@
                 <select name="id_boitier" id="boitier" class="form-control">
                 <option value="">Défault</option>
                 @foreach ($boitier as $boitier)
-                <option value="{{ $boitier->id }}"> {{ $boitier->sigfox }}</option>
+                  @if($boitier->statut == "non utilisé")
+                    <option value="{{ $boitier->id }}"> {{ $boitier->adrSigfox }} </option>
+                  @endif
                 @endforeach
-                </select> 
+                </select>  
             </div>
 
           <hr class="my-4 text-muted">
