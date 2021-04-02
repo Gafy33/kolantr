@@ -1,8 +1,3 @@
-<div class="alertbatterie text-center" id="modal-btn">
-    <a href="#popup1"> <div class="charging-container"></div> </a>
-    <p> Batterie Faible </p>
-</div>
-
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<h2>Batterie Faible</h2>

@@ -68,9 +68,26 @@
                 <li class="nav-item active">
                 <a class="nav-link" aria-current="page" href="{{ route('clientmescampagnes_path') }}">Mes campagnes de mesure</a>
                 </li>
+                <li class="nav-item active">
+                <a class="nav-link" aria-current="page" href="{{ route('formmessage') }}">Demande</a>
+                </li>
               </ul>
 
           @endif
+              @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien'))
+
+                @if(!empty($demande_popup))
+                <ul class="navbar-nav me_auto mb-2 mb-lg-0" style="padding-right: 30px;">
+                <a class="nav-linkArmand" href="#popup2"> <li class="nav-item tx-white demande_kolantr" style="border: 2px solid red; filter: brightness(200%); padding: 5px 8px; border-radius: 20px;"> {{ $demande_popup }} </li> </a>
+                </ul>
+                @endif
+
+                @if(!empty($alarme_popup))
+                <ul class="navbar-nav me_auto mb-2 mb-lg-0" style="padding-right: 15px;">
+                  <a href="#popup1"> <div class="charging-container"></div> </a>
+                </ul>
+                @endif
+              @endif
               <ul class="navbar-nav me_auto mb-2 mb-lg-0">
                   <li class="nav-item tx-white"> {{ Auth::user()->name }} {{ Auth::user()->prenom }}</li>
               </ul>

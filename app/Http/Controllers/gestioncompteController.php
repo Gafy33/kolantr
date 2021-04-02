@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use App\Models\boitier;
+use App\Models\demande;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MessageGoogle;
 
 class gestioncompteController extends Controller
 {
@@ -33,6 +36,10 @@ class gestioncompteController extends Controller
 	//Afficher la page inscription client
     public function ajouterClientget()
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         return view('/gerercompte/inscription');
     }
 
@@ -40,6 +47,10 @@ class gestioncompteController extends Controller
     //Afficher la page inscription Admin/Technicien
     public function ajouterAdminTechnicienget()
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         return view('/gerercompte/inscriptionAdmin');
     }
     
@@ -47,6 +58,10 @@ class gestioncompteController extends Controller
     //Afficher la liste des clients
     public function listeClient()
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $listeclient = User::all();
         $alarme = boitier::all();
 
@@ -58,14 +73,28 @@ class gestioncompteController extends Controller
                 $alarme_popup = 1;
             }
         }
-        return view('/gerercompte/ListeClient')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
+
+        $demande = demande::all();
+
+        $demande_popup = NULL;
+        
+        foreach($demande as $demandes)
+        {
+                $demande_popup += 1;
+        }
+
+        return view('/gerercompte/ListeClient')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
     }
 
     //Ajouter Client avec Eloquent
-    public function ajouterClient()
+    public function ajouterClient(Request $request)
     {
 
-        $email_existant = User::where('email', request('email'))->first();
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
+        $email_existant = User::where('email', $request['email'])->first();
 
         if(!empty($email_existant))
         {
@@ -77,23 +106,26 @@ class gestioncompteController extends Controller
         }
 
         $client = new User;
-        $client->email = request('email');
+        $client->email = $request['email'];
         $client->role_id = 2;
-        $client->name = request('name');
-        $client->password = Hash::make(request('password'));
-        $client->prenom = request('prenom');
-        $client->identifiant = request('identifiant');
-        $client->numeroTel = request('numeroTel');
-        $client->adresseClient = request('adresseClient');
-        $client->codePostal = request('codePostal');
-        $client->ville = request('ville');
-        $client->region = request('region');
+        $client->name = $request['name'];
+        $client->password = Hash::make($request['password']);
+        $client->prenom = $request['prenom'];
+        $client->identifiant = $request['identifiant'];
+        $client->numeroTel = $request['numeroTel'];
+        $client->adresseClient = $request['adresseClient'];
+        $client->codePostal = $request['codePostal'];
+        $client->ville = $request['ville'];
+        $client->region = $request['region'];
         $client->preference = "theme_dark";
 
-        if( request('entreprise') == "oui") {
-            $client->nomEntreprise = request('entreprise');
-            $client->nomEntreprise = request('nomEntreprise');
+        if( $request['entreprise'] == "oui") {
+            $client->nomEntreprise = $request['entreprise'];
+            $client->nomEntreprise = $request['nomEntreprise'];
         }
+
+        Mail::to($client)->bcc("kolantr2021snir@gmail.com")
+            ->queue(new MessageGoogle($request->all()));
 
         $client->save();
 
@@ -104,6 +136,10 @@ class gestioncompteController extends Controller
     //Supprimer Client avec Eloquent
     public function supprimerClient($id)
     {
+
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
 
         $client = User::find($id);
 
@@ -116,6 +152,10 @@ class gestioncompteController extends Controller
      public function modifierClient($id)
     {
 
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $client = User::find($id);
 
         return view('/gerercompte/ModifierClient')->with('client', $client);
@@ -125,6 +165,10 @@ class gestioncompteController extends Controller
     //Modifier Client avec Eloquent
     public function modifierClientConfirm($id)
     {
+
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
 
         $client = User::find($id);
         $client->email = request('email');
@@ -176,6 +220,10 @@ class gestioncompteController extends Controller
     //Afficher la liste Admin / Technicien
     public function listeAdminTechnicienmodifier()
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $listeclient = User::all();
         $alarme = boitier::all();
 
@@ -187,13 +235,37 @@ class gestioncompteController extends Controller
                 $alarme_popup = 1;
             }
         }
-        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
+
+        $demande = demande::all();
+
+        $demande_popup = NULL;
+        
+        foreach($demande as $demandes)
+        {
+                $demande_popup += 1;
+        }
+        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
     }
 
 
     //Ajouter Admin / Technicien avec Eloquent
     public function ajouterAdminTechnicien()
     {
+
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
+        $email_existant = User::where('email', request('email'))->first();
+
+        if(!empty($email_existant))
+        {
+            $alert = 1;
+            $messagealert = "L'adresse mail existe deja !";
+
+            return view('/gerercompte/ListeAdminTechnicien')->with('alert', $alert)->with('messagealert', $messagealert);
+
+        }
 
         $client = new User;
         $client->email = request('email');
@@ -209,6 +281,9 @@ class gestioncompteController extends Controller
         $alert = 1;
         $messagealert = "Le compte Admin / Technicien a bien été crée !";
 
+        Mail::to($client)->bcc("kolantr2021snir@gmail.com")
+            ->queue(new MessageGoogle($request->all()));
+
         $listeclient = User::all();
         return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient)->with('alert', $alert)->with('messagealert', $messagealert);
     }
@@ -216,6 +291,10 @@ class gestioncompteController extends Controller
     //Supprimer Admin / Technicien avec Eloquent
     public function supprimerAdminTechnicien($id)
     {
+
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
 
         $client = User::find($id);
 
@@ -239,6 +318,10 @@ class gestioncompteController extends Controller
     public function modifierAdminTechnicien($id)
     {
 
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $client = User::find($id);
 
         return view('/gerercompte/ModifierAdminTechnicien')->with('client', $client);
@@ -249,6 +332,9 @@ class gestioncompteController extends Controller
     //Modifier Admin / Technicien avec Eloquent
     public function modifierAdminTechnicienConfirm($id)
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
 
         $client = User::find($id);
         $client->email = request('email');

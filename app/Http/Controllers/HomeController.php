@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\campagnemesure;
 use App\Models\boitier;
+
+use App\Models\demande;
+
 use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
@@ -31,6 +34,7 @@ class HomeController extends Controller
         $alarme = boitier::all();
 
         $alarme_popup = NULL;
+
         foreach($alarme as $alarmes)
         {
             if(!empty($alarmes->alarmeBatterie))
@@ -38,8 +42,18 @@ class HomeController extends Controller
                 $alarme_popup = 1;
             }
         }
+        
+        $demande = demande::all();
 
-        return view('/accueil')->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
+        $demande_popup = NULL;
+        
+        foreach($demande as $demandes)
+        {
+                $demande_popup += 1;
+        }
+
+
+        return view('/accueil')->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
     }
 
 
@@ -84,7 +98,16 @@ class HomeController extends Controller
             }
         }
 
-        return view('/liste')->with('campagne', $listecampagne)->with('listeboitier', $listeboitier)->with('listeclient', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
+        $demande = demande::all();
+
+        $demande_popup = NULL;
+        
+        foreach($demande as $demandes)
+        {
+                $demande_popup += 1;
+        }
+
+        return view('/liste')->with('campagne', $listecampagne)->with('listeboitier', $listeboitier)->with('listeclient', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
     }
 
     public function boitierdelete($id)

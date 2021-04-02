@@ -95,7 +95,8 @@
   <div class="album py-5">
     <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 @if (Auth::user()->hasRole('admin')) row-cols-md-3 @elseif(Auth::user()->hasrole('technicien')) row-cols-md-2 @else row-cols-md-1 @endif g-3">
+      <div class="row row-cols-1 row-cols-sm-2 @if (Auth::user()->hasRole('admin')) row-cols-md-3 @elseif(Auth::user()->hasrole('technicien')) row-cols-md-2 @else row-cols-md-2 @endif g-3">
+        
         <div class="col">
           <div class="shadow mb-5">
             <svg class="bd-placeholder-img card-img-top @if(Auth::user()->preference == "theme_dark") bg-dark @else bg-light @endif" width="100%" height="175" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><text x="50%" y="50%" fill="@if(Auth::user()->preference == "theme_dark") #eceeef @else #2E2E2E @endif" dy=".3em">Consultation des mes campagnes</text></svg>
@@ -108,7 +109,21 @@
             </div>
           </div>
         </div>
+
+        <div class="col">
+          <div class="shadow mb-5">
+            <svg class="bd-placeholder-img card-img-top @if(Auth::user()->preference == "theme_dark") bg-dark @else bg-light @endif" width="100%" height="175" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><text x="50%" y="50%" fill="@if(Auth::user()->preference == "theme_dark") #eceeef @else #2E2E2E @endif" dy=".3em">Demande</text></svg>
+            <svg class="bd-placeholder-img card-img-top @if(Auth::user()->preference == "theme_dark") bg-dark @else bg-light @endif" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><text x="50%" y="20%" fill="@if(Auth::user()->preference == "theme_dark") #eceeef @else #2E2E2E @endif" dy=".3em">Faire une demande de</text> <text x="50%" y="50%" fill="@if(Auth::user()->preference == "theme_dark") #eceeef @else #2E2E2E @endif" dy=".3em"> campagne de mesure </text></svg>
+
+            <div class="card-body @if(Auth::user()->preference == "theme_dark") bg-dark @else bg-light @endif">
+            <div class="d-flex justify-content-between align-items-center">
+                  <a class="w-100" href="{{ route('formmessage') }}"><button type="button" class="w-100 btn btn-sm btn-outline-secondary"> Faire une demande </button> </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 

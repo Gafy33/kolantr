@@ -72,36 +72,24 @@
       margin-bottom: 15px;
     }
 
-
-    .alertbatterie {
-      position:fixed;
-      margin: 50px 50px;
-      width: auto;
-      padding: 10px;
-      color: white;
-      margin-bottom: 15px;
-      z-index: 5;
-      color: rgb(236, 39, 72);
-      text-align: center;
-    }
-
       .charging-container {
       max-width: 150px;
-      width: 120px;
-      height: 50px;
-      border: 4px solid rgb(236, 39, 72);
+      width: 85px;
+      height: 35px;
+      border: 3px solid rgb(236, 39, 72);
       border-radius: 5px;
       position: relative;
       cursor: pointer;
+      padding: 10px;
     }
 
     .charging-container::before {
     content: '';
     position: absolute;
-    width: 8px;
+    width: 6px;
     height: 16px;
     background: rgb(236, 39, 72);
-    right: -9px;
+    right: -7px;
     top: 50%;
     margin-top: -8px;
     border-radius: 2px;
@@ -260,20 +248,48 @@
           width: 70%;
         }
       }
+
+      .demande_kolantr
+      {
+        border: 2px solid red; 
+        filter: brightness(200%); 
+        padding: 5px 8px; 
+        border-radius: 20px;
+        animation: color_kolantr 0.5s infinite;
+      }
+
+      @keyframes color_kolantr
+      {
+        0%{
+          border: 3px solid red; 
+        }
+        50%
+        {
+          border: 3px solid green; 
+        }
+        100%{
+          border: 3px solid blue; 
+        }
+      }
   </style>
 
   @yield('style')
 
   </head>
 
-  <body class="@if(Auth::user()->preference == "theme_dark") bg-dark @else bg-light @endif">
+  <body class="@if(Auth::user()->preference == 'theme_dark') bg-dark @else bg-light @endif">
 
   @include('layouts.partials.navbar')
 
   @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien'))
+
+    @if(!empty($demande_popup))
+      @include('demandepopup')
+    @endif
     @if(!empty($alarme_popup))
       @include('alertbatterie')
     @endif
+
   @endif
 
   @yield('content')
@@ -283,22 +299,6 @@
 
   @yield('scriptAlert')
   @yield('script')
-
-  <script>
-    let elBtn = document.getElementById("modal-btn");
-    let elModal = document.getElementById("modal");
-    let close = document.getElementById("btn-close");
-
-    elBtn.onclick = function() {
-        console.log('click: btn: ' + this.id + ', modal: ' + elModal.id);
-        elModal.classList.toggle('show-popup');
-
-        }
-        /* to dispose the popup on click */
-        close.onclick = function() {
-        elModal.classList.toggle('show-popup');
-        }
-  </script>
 
   </body>
 

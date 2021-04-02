@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\campagnemesure;
 use App\Models\boitier;
-
+use App\Models\demande;
 class gestionboitierController extends Controller
 {
 
@@ -20,6 +20,11 @@ class gestionboitierController extends Controller
 	//Affiche la liste des boitiers
      public function listeBoitier()
     {
+
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $listeboitier = boitier::all();
         $alarme = boitier::all();
 
@@ -31,19 +36,35 @@ class gestionboitierController extends Controller
                 $alarme_popup = 1;
             }
         }
-        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
+
+        $demande = demande::all();
+
+        $demande_popup = NULL;
+        
+        foreach($demande as $demandes)
+        {
+                $demande_popup += 1;
+        }
+        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
     }
 
     //Affiche la page d'ajout des boitiers
     public function creationBoitier()
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         return view('/gererboitier/creationBoitier');
     }
 
     //Ajouter des boitiers
     public function ajouterBoitier()
     {
-        
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $boitier = new boitier;
         $boitier->adrSigfox = request('sigfox');
         $boitier->statut = request('statut');
@@ -57,7 +78,10 @@ class gestionboitierController extends Controller
     //Supprimer la liste des boitiers
     public function supprimerBoitier($id)
     {
-        
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $boitier = boitier::find($id);
 
 
@@ -78,6 +102,10 @@ class gestionboitierController extends Controller
     public function modifierBoitier($id)
     {
 
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $boitier = boitier::find($id);
 
         $campagne = campagnemesure::where('id_boitier', $boitier->id)->first();
@@ -90,6 +118,10 @@ class gestionboitierController extends Controller
     //Modifie des boitiers
     public function modifierBoitierConfirm($id)
     {
+
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
 
         $boitier = boitier::find($id);
         $boitier->adrSigfox = request('sigfox');
@@ -106,6 +138,10 @@ class gestionboitierController extends Controller
     public function BoitierAlarmeBatterie($id)
     {
 
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+        
         $boitier = boitier::find($id);
         $boitier->alarmeBatterie = NULL;
 

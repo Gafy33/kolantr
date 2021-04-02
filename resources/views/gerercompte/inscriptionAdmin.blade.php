@@ -104,7 +104,7 @@
 					  // Convert it to base 36 (numbers + letters), and grab the first 9 characters
 					  // after the decimal.
 					  var ladate=new Date()
-					  return 'c' + ladate.getHours() + Math.random().toString(36).substr(2, 9) + ladate.getDate()+(ladate.getMonth()+1)+ ladate.getMinutes();
+					  return 'a/t' + ladate.getHours() + Math.random().toString(36).substr(2, 9) + ladate.getDate()+(ladate.getMonth()+1)+ ladate.getMinutes();
 					   };
 			          document.getElementById("Identifiant").value = ID();
 

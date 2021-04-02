@@ -78,4 +78,12 @@ class AlertController extends Controller
 
         return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne)->with('alert', $alert)->with('messagealert', $messagealert);
     }
+
+    public function demandeOK_path($alert)
+    {
+        $alert = 1;
+        $messagealert = "La demande à été envoyée !";
+        return view('/forms/message_demande')->with('alert', $alert)->with('messagealert', $messagealert);
+
+    }
 }

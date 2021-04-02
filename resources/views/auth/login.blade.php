@@ -32,8 +32,8 @@
             <hr class="featurette-divider">
               <h2 class="featurette-heading fw-normal mb-3 h3"><span class="text-muted">Se connecter</span></h2>
               <label for="inputText" class="visually-hidden">Votre Identifiant</label>
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Identifiant" style="border-radius: 3px">
-                @error('email')
+                <input id="identifiant" type="text" class="form-control @error('identifiant') is-invalid @enderror" name="identifiant" value="{{ old('identifiant') }}" required autocomplete="email" autofocus placeholder="Identifiant" style="border-radius: 3px">
+                @error('identifiant')
                 <span class="invalid-feedback" role="alert">
                      <strong>{{ $message }}</strong>
                 </span>

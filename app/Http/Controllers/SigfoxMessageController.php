@@ -8,6 +8,10 @@ use App\Models\campagnemesure;
 use App\Models\boitier;
 use App\Models\Statistique;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MessageGoogle;
+
 class SigfoxMessageController extends Controller
 {
     /**
@@ -45,6 +49,47 @@ class SigfoxMessageController extends Controller
 
             $info = $sigfoxMessage->data;
 
+            if(strlen($sigfoxMessage->data) == 1)
+            {
+                $boitier = boitier::where('adrSigfox', $sigfoxMessage->device)->first();
+                
+                if($sigfoxMessage->data == 1)
+                {
+                    $info2 = $boitier->adrSigfox;
+                
+                    $boitier->alarmeBatterie = $sigfoxMessage->data;
+                    $boitier->update();
+
+                    $info = "Problèmes Batterie";
+
+                    $users = User::all();
+
+                    foreach($users as $users)
+                    {
+                        if($users->role_id == 1 || $users->role_id == 2)
+                            {
+                            #3. Envoi du mail
+                                Mail::to($users)->bcc("kolantr2021snir@gmail.com")
+                                        ->queue(new MessageGoogle('Une batterie est faible : ' . $info2));
+                            }
+                    }
+
+                    return (array(['info' => $info, 'info2' => $info2]));
+    
+
+                } elseif($sigfoxMessage->data == 0)
+                {
+                    $info2 = $boitier->adrSigfox;
+                
+                    $boitier->alarmeBatterie = NULL;
+                    $boitier->update();
+
+                    $info = "Batterie rempli";
+                    return (array(['info' => $info, 'info2' => $info2]));
+                }
+            } else {
+
+            if( strlen($sigfoxMessage->data) > 10){
             for ($i = 0; $i < strlen($sigfoxMessage->data); $i++) {
                 // convertit chaque chiffre hexa en un quartet binaire
                 $quartet = base_convert($sigfoxMessage->data[$i], 16, 2);
@@ -116,6 +161,47 @@ class SigfoxMessageController extends Controller
 
 
         return (array(['info' => $info, 'info2' => $info2]));
+        } else 
+        {
+            for ($i = 0; $i < strlen($sigfoxMessage->data); $i++) {
+                // convertit chaque chiffre hexa en un quartet binaire
+                $quartet = base_convert($sigfoxMessage->data[$i], 16, 2);
+                $quartet = str_pad($quartet, 4, "0", STR_PAD_LEFT); // format fixe en 4 chiffres binaires
+                $binData .= $quartet; // on concatène au résultat
+            }
+
+            $info2 = $binData;
+
+            // extraction des données binaires
+            $NbEssieu = extraitChampBinaire($binData, 0, 13);
+
+            $NbEssieu = dechex($NbEssieu);
+
+            $boitier = boitier::where('adrSigfox', $sigfoxMessage->device)->first();
+
+            if(empty($boitier))
+            {
+                return response()->json('ERREUR : boitier inexistant', 500);
+            }
+            $campagne = campagnemesure::where('id_boitier', $boitier->id)->first();
+            if(empty($campagne))
+            {
+                return response()->json('ERREUR : campagne inexistante', 500);
+            }
+
+            // création du relevé
+            $stat = Statistique::create([
+                'campagneId' => $campagne->id,
+                'timestamp' => date('Y-m-d H:i:s', $sigfoxMessage->time),
+                'NbEssieux' => $NbEssieu,
+            ]);
+
+
+        $info = "Hugo tu es le plus beau du monde";
+        $info2 = "cc";
+        return (array(['info' => $info, 'info2' => $info2]));
+        }
+        }
     }
 
     /**

@@ -14,10 +14,20 @@ use App\Models\campagnemesure;
 use App\Models\boitier;
 use App\Models\Statistique;
 
+use App\Models\demande;
+
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MessageGoogle;
+
+
 class clientController extends Controller
 {
     public function mescampagnesliste()
     {
+
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
 
         $listecampagne = campagnemesure::all();
 
@@ -26,6 +36,10 @@ class clientController extends Controller
 
     public function campagneconsultation($id)
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $campagne = campagnemesure::find($id);
         $stat = Statistique::all();
 
@@ -56,6 +70,7 @@ class clientController extends Controller
         fclose($f);
 
         $vitmax = 0;
+        
 
         foreach($stat as $data)
         {
@@ -89,11 +104,47 @@ class clientController extends Controller
                     $statVitesseLimitPlus40_VL[] = $data->VitesseLimitPlus40;
                     $statVitesseLimitPlus50_VL[] = $data->VitesseLimitPlus50;
                 }
+
+                $stat_true = 1;
+            }
+            else
+            {
+                $stat_true = 0;
             }
         }
 
+        if($stat_true == 1)
+        {
+            return view('/Client/consultationcampagne')->with('campagne', $campagne)->with('stat_true', $stat_true)->with('vitmax', $vitmax)->with('stat', $stat)->with('statVitMoyen_PL', $statVitMoyen_PL)->with('statHeureStat_PL', $statHeureStat_PL)->with('statVitesseInferieurOuEgale_PL', $statVitesseInferieurOuEgale_PL)->with('statVitesseLimitMoins20_PL', $statVitesseLimitMoins20_PL)->with('statVitesseLimitPlus20_PL', $statVitesseLimitPlus20_PL)->with('statVitesseLimitPlus30_PL', $statVitesseLimitPlus30_PL)->with('statVitesseLimitPlus40_PL', $statVitesseLimitPlus40_PL)->with('statVitesseLimitPlus50_PL', $statVitesseLimitPlus50_PL)->with('statVitMoyen_VL', $statVitMoyen_VL)->with('statHeureStat_VL', $statHeureStat_VL)->with('statVitesseInferieurOuEgale_VL', $statVitesseInferieurOuEgale_VL)->with('statVitesseLimitMoins20_VL', $statVitesseLimitMoins20_VL)->with('statVitesseLimitPlus20_VL', $statVitesseLimitPlus20_VL)->with('statVitesseLimitPlus30_VL', $statVitesseLimitPlus30_VL)->with('statVitesseLimitPlus40_VL', $statVitesseLimitPlus40_VL)->with('statVitesseLimitPlus50_VL', $statVitesseLimitPlus50_VL);
+        } elseif($stat_true == 0)
+        {
+            return view('/Client/consultationcampagne')->with('campagne', $campagne)->with('stat_true', $stat_true);
+        }
+    }
 
-        return view('/Client/consultationcampagne')->with('campagne', $campagne)->with('vitmax', $vitmax)->with('stat', $stat)->with('statVitMoyen_PL', $statVitMoyen_PL)->with('statHeureStat_PL', $statHeureStat_PL)->with('statVitesseInferieurOuEgale_PL', $statVitesseInferieurOuEgale_PL)->with('statVitesseLimitMoins20_PL', $statVitesseLimitMoins20_PL)->with('statVitesseLimitPlus20_PL', $statVitesseLimitPlus20_PL)->with('statVitesseLimitPlus30_PL', $statVitesseLimitPlus30_PL)->with('statVitesseLimitPlus40_PL', $statVitesseLimitPlus40_PL)->with('statVitesseLimitPlus50_PL', $statVitesseLimitPlus50_PL)->with('statVitMoyen_VL', $statVitMoyen_VL)->with('statHeureStat_VL', $statHeureStat_VL)->with('statVitesseInferieurOuEgale_VL', $statVitesseInferieurOuEgale_VL)->with('statVitesseLimitMoins20_VL', $statVitesseLimitMoins20_VL)->with('statVitesseLimitPlus20_VL', $statVitesseLimitPlus20_VL)->with('statVitesseLimitPlus30_VL', $statVitesseLimitPlus30_VL)->with('statVitesseLimitPlus40_VL', $statVitesseLimitPlus40_VL)->with('statVitesseLimitPlus50_VL', $statVitesseLimitPlus50_VL);
+    public function formMessage () {
+		return view("forms.message_demande");
+    }
+    
+    public function sendMessage(Request $request)
+    {
+        Mail::to("kolantr2021snir@gmail.com")->bcc("kolantr2021snir@gmail.com")
+            ->queue(new MessageGoogle($request->all()));
 
+        $demande = new demande;
+        $demande->email = $request['email'];
+        $demande->Nb_demande = 1;
+        $demande->save();
+
+        return redirect()->route('demandeOK_path', ['alert' => 1]);
+    }
+
+    public function valid_demande($id)
+    {
+        $demande = demande::find($id);
+
+        $demande->delete();
+
+        return redirect()->route('accueil');
     }
 }

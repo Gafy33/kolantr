@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\campagnemesure;
 use App\Models\boitier;
+use App\Models\demande;
 use Geocoder\Laravel\ProviderAndDumperAggregator as Geocoder;
 
 class gestioncampagnemesureController extends Controller
@@ -21,6 +22,10 @@ class gestioncampagnemesureController extends Controller
     //Affiche la liste des campagnes
     public function listeCampagneMesure()
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $listecampagne = campagnemesure::all();
         $alarme = boitier::all();
 
@@ -32,13 +37,26 @@ class gestioncampagnemesureController extends Controller
                 $alarme_popup = 1;
             }
         }
-        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
+
+        $demande = demande::all();
+
+        $demande_popup = NULL;
+        
+        foreach($demande as $demandes)
+        {
+                $demande_popup += 1;
+        }
+        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
     }
 
 
  	//Affiche la page d'ajout des campagnes
     public function creationCampagneMesure()
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $listeclient = User::all();
         $listeboitier = boitier::all();
         return view('/gerercampagne/creationCampagneMesure')->with('client', $listeclient)->with('boitier', $listeboitier);
@@ -47,7 +65,10 @@ class gestioncampagnemesureController extends Controller
     //Ajouter des campagnes avec Eloquent
     public function ajouterCampagneMesure()
     {
-        
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $campagne = new campagnemesure;
         $campagne->adresseCampagne = request('adresseCampagne');
         $campagne->statut = request('statut');
@@ -77,7 +98,10 @@ class gestioncampagnemesureController extends Controller
     //Supprimer des campagnes avec Eloquent
     public function supprimerCampagneMesure($id)
     {
-        
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+
         $campagne = campagnemesure::find($id);
 
         $campagne->delete();
@@ -89,6 +113,9 @@ class gestioncampagnemesureController extends Controller
     //Afficher la page modifier des campagnes
     public function modifierCampagneMesure($id)
     {
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
 
         $listeclient = User::all();
         $listeboitier = boitier::all();
@@ -110,6 +137,10 @@ class gestioncampagnemesureController extends Controller
     public function modifierCampagneMesureConfirm($id)
     {
 
+        if (! auth()->check()) {
+            return redirect('/login');
+        }
+        
         $campagne = campagnemesure::find($id);
         $campagne->adresseCampagne = request('adresseCampagne');
         $campagne->statut = request('statut');
