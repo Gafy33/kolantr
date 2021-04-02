@@ -60,3 +60,43 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## DLC
+
+Envoie automatiquement des emails à la création du compte au client<br>
+Envoie automatiquement des emails quand une batterie est faible<br>
+Demande de campagne de mesure via le client<br>
+
+## gestion
+
+Gestion Compte<br>
+Gestion campagne<br>
+Gestion Boitier<br>
+
+Popup alarme batterie<br>
+Popup demande campagne de mesure<br>
+
+## adresse mail
+
+kolantr2021snir@gmail.com
+
+## env email 
+
+MAIL_MAILER=smtp<br>
+MAIL_HOST=smtp.googlemail.com<br>
+MAIL_PORT=465<br>
+MAIL_USERNAME=kolantr2021snir@gmail.com<br>
+MAIL_PASSWORD=bipnxvvaydpbjxfa<br>
+MAIL_ENCRYPTION=ssl<br>
+MAIL_FROM_ADDRESS=null<br>
+MAIL_FROM_NAME="${APP_NAME}"<br>
+
+## env database
+
+DB_CONNECTION=mysql<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE={nom_base}<br>
+DB_USERNAME={nom_user}<br>
+DB_PASSWORD={nom_motdepasse}<br>
