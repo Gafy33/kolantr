@@ -67,7 +67,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 Envoie automatiquement des emails à la création du compte au client<br>
 Envoie automatiquement des emails quand une batterie est faible<br>
 
-## gestion
+## Gestion
 
 Gestion Compte<br>
 Gestion campagne<br>
@@ -75,11 +75,11 @@ Gestion Boitier<br>
 
 Popup alarme batterie<br>
 
-## adresse mail
+## Adresse mail
 
 kolantr2021snir@gmail.com
 
-## env email 
+## Env email 
 
 MAIL_MAILER=smtp<br>
 MAIL_HOST=smtp.googlemail.com<br>
@@ -90,7 +90,7 @@ MAIL_ENCRYPTION=ssl<br>
 MAIL_FROM_ADDRESS=null<br>
 MAIL_FROM_NAME="${APP_NAME}"<br>
 
-## env database
+## Env database
 
 DB_CONNECTION=mysql<br>
 DB_HOST=127.0.0.1<br>
