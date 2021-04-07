@@ -66,7 +66,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Envoie automatiquement des emails à la création du compte au client<br>
 Envoie automatiquement des emails quand une batterie est faible<br>
-Demande de campagne de mesure via le client<br>
 
 ## gestion
 
