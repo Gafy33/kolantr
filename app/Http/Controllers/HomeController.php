@@ -53,7 +53,7 @@ class HomeController extends Controller
         }
 
 
-        return view('/accueil')->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
+        return view('/accueil')->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
 
@@ -107,7 +107,7 @@ class HomeController extends Controller
                 $demande_popup += 1;
         }
 
-        return view('/liste')->with('campagne', $listecampagne)->with('listeboitier', $listeboitier)->with('listeclient', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
+        return view('/liste')->with('campagne', $listecampagne)->with('listeboitier', $listeboitier)->with('listeclient', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
     public function boitierdelete($id)

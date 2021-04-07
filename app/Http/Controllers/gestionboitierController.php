@@ -45,7 +45,7 @@ class gestionboitierController extends Controller
         {
                 $demande_popup += 1;
         }
-        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
+        return view('/gererboitier/ListeBoitier')->with('boitier', $listeboitier)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
     //Affiche la page d'ajout des boitiers

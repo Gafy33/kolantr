@@ -75,7 +75,6 @@ Gestion campagne<br>
 Gestion Boitier<br>
 
 Popup alarme batterie<br>
-Popup demande campagne de mesure<br>
 
 ## adresse mail
 

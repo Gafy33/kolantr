@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatistiqueTable extends Migration
+class CreateStatistiquesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateStatistiqueTable extends Migration
      */
     public function up()
     {
-        Schema::create('_statistique', function (Blueprint $table) {
+        Schema::create('statistiques', function (Blueprint $table) {
             $table->id();
             $table->string('typeV')->nullable();
             $table->integer('VitMax')->nullable();
@@ -38,6 +38,6 @@ class CreateStatistiqueTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_statistique');
+        Schema::dropIfExists('statistiques');
     }
 }

@@ -106,7 +106,6 @@ Route::get('/gererboitier/BoitierAlarmeBatterie/{id}', [App\Http\Controllers\ges
 Route::get('/gerercompte/ListeClient/alert/{alert}', [App\Http\Controllers\AlertController::class, 'listeClientalert'])->name('listeClientalert_path');
 Route::get('/gerercompte/ListeBoitier/alert/{alert}', [App\Http\Controllers\AlertController::class, 'listeboitieralert'])->name('listeboitieralert_path');
 Route::get('/gerercompte/ListeCampagneMesure/alert/{alert}', [App\Http\Controllers\AlertController::class, 'listecampagnemesurealert'])->name('listecampagnemesurealert_path');
-Route::get('/Demande/{alert}', [App\Http\Controllers\AlertController::class, 'demandeOK_path'])->name('demandeOK_path');
 
 
 
@@ -168,8 +167,3 @@ Route::get('/Statistiques', [ App\Http\Controllers\CollecteSigfoxController::cla
 //
 
 Route::get('/accueil', [App\Http\Controllers\HomeController::class, 'index'])->name('accueil');
-
-Route::get("/Demande", [App\Http\Controllers\clientController::class, 'formMessage'])->name('formmessage');
-Route::post("/Demande", [App\Http\Controllers\clientController::class, 'sendMessage'])->name('sendmessage');
-
-Route::get("/Demande/valide/{id}", [App\Http\Controllers\clientController::class, 'valid_demande'])->name('valid_demande');

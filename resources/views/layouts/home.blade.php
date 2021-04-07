@@ -283,9 +283,6 @@
 
   @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien'))
 
-    @if(!empty($demande_popup))
-      @include('demandepopup')
-    @endif
     @if(!empty($alarme_popup))
       @include('alertbatterie')
     @endif

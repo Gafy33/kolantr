@@ -83,7 +83,7 @@ class gestioncompteController extends Controller
                 $demande_popup += 1;
         }
 
-        return view('/gerercompte/ListeClient')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
+        return view('/gerercompte/ListeClient')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
     //Ajouter Client avec Eloquent
@@ -244,7 +244,7 @@ class gestioncompteController extends Controller
         {
                 $demande_popup += 1;
         }
-        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
+        return view('/gerercompte/ListeAdminTechnicien')->with('client', $listeclient)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
 

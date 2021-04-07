@@ -44,15 +44,6 @@
             </div>
 
             <div class="col-12">
-              <label for="username" class="form-label text-muted">Mot de passe</label><br>
-              <label for="lastName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">{{ Auth::user()->password }}</label>
-              <hr  class="my-4  text-muted">
-              <div class="invalid-feedback">
-                  Un mot de passe valide est requis.
-              </div>
-            </div>
-
-            <div class="col-12">
               <label for="email" class="form-label text-muted">Adresse Mail</label><br>
               <label for="lastName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">{{ Auth::user()->email }}</label>
               <hr  class="my-4  text-muted">

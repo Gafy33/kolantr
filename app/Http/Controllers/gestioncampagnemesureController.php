@@ -46,7 +46,7 @@ class gestioncampagnemesureController extends Controller
         {
                 $demande_popup += 1;
         }
-        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('demande_popup', $demande_popup)->with('demande', $demande);
+        return view('/gerercampagne/ListeCampagneMesure')->with('campagne', $listecampagne)->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
     }
 
 

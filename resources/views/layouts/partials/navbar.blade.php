@@ -68,9 +68,6 @@
                 <li class="nav-item active">
                 <a class="nav-link" aria-current="page" href="{{ route('clientmescampagnes_path') }}">Mes campagnes de mesure</a>
                 </li>
-                <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="{{ route('formmessage') }}">Demande</a>
-                </li>
               </ul>
 
           @endif

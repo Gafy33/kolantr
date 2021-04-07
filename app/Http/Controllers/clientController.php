@@ -80,6 +80,8 @@ class clientController extends Controller
             }
         }
 
+        $stat_true = 0;
+
         foreach($stat as $data){
             if($data->campagneId == $campagne->id)
             {
@@ -122,29 +124,5 @@ class clientController extends Controller
         }
     }
 
-    public function formMessage () {
-		return view("forms.message_demande");
-    }
-    
-    public function sendMessage(Request $request)
-    {
-        Mail::to("kolantr2021snir@gmail.com")->bcc("kolantr2021snir@gmail.com")
-            ->queue(new MessageGoogle($request->all()));
 
-        $demande = new demande;
-        $demande->email = $request['email'];
-        $demande->Nb_demande = 1;
-        $demande->save();
-
-        return redirect()->route('demandeOK_path', ['alert' => 1]);
-    }
-
-    public function valid_demande($id)
-    {
-        $demande = demande::find($id);
-
-        $demande->delete();
-
-        return redirect()->route('accueil');
-    }
 }
