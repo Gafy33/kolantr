@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9i_4sX9b1uIV_QXHx9HmXOyJkftoM_LC94wQh0OOncqVh6DT9wsfa_xN_Nt4shAcdKgc&usqp=CAU" />
 
     <!-- Styles -->
     <link href="{{ asset('bootstrap/bootstrap.min.css') }}" rel="stylesheet">

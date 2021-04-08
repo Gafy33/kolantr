@@ -11,7 +11,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
     <title> {{ $title }} </title>
-
+    <link rel="shortcut icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrT538TjduUwc9IMe7dM-REsBgyFnMhw6dmA&usqp=CAU" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 
     
