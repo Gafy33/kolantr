@@ -11,7 +11,7 @@ class PagesController extends Controller
         return \view('pages.login');
     }
 
-    public function home()
+    public function login()
     {
 
     	if (auth()->check()) {
