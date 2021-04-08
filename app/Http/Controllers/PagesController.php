@@ -10,4 +10,14 @@ class PagesController extends Controller
     {
         return \view('pages.login');
     }
-}
+
+    public function home()
+    {
+
+    	if (auth()->check()) {
+            return redirect()->route('accueil');
+        } else {
+        return view('auth.login');
+    	}
+    }
+}	

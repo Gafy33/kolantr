@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('/auth/login');
-})->name('login');
+Route::get ('/', [App\Http\Controllers\PagesController::class, 'login'])->name('login');
 
 
 Route::get('/popup', function () {

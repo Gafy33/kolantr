@@ -249,14 +249,14 @@ class gestioncompteController extends Controller
 
 
     //Ajouter Admin / Technicien avec Eloquent
-    public function ajouterAdminTechnicien()
+    public function ajouterAdminTechnicien(Request $request)
     {
 
         if (! auth()->check()) {
             return redirect('/login');
         }
 
-        $email_existant = User::where('email', request('email'))->first();
+        $email_existant = User::where('email', $request['email'])->first();
 
         if(!empty($email_existant))
         {
@@ -268,12 +268,12 @@ class gestioncompteController extends Controller
         }
 
         $client = new User;
-        $client->email = request('email');
-        $client->role_id = request('role');
-        $client->name = request('name');
-        $client->prenom = request('prenom');
-        $client->password = Hash::make(request('password'));
-        $client->identifiant = request('identifiant');
+        $client->email = $request['email'];
+        $client->role_id = $request['role'];
+        $client->name = $request['name'];
+        $client->prenom = $request['prenom'];
+        $client->password = Hash::make($request['password']);
+        $client->identifiant = $request['identifiant'];
         $client->preference = "theme_dark";
 
         $client->save();
