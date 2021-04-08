@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>
-     Page Non trouvée Error 404
+     KOLANTR : maintenance
      </title>
 
      <style>
