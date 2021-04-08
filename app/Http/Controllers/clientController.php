@@ -117,7 +117,7 @@ class clientController extends Controller
 
         if($stat_true == 1)
         {
-            if($statVitMoyen_PL == NULL){
+            if(empty($statVitMoyen_PL)){
 
                     $statVitMoyen_PL = NULL;
                     $statHeureStat_PL = NULL;
@@ -130,7 +130,7 @@ class clientController extends Controller
 
                 return view('/Client/consultationcampagne')->with('campagne', $campagne)->with('stat_true', $stat_true)->with('vitmax', $vitmax)->with('stat', $stat)->with('statVitMoyen_PL', $statVitMoyen_PL)->with('statHeureStat_PL', $statHeureStat_PL)->with('statVitesseInferieurOuEgale_PL', $statVitesseInferieurOuEgale_PL)->with('statVitesseLimitMoins20_PL', $statVitesseLimitMoins20_PL)->with('statVitesseLimitPlus20_PL', $statVitesseLimitPlus20_PL)->with('statVitesseLimitPlus30_PL', $statVitesseLimitPlus30_PL)->with('statVitesseLimitPlus40_PL', $statVitesseLimitPlus40_PL)->with('statVitesseLimitPlus50_PL', $statVitesseLimitPlus50_PL)->with('statVitMoyen_VL', $statVitMoyen_VL)->with('statHeureStat_VL', $statHeureStat_VL)->with('statVitesseInferieurOuEgale_VL', $statVitesseInferieurOuEgale_VL)->with('statVitesseLimitMoins20_VL', $statVitesseLimitMoins20_VL)->with('statVitesseLimitPlus20_VL', $statVitesseLimitPlus20_VL)->with('statVitesseLimitPlus30_VL', $statVitesseLimitPlus30_VL)->with('statVitesseLimitPlus40_VL', $statVitesseLimitPlus40_VL)->with('statVitesseLimitPlus50_VL', $statVitesseLimitPlus50_VL);
 
-            } elseif($statVitMoyen_VL == NULL)
+            } elseif(empty($statVitMoyen_VL))
             {
 
                     $statVitMoyen_VL = NULL;
