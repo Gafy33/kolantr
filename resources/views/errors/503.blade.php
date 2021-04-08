@@ -36,10 +36,8 @@ body {
 }
 
 .txt{
-
     position: fixed;
     margin-top: -22%;
-    margin-left: -1%;
     font-size: 2em;
     z-index: 9999;
     color: black;
@@ -702,7 +700,7 @@ body {
 </head>
 
 <body>
-		<div class="txt">  Le site est en maintenance  </div>
+		<div class="txt">  Revient plus tard, <br> le site est en maintenance  </div>
 
         <div class="eye"></div>
 
