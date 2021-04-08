@@ -35,23 +35,15 @@ body {
 	animation: eyeAnimation 4s cubic-bezier(1, 0, 1, 1) infinite;
 }
 
-    .txt{
+.txt{
     position: fixed;
-    margin-top: -25%;
+    margin-top: -22%;
     margin-left: -1%;
     font-size: 2em;
-    z-index: 999;
+    z-index: 9999;
     color: black;
-    }
+}
 
-    .txt2{
-    position: fixed;
-    margin-top: -23%;
-    margin-left: -1%;
-    font-size: 2em;
-    z-index: 999;
-    color: black;
-    }
 @keyframes eyeAnimation {
 	0%, 33%, 100% {
 		box-shadow: inset -8px -13px 20px -10px rgba(230, 230, 236, 0.04), 64px 55px 40px -40px #38406A, 20px 18px 30px -10px #38406A, inset -70px -50px 60px -30px #4b6398, inset -90px -90px 70px -90px #697398, inset -70px -50px 100px -40px #697398, inset 80px 50px 80px -50px #eeeef3, -25px -15px 50px -10px #F6F6FB, 14px -1px 50px -10px #7e7ea9, 1px 9px 50px -10px #7e7ea9, inset -90px 40px 60px -20px rgba(116, 66, 255, 0.1), inset -90px -120px 60px -20px rgba(116, 66, 255, 0.1);
@@ -710,7 +702,8 @@ body {
 
 <body>
 
-        <div class="txt"> <p> Erreur 404 </p> </div>
+        <div class="txt"> Erreur 404 : Page Non trouvée </div>
+
         <div class="eye"></div>
 
         <div class="circle-1"></div>
