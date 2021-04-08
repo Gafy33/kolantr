@@ -38,7 +38,7 @@ body {
 .txt{
     position: fixed;
     margin-top: -22%;
-    margin-left: -5%;
+    margin-left: -15%;
     font-size: 2em;
     z-index: 9999;
     color: black;
