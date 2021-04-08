@@ -13,7 +13,7 @@ class CreateSigfoxmessageTable extends Migration
      */
     public function up()
     {
-        Schema::create('sigfoxmessage', function (Blueprint $table) {
+        Schema::create('sigfoxmessages', function (Blueprint $table) {
             $table->id();
             $table->string('device');
             $table->string('data');
@@ -29,6 +29,6 @@ class CreateSigfoxmessageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sigfoxmessage');
+        Schema::dropIfExists('sigfoxmessages');
     }
 }
