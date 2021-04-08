@@ -701,7 +701,7 @@ body {
 </head>
 
 <body>
-		<div class="txt">  Revient plus tard, <br> le site est en maintenance  </div>
+		<div class="txt">  Revient plus tard, le site est en maintenance  </div>
 
         <div class="eye"></div>
 
