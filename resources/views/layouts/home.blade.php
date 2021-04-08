@@ -249,28 +249,6 @@
         }
       }
 
-      .demande_kolantr
-      {
-        border: 2px solid red; 
-        filter: brightness(200%); 
-        padding: 5px 8px; 
-        border-radius: 20px;
-        animation: color_kolantr 0.5s infinite;
-      }
-
-      @keyframes color_kolantr
-      {
-        0%{
-          border: 3px solid red; 
-        }
-        50%
-        {
-          border: 3px solid green; 
-        }
-        100%{
-          border: 3px solid blue; 
-        }
-      }
   </style>
 
   @yield('style')

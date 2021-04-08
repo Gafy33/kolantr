@@ -43,11 +43,11 @@ class SigfoxMessageController extends Controller
             'time'   => $request->input('time'),
         ]);
 
-        // décode la payload
-            // conversion de la payload en binaire codé ASCII
             $binData = "";
 
             $info = $sigfoxMessage->data;
+
+            // A modifier avec hugo pour savoir la longueur de la trame pour le boitier
 
             if(strlen($sigfoxMessage->data) == 1)
             {
@@ -62,17 +62,18 @@ class SigfoxMessageController extends Controller
 
                     $info = "Problèmes Batterie";
 
-                    $users = User::all();
+                    // laisser place Armand envoie mail quand batterie est faible
+	                    $users = User::all();
 
-                    foreach($users as $users)
-                    {
-                        if($users->role_id == 1 || $users->role_id == 2)
-                            {
-                            #3. Envoi du mail
-                                Mail::to($users)->bcc("kolantr2021snir@gmail.com")
-                                        ->queue(new MessageGoogle('Une batterie est faible : ' . $info2));
-                            }
-                    }
+	                    foreach($users as $users)
+	                    {
+	                        if($users->role_id == 1 || $users->role_id == 2)
+	                            {
+	                                Mail::to($users)->bcc("kolantr2021snir@gmail.com")
+	                                        ->queue(new MessageGoogle('Une batterie est faible : ' . $info2));
+	                            }
+	                    }
+                    //
 
                     return (array(['info' => $info, 'info2' => $info2]));
     
@@ -163,6 +164,9 @@ class SigfoxMessageController extends Controller
         return (array(['info' => $info, 'info2' => $info2]));
         } else 
         {
+
+        	// A modifier avec hugo pour savoir la longueur de la trame
+
             for ($i = 0; $i < strlen($sigfoxMessage->data); $i++) {
                 // convertit chaque chiffre hexa en un quartet binaire
                 $quartet = base_convert($sigfoxMessage->data[$i], 16, 2);
@@ -170,7 +174,7 @@ class SigfoxMessageController extends Controller
                 $binData .= $quartet; // on concatène au résultat
             }
 
-            $info2 = $binData;
+            $info = $binData;
 
             // extraction des données binaires
             $NbEssieu = extraitChampBinaire($binData, 0, 13);
@@ -196,10 +200,7 @@ class SigfoxMessageController extends Controller
                 'NbEssieux' => $NbEssieu,
             ]);
 
-
-        $info = "Hugo tu es le plus beau du monde";
-        $info2 = "cc";
-        return (array(['info' => $info, 'info2' => $info2]));
+        return (array(['info' => $info]));
         }
         }
     }

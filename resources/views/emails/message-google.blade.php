@@ -13,7 +13,7 @@
 
 	<h3>Suite à votre demande de campagne de mesure sur Kolantr, nous avons créer votre compte </h3>
     <br>
-    <h6> Vous pouvez vous connecter sur le site <a href="#"> kolantr </a> avec ces identifiants : 
+    <h6> Vous pouvez vous connecter sur le site <a href="http://kolantr.sn-kastler.fr:8000"> kolantr </a> avec ces identifiants : 
     <hr>
     <h6> identifiant : {{ $data['identifiant']}} </h6>
     <h6> Mot de passe : {{ $data['password']}}</h6>
