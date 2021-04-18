@@ -101,7 +101,7 @@
                       </form></li>
                     @if(Auth::user()->hasRole('admin'))
                       <hr>
-                      <li> <a class="dropdown-itemArmand" href="{{ asset('application_simulation_kolantr/application_simulation_kolantr.rar')}}" download> <i class="fas fa-file-download"></i> Télécharger l'application  <br> simulation Kolantr</a></li>
+                      <li> <a class="dropdown-itemArmand" href="{{ asset('application_simulation_kolantr/Application_simulation_kolantr.rar')}}" download> <i class="fas fa-file-download"></i> Télécharger l'application  <br> simulation Kolantr</a></li>
                     @endif
                     </ul>
                   </a>
