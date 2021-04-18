@@ -99,6 +99,10 @@
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                       </form></li>
+                    @if(Auth::user()->hasRole('admin'))
+                      <hr>
+                      <li> <a class="dropdown-itemArmand" href="{{ asset('application_simulation_kolantr/application_simulation_kolantr.rar')}}"> <i class="fas fa-file-download"></i> Télécharger l'application  <br> simulation Kolantr</a></li>
+                    @endif
                     </ul>
                   </a>
                   </li>
