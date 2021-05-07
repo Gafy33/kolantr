@@ -240,6 +240,16 @@
         overflow: auto;
       }
 
+      .navbar-toggler-armand {
+        padding:.25rem .75rem;
+        font-size:1.25rem;
+        line-height:1;
+        background-color:transparent;
+        border:1px solid gray;
+        border-radius:.25rem;
+        transition:box-shadow .15s ease-in-out
+      }
+
       @media screen and (max-width: 700px){
         .box{
           width: 70%;

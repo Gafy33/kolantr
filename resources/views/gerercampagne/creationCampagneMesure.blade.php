@@ -26,7 +26,7 @@
               <label for="firstName" class="form-label text-muted">Adresse de la campagne</label>
               <input type="text" class="form-control" id="prenom" name="adresseCampagne" placeholder="Lycée Alfred Klaster" value="" required>
               <div class="invalid-feedback">
-                Un prénom nom valide est requis.
+                Une adresse valide est requis.
               </div>
             </div>
 
@@ -34,7 +34,7 @@
               <label for="email" class="form-label text-muted">Direction ( information ) </label>
               <input type="text" class="form-control" id="email" name="Direction" placeholder="Vers le Nord" required>
               <div class="invalid-feedback">
-                Veuillez saisir une adresse e-mail valide.
+                Veuillez saisir une direction valide.
               </div>
             </div>
 
@@ -42,7 +42,7 @@
               <label for="country" class="form-label text-muted">N° de la route</label>
               <input type="text" class="form-control" id="region" name="numeroRoute"  placeholder="Ex: D15" required>
               <div class="invalid-feedback">
-                Veuillez saisir une région valide.
+                Veuillez saisir un N° de route valide.
               </div>
             </div>
 
@@ -71,7 +71,7 @@
               <label for="email" class="form-label text-muted">Date Début</label>
               <input type="date" class="form-control" id="telephone" name="DebutCampagne" placeholder="" required>
               <div class="invalid-feedback">
-                Veuillez saisir un numéro de téléphone valide.
+                Veuillez saisir une date valide.
               </div>
             </div>
             <br>
@@ -86,10 +86,10 @@
 
             <div class="my-3">
                 <div class="form-check">
-                <input  name="statut" type="radio" class="form-check-input"  value="en cours" required> <span class="tx-white"> En cours </span>
+                <input  name="statut" type="radio" class="form-check-input"  value="en cours" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> En cours </span>
                 </div>
                 <div class="form-check">
-                <input  name="statut" type="radio" class="form-check-input"  value="fini" required> <span class="tx-white"> Fini </span>
+                <input  name="statut" type="radio" class="form-check-input"  value="fini" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Fini </span>
                 </div>
             </div>
 
@@ -100,25 +100,25 @@
 
           <div class="my-3">
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="30" required> <span class="tx-white"> 30 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="30" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 30 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="50" required> <span class="tx-white"> 50 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="50" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 50 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="70" required> <span class="tx-white"> 70 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="70" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 70 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="80" required> <span class="tx-white"> 80 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="80" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 80 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="90" required> <span class="tx-white"> 90 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="90" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 90 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="110" required> <span class="tx-white"> 110 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="110" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 110 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="130" required> <span class="tx-white"> 130 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="130" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 130 </span>
             </div>
           </div>
 

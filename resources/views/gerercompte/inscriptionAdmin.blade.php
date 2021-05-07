@@ -71,10 +71,10 @@
 
           <div class="my-3">
             <div class="form-check">
-              <input name="role" type="radio" class="form-check-input" value="1" required checked> <span class="@if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> Admin </span>
+              <input name="role" type="radio" class="form-check-input" value="1" required checked> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Admin </span>
             </div>
             <div class="form-check">
-              <input name="role" type="radio" class="form-check-input" value="3" required> <span class="@if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> Technicien </span>
+              <input name="role" type="radio" class="form-check-input" value="3" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Technicien </span>
             </div>
           </div>
 

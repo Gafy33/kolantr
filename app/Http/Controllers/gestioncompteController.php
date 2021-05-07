@@ -340,6 +340,7 @@ class gestioncompteController extends Controller
         $client->email = request('email');
         $client->name = request('name');
         $client->prenom = request('prenom');
+        $client->role_id = request('role');
 
         $client->update();
 

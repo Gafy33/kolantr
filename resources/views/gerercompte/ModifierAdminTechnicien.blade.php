@@ -44,6 +44,18 @@
             </div>
 
           <hr class="my-4 text-muted">
+          
+          <label for="state" class="form-label text-muted">Role</label>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input name="role" type="radio" class="form-check-input" value="1" required @if($client->role_id == 1) checked @endif> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Admin </span>
+            </div>
+            <div class="form-check">
+              <input name="role" type="radio" class="form-check-input" value="3" required @if($client->role_id == 3) checked @endif> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Technicien </span>
+            </div>
+          </div>
+          <hr class="my-4  text-muted">
 
           <button class="w-100 btn btn-primary btn-lg" type="submit">Modifier le compte</button>
         </form>

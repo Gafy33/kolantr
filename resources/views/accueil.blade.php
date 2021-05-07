@@ -3,6 +3,8 @@
 @section('style')
 
     <link href="{{ asset('/bootstrap/carousel.css')}}" rel="stylesheet">
+    <link href="{{ asset('/bootstrap/morpion.css')}}" rel="stylesheet">
+    <script src="{{ asset('/js/konami.js')}}"></script>
 
 @stop
 
@@ -76,7 +78,41 @@
     </div>
   </div>
 
+  <div id="video_easter_egg" style="display:none;">
+  <footer class="my-5 pt-5 text-muted text-center text-small" >
+        <video controls width="1000">
+
+        <source src="{{ asset('/video/Kolantrélemechanprojé.mp4')}}" type="video/mp4">
+
+        Sorry, your browser doesn't support embedded videos.
+        </video>
+  </footer>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small" id="morpion_div" style="display: none">
+  @include('pages.morpion')
+  </footer>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small" id="puissance_div" style="display: none">
+  @include('pages.puissance4')
+  </footer>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small" id="snake_div" style="display: none">
+  @include('pages.snake')
+  </footer>
+
+
+
 </main>
+
+
+<script>
+    var easter_egg = new Konami(function() {
+    var div5 = document.getElementById("morpion_div"); 
+    div5.style.display = "block";
+    });
+</script>
+
 @stop
 
 @else
@@ -86,8 +122,8 @@
   <section class="py-5 text-center container">
   <div class="row py-lg-5">
   <div class="col-lg-6 col-md-8 mx-auto">
-  <h1 class="featurette-heading">Bienvenue <span  class="@if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif" >{{ Auth::user()->name }} {{ Auth::user()->prenom }}</span></h1>
-  <p class="lead text-muted">Vous êtes un {{ Auth::user()->role->name }} du site </p>
+  <h1 class="featurette-heading">Bonjour <span  class="@if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif" >{{ Auth::user()->name }} {{ Auth::user()->prenom }}</span></h1>
+  <p class="lead text-muted">Bienvenue sur kolantr, le site à tout faire</p>
   </div>
   </div>
   </section>
@@ -111,6 +147,7 @@
         </div>
 
       </div>
+
 
     </div>
   </div>

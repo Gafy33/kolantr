@@ -24,7 +24,7 @@
       </div>
 	</div>
     
-    <hr class="featurette-divider @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 
+    <hr class="featurette-divider @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif">
     <!-- START THE FEATURETTES -->
 
     <div class="row featurette shadow p-3 mb-5">

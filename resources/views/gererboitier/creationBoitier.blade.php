@@ -23,7 +23,7 @@
               <label for="firstName" class="form-label text-muted">Adresse @sigfox</label>
               <input type="text" class="form-control" id="sigfox" name="sigfox" placeholder="e641221" value="" required>
               <div class="invalid-feedback">
-                Un prénom nom valide est requis.
+                Une adresse sigfox valide est requis.
               </div>
             </div>
             
@@ -33,10 +33,7 @@
 
             <div class="my-3">
                 <div class="form-check">
-                <input  name="statut" type="radio" class="form-check-input"  value="utilisé" required> <span class="tx-white"> utilisé </span>
-                </div>
-                <div class="form-check">
-                <input  name="statut" type="radio" class="form-check-input"  value="non utilisé" required> <span class="tx-white"> non utilisé </span>
+                <input  name="statut" type="radio" class="form-check-input"  value="non utilisé" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> non utilisé </span>
                 </div>
             </div>
 
