@@ -22,7 +22,7 @@ class gestionboitierController extends Controller
     {
 
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $listeboitier = boitier::all();
@@ -52,7 +52,7 @@ class gestionboitierController extends Controller
     public function creationBoitier()
     {
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         return view('/gererboitier/creationBoitier');
@@ -62,12 +62,13 @@ class gestionboitierController extends Controller
     public function ajouterBoitier()
     {
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $boitier = new boitier;
         $boitier->adrSigfox = request('sigfox');
         $boitier->statut = request('statut');
+        $boitier->alarmeBatterie = NULL;
 
         $boitier->save();
 
@@ -79,7 +80,7 @@ class gestionboitierController extends Controller
     public function supprimerBoitier($id)
     {
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $boitier = boitier::find($id);
@@ -103,7 +104,7 @@ class gestionboitierController extends Controller
     {
 
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $boitier = boitier::find($id);
@@ -120,7 +121,7 @@ class gestionboitierController extends Controller
     {
 
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $boitier = boitier::find($id);
@@ -139,7 +140,7 @@ class gestionboitierController extends Controller
     {
 
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
         
         $boitier = boitier::find($id);

@@ -91,7 +91,7 @@
         <div class="container" style="border-bottom: 1px solid @if($campagne->statut == "fini") red @else green @endif">
 
         <div class="col-md-4">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $campagne->adresseCampagne !!} <a href="{{ route('modifierCampagneMesure_path', ['id' => $campagne->id ])}}"><i class="far fa-edit"></i></a> <a onclick="return confirmdelete();" href="{{ route('listedeletecampagne', ['id' => $campagne->id ])}}"> <i class="fas fa-trash"></i></a> </label>
+              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $campagne->adresseCampagne !!} <a href="{{ route('modifierCampagneMesure_path', ['id' => $campagne->id ])}}" style="color: #FCED00"><i class="far fa-edit"></i></a> <a onclick="return confirmdelete();" href="{{ route('listedeletecampagne', ['id' => $campagne->id ])}}" style="color: #FC0000"> <i class="fas fa-trash"></i></a> </label>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,8 +107,8 @@
                         {{ $listeboitiers->adrSigfox }}
                 @endif
               @endforeach
-              <a href="{{ route('modifierBoitier_path', ['id' => $campagne->id_boitier])}}"><i class="far fa-edit"></i></a>
-              <a onclick="return confirmdelete();" href="{{ route('listedeleteboitier', ['id' => $campagne->id_boitier ])}}"><i class="fas fa-trash"></i></a>
+              <a href="{{ route('modifierBoitier_path', ['id' => $campagne->id_boitier])}}" style="color: #FCED00"><i class="far fa-edit"></i></a>
+              <a onclick="return confirmdelete();" href="{{ route('listedeleteboitier', ['id' => $campagne->id_boitier ])}}" style="color: #FC0000"><i class="fas fa-trash"></i></a>
               </label>
               @else
               <div class="dropdown">  

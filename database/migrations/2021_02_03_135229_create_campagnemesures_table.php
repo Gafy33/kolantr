@@ -22,8 +22,6 @@ class CreateCampagnemesuresTable extends Migration
             $table->string('DébutCampagne')->nullable();
             $table->string('FinCampagne')->nullable();
             $table->string('adresseCampagne')->nullable();
-            $table->string('latitudeCampagne')->nullable();
-            $table->string('longitudeCampagne')->nullable();
             $table->string('statut')->nullable();
             $table->string('codePostal')->nullable();
             $table->string('ville')->nullable();

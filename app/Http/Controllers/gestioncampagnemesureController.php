@@ -23,7 +23,7 @@ class gestioncampagnemesureController extends Controller
     public function listeCampagneMesure()
     {
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $listecampagne = campagnemesure::all();
@@ -54,7 +54,7 @@ class gestioncampagnemesureController extends Controller
     public function creationCampagneMesure()
     {
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $listeclient = User::all();
@@ -66,7 +66,7 @@ class gestioncampagnemesureController extends Controller
     public function ajouterCampagneMesure()
     {
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $campagne = new campagnemesure;
@@ -99,7 +99,7 @@ class gestioncampagnemesureController extends Controller
     public function supprimerCampagneMesure($id)
     {
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $campagne = campagnemesure::find($id);
@@ -114,7 +114,7 @@ class gestioncampagnemesureController extends Controller
     public function modifierCampagneMesure($id)
     {
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
         $listeclient = User::all();
@@ -138,7 +138,7 @@ class gestioncampagnemesureController extends Controller
     {
 
         if (! auth()->check()) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
         
         $campagne = campagnemesure::find($id);
