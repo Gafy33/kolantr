@@ -74,10 +74,10 @@ class HomeController extends Controller
             foreach($campagne as $campagnes)
             {
                 $nb_campagne = $nb_campagne + 1;
-                if ($boitiers->statut == "en cous") {
-                    $camp_cours = $camp_cours + 1;
-                }else{
+                if ($campagnes->statut == "fini") {
                     $camp_fini = $camp_fini + 1;
+                }else{
+                    $camp_cours = $camp_cours + 1;
                 }
             }
 
@@ -101,18 +101,21 @@ class HomeController extends Controller
 
             $id = Auth::user()->id;
 
-            $campagne = campagnemesure::where('id_user', $id)->first();
+            $campagne = campagnemesure::all();
 
             $nb_campagne = 0;
             $nb_camp_cours = 0;
             $nb_camp_fini = 0;
 
             foreach($campagne as $campagnes){
-                $nb_campagne = $nb_campagne + 1;
-                if($campagnes->statut == "en cours"){
-                    $nb_camp_cours = $nb_camp_cours + 1;
-                } else {
-                    $nb_camp_fini = $nb_camp_fini + 1;
+                if($campagnes->id_user == $id)
+                {
+                    $nb_campagne = $nb_campagne + 1;
+                    if($campagnes->statut == "fini"){
+                        $nb_camp_fini = $nb_camp_fini + 1;
+                    } else {
+                        $nb_camp_cours = $nb_camp_cours + 1;
+                    }
                 }
             }
             return view('/accueil')->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('nb_campagne', $nb_campagne)->with('nb_camp_cours', $nb_camp_cours)->with('nb_camp_fini', $nb_camp_fini);

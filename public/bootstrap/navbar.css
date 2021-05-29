@@ -487,14 +487,6 @@ hr
     margin-bottom: 0;
 }
 
-.copyright
-{
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-
 /*Responsive*/
 @media(max-width: 991px)
 {
@@ -541,6 +533,7 @@ hr
         background-repeat: no-repeat;
         background-size: 30px;
         cursor: pointer;
+        filter: invert(1);
     }
     .toggle.active
     {
@@ -549,6 +542,7 @@ hr
         background-repeat: no-repeat;
         background-size: 25px;
         cursor: pointer;
+        filter: invert(1);
     }
     header.sticky .toggle
     {
