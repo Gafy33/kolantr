@@ -118,7 +118,7 @@ class HomeController extends Controller
                     }
                 }
             }
-            return view('/accueil')->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('nb_campagne', $nb_campagne)->with('nb_camp_cours', $nb_camp_cours)->with('nb_camp_fini', $nb_camp_fini);
+            return view('/accueil')->with('nb_campagne', $nb_campagne)->with('nb_camp_cours', $nb_camp_cours)->with('nb_camp_fini', $nb_camp_fini);
         }
     }
 
