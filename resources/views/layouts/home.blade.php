@@ -14,6 +14,11 @@
 
     <!-- Bootstrap core CSS -->
   <link href="{{ asset('/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
+  @if($title == "accueil")
+  <link href="{{ asset('/bootstrap/navbar_accueil.css')}}" rel="stylesheet">
+  @else
+  <link href="{{ asset('/bootstrap/navbar.css')}}" rel="stylesheet">
+  @endif
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 

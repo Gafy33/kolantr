@@ -31,7 +31,7 @@
                     <h3> Gérer les comptes clients </h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="{{ route('listeClient_path') }}"> Accéder </a></button>
+                        <button type="button" class="btn" name=""> <a href="{{ route('listeClient_path') }}" class="lien"> Accéder </a></button>
                     </div>
                 </div>
                 <div class="w50 center_content">
@@ -50,7 +50,7 @@
                     <h3> Gérer les comptes clients Administrateur et technicien</h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="">Accéder </button>
+                        <button type="button" class="btn" name=""> <a href="{{ route('listeAdminTechnicien_path')}}" class="lien">Accéder </button>
                     </div>
                 </div>
                 <div class="w50 center_content" >
@@ -74,7 +74,7 @@
                     <h3> Gérer les campagnes de mesure </h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="{{ route('listeCampagneMesure_path') }}">Accéder </button>
+                        <button type="button" class="btn" name=""> <a href="{{ route('listeCampagneMesure_path') }}" class="lien">Accéder</a> </button>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                     <h3> Gérer les boitiers </h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="{{ route('listeBoitier_path') }}">Accéder </button>
+                        <button type="button" class="btn" name=""> <a href="{{ route('listeBoitier_path') }}" class="lien">Accéder</a> </button>
                     </div>
                 </div>
             </div>
@@ -186,7 +186,7 @@
 
                     <div class="downloadBx">
                         <p> Version : <span> 0.0.1 </span> </p>
-                        <button type="button" class="btn" name=""> <a href="{{ asset('application_simulation_kolantr/Application_simulation_kolantr.rar')}}" download>Télécharger </button>
+                        <button type="button" class="btn" name=""> <a href="{{ asset('application_simulation_kolantr/Application_simulation_kolantr.rar')}}" download class="lien"> Télécharger </a></button>
                     </div>
 
                     <div class="container">
@@ -226,7 +226,7 @@
                     <h3> Visualiser mes campagnes de mesure </h3>
                     <p> Regarder, étudier, télécharger </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="{{ route('clientmescampagnes_path') }}">Accéder </button>
+                        <button type="button" class="btn" name=""> <a href="{{ route('clientmescampagnes_path') }}" class="lien">Accéder </a></button>
                     </div>
                 </div>
                 <div class="w50 center_content" >

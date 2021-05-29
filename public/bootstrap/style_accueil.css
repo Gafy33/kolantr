@@ -83,6 +83,12 @@ section
     transition: 1s;
 }
 
+.lien
+{
+    color: #fff;
+    text-decoration: none;
+}
+
 .btn:hover
 {
     background: #1546f3;
