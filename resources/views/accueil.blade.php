@@ -18,7 +18,7 @@
                 <!--<h3>Développeur Web Front end.</h3>-->
                 <a href="#client" class="btn"> C'est parti </a>
             </div>
-        </section>
+</section>
 
 
         @if(Auth::user()->hasRole('admin'))

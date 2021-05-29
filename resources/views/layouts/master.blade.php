@@ -58,7 +58,7 @@
     
     <!-- Custom styles for this template -->
     <link href="{{ asset('/bootstrap/signin.css')}}" rel="stylesheet">
-    <link href="{{ asset('/bootstrap/style_accueil.css')}}" rel="stylesheet">
+    <link href="{{ asset('/bootstrap/navbar.css')}}" rel="stylesheet">
   </head>
   <body class="text-center bg-light">
 
