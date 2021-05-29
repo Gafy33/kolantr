@@ -10,6 +10,9 @@ use App\Models\boitier;
 
 use App\Models\demande;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
