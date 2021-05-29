@@ -47,7 +47,7 @@
 
         <section class="about background_gray">
             <div class="heading" >
-                <h2> Client </h2>
+                <h2> Administrateur et technicien </h2>
             </div>
             <div class="content">
                 <div class="w50 center_content" >

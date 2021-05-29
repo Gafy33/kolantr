@@ -1,4 +1,4 @@
-header{
+.header{
     position: fixed;
     top: 0;
     left: 0;
@@ -11,25 +11,25 @@ header{
     transition: 0.5s;
 }
 
-header.sticky
+.header.sticky
 {
     background: #fff;
     padding: 20px 100px;
     box-shadow: 0 5px 20px rgb(0,0,0,0.1);
 }
 
-header.sticky .logo
+.header.sticky .logo
 {
     color: #111;
 }
 
-header.sticky ul li a
+.header.sticky ul li a
 {
     color: #111;
 }
 
 
-header .logo
+.header .logo
 {
     color: #111;
     font-size: 24px;
@@ -39,24 +39,24 @@ header .logo
     letter-spacing: 2px;
 }
 
-header ul
+.header ul
 {   
     position: relative;
     display: flex;
 }
 
-header ul li
+.header ul li
 {
     position: relative;
     list-style: none;
 }
 
-header ul li:hover
+.header ul li:hover
 {
     font-weight: 700;
 }
 
-header ul li a
+.header ul li a
 {
     position: relative;
     display: inline-block;
@@ -65,12 +65,12 @@ header ul li a
     text-decoration: none;
 }
 
-header .logout:hover
+.header .logout:hover
 {
     color: red;
 }
 
-header .login:hover
+.header .login:hover
 {
     color: green;
 }

@@ -1,4 +1,4 @@
-  <header>
+<header class="header">
             <a href="{{ route('accueil') }}" class="logo">KOLANTR</a>
             <div class="toggle" onclick="toggleMenu();"></div>
             <ul class="menu">
@@ -31,4 +31,4 @@
                       </form> </li>
               @endauth
             </ul>
-  </header>
+</header>
