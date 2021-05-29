@@ -439,8 +439,8 @@ hr
 /*Responsive*/
 @media(max-width: 991px)
 {
-    header,
-    header.sticky
+    .header,
+    .header.sticky
     {
         padding: 20px 50px;
         z-index: 1000;
@@ -467,7 +467,7 @@ hr
         left: 0;
     }
 
-    header ul li a
+    .header ul li a
     {
         color: #111;
         font-size: 24px;
@@ -491,7 +491,7 @@ hr
         background-size: 25px;
         cursor: pointer;
     }
-    header.sticky .toggle
+    .header.sticky .toggle
     {
         filter: invert(1);
     }
@@ -565,8 +565,8 @@ hr
 
 @media(max-width: 600px)
 {
-    header,
-    header.sticky
+    .header,
+    .header.sticky
     {
         padding: 20px 20px;
     }
