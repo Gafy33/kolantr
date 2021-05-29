@@ -49,10 +49,10 @@
 
           <div class="my-3">
             <div class="form-check">
-              <input name="role" type="radio" class="form-check-input" value="1" required @if($client->role_id == 1) checked @endif> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Admin </span>
+              <input name="role" type="radio" class="form-check-input" value="1" required @if($client->role_id == 1) checked @endif> <span class="tx-black"> Admin </span>
             </div>
             <div class="form-check">
-              <input name="role" type="radio" class="form-check-input" value="3" required @if($client->role_id == 3) checked @endif> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Technicien </span>
+              <input name="role" type="radio" class="form-check-input" value="3" required @if($client->role_id == 3) checked @endif> <span class="tx-black"> Technicien </span>
             </div>
           </div>
           <hr class="my-4  text-muted">

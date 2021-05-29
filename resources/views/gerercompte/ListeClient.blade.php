@@ -34,7 +34,7 @@
                 </svg></a>
             </div>
             <div class="col-md-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-search @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-search tx-black" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                 </svg>
             </div>
@@ -79,7 +79,7 @@
         </div>
         </div>
         </div>
-        <hr class="my-4 @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">
+        <hr class="my-4 tx-black">
 
 
         @foreach ($client as $client)
@@ -88,11 +88,11 @@
         <div class="container">
 
         <div class="col-md-2">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">{!! $client->prenom !!}</label>
+              <label for="firstName" class="form-label tx-black">{!! $client->prenom !!}</label>
         </div>
 
         <div class="col-md-2">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">{!! $client->name !!}</label>
+              <label for="firstName" class="form-label tx-black">{!! $client->name !!}</label>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample{!! $client->id !!}" aria-controls="navbarsExample{!! $client->id !!}" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,10 +101,10 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample{!! $client->id !!}">
         <div class="col-md-6">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">{!! $client->email !!}</label>
+              <label for="firstName" class="form-label tx-black">{!! $client->email !!}</label>
         </div>
         <div class="col-md-4">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">{!! $client->identifiant !!}</label>
+              <label for="firstName" class="form-label tx-black">{!! $client->identifiant !!}</label>
               <!--<label for="firstName" class="form-label text-muted">{!! $client->role->name !!}</label>-->
         </div>
         <div class="col-md-1">

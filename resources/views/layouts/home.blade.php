@@ -14,10 +14,8 @@
 
     <!-- Bootstrap core CSS -->
   <link href="{{ asset('/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
-  <script
-		src="https://kit.fontawesome.com/64d58efce2.js"
-		crossorigin="anonymous"
-		></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
   <style>
       .bd-placeholder-img {
@@ -265,7 +263,7 @@
 
   </head>
 
-  <body class="@if(Auth::user()->preference == 'theme_dark') bg-dark @else bg-light @endif">
+  <body class="bg-light">
 
   @include('layouts.partials.navbar')
 
@@ -284,6 +282,20 @@
 
   @yield('scriptAlert')
   @yield('script')
+
+  <script>
+            window.addEventListener('scroll', function(){
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var menu = document.querySelector('.menu');
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+  </script>
 
   </body>
 

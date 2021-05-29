@@ -33,7 +33,7 @@
 
             <div class="my-3">
                 <div class="form-check">
-                <input  name="statut" type="radio" class="form-check-input"  value="non utilisé" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> non utilisé </span>
+                <input  name="statut" type="radio" class="form-check-input"  value="non utilisé" required> <span class="tx-black"> non utilisé </span>
                 </div>
             </div>
 

@@ -1,6 +1,6 @@
 <div class="row featurette shadow p-3 mb-5">
       <div class="col-md-13">
-        <h2 class="featurette-heading @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Graphique camion</h2>
+        <h2 class="featurette-heading tx-black"> Graphique camion</h2>
         <hr>
         <div class="row">
           <div class="col-lg-4" style="width: 33%;">

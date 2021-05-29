@@ -49,7 +49,7 @@
         </div>
         </div>
         </div>
-        <hr class="my-4 @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">
+        <hr class="my-4 tx-black">
 
         <!-- foreach ici -->
         @foreach($listecampagne as $listecampagne)
@@ -58,11 +58,11 @@
         <div class="container">
 
         <div class="col-md-4">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $listecampagne->adresseCampagne !!} </label>
+              <label for="firstName" class="form-label tx-black"> {!! $listecampagne->adresseCampagne !!} </label>
         </div>
 
         <div class="col-md-2">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $listecampagne->ville !!} </label>
+              <label for="firstName" class="form-label tx-black"> {!! $listecampagne->ville !!} </label>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample{{$listecampagne->id}}" aria-controls="navbarsExample{{$listecampagne->id}}" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,16 +71,16 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample{{$listecampagne->id}}">
         <div class="col-md-5">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $listecampagne->DébutCampagne !!} </label>
+              <label for="firstName" class="form-label tx-black"> {!! $listecampagne->DébutCampagne !!} </label>
         </div>
         <div class="col-md-3">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $listecampagne->statut !!} </label>  
+              <label for="firstName" class="form-label tx-black"> {!! $listecampagne->statut !!} </label>  
         </div>
         <div class="col-md-3">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $listecampagne->limitationvitesse !!} </label>  
+              <label for="firstName" class="form-label tx-black"> {!! $listecampagne->limitationvitesse !!} </label>  
         </div>
         <div class="col-md-1">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> 
+              <label for="firstName" class="form-label tx-black"> 
               <a href="{{ route('clientconsultation_path', ['id' => $listecampagne->id ]) }}"><i class="fas fa-search-plus"></i></a>
               </label>  
         </div>

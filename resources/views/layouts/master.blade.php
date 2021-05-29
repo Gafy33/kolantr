@@ -1,7 +1,3 @@
-@if(session('status'))
-    return redirect('/accueil');
-@endif
-
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -63,7 +59,7 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('/bootstrap/signin.css')}}" rel="stylesheet">
   </head>
-  <body class="text-center bg-dark">
+  <body class="text-center bg-light">
 
   	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 

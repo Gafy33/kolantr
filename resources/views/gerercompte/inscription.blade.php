@@ -126,10 +126,10 @@
 
           <div class="my-3">
             <div class="form-check">
-              <input id="ouiEntreprise" name="entreprise" type="radio" class="form-check-input" onclick="AfficherEntreprise();" value="oui" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Oui </span>
+              <input id="ouiEntreprise" name="entreprise" type="radio" class="form-check-input" onclick="AfficherEntreprise();" value="oui" required> <span class="tx-black"> Oui </span>
             </div>
             <div class="form-check">
-              <input id="nonEntreprise" name="entreprise" type="radio" class="form-check-input" onclick="CacherEntreprise();" value="non" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Non </span>
+              <input id="nonEntreprise" name="entreprise" type="radio" class="form-check-input" onclick="CacherEntreprise();" value="non" required> <span class="tx-black"> Non </span>
             </div>
           </div>
 

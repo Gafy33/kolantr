@@ -2,25 +2,7 @@
 
 @section('navbar')
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-violet" aria-label="Eighth navbar example">
-      <div class="container">
-        <a class="navbar-brand" href="{{ '/' }}">KOLANTR</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExample07">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item active">
-            </li>
-          </ul>
-          <ul class="navbar-nav me_auto mb-2 mb-lg-0">
-          	<button class="btn btn-outline-success" type="submit" name="ville"> <a class="nav-linkArmand" href="#" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Compte</a>
-			   </button>
-         </ul>
-        </div>
-      </div>
-    </nav>
+            <a href="#home" class="logo">KOLANTR</a>
 </header>
 @stop
 

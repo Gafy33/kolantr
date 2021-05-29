@@ -86,10 +86,10 @@
 
             <div class="my-3">
                 <div class="form-check">
-                <input  name="statut" type="radio" class="form-check-input"  value="en cours" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> En cours </span>
+                <input  name="statut" type="radio" class="form-check-input"  value="en cours" required> <span class="tx-black"> En cours </span>
                 </div>
                 <div class="form-check">
-                <input  name="statut" type="radio" class="form-check-input"  value="fini" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> Fini </span>
+                <input  name="statut" type="radio" class="form-check-input"  value="fini" required> <span class="tx-black"> Fini </span>
                 </div>
             </div>
 
@@ -100,25 +100,25 @@
 
           <div class="my-3">
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="30" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 30 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="30" required> <span class="tx-black"> 30 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="50" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 50 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="50" required> <span class="tx-black"> 50 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="70" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 70 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="70" required> <span class="tx-black"> 70 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="80" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 80 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="80" required> <span class="tx-black"> 80 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="90" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 90 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="90" required> <span class="tx-black"> 90 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="110" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 110 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="110" required> <span class="tx-black"> 110 </span>
             </div>
             <div class="form-check">
-              <input  name="limitationvitesse" type="radio" class="form-check-input" value="130" required> <span class="@if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif"> 130 </span>
+              <input  name="limitationvitesse" type="radio" class="form-check-input" value="130" required> <span class="tx-black"> 130 </span>
             </div>
           </div>
 

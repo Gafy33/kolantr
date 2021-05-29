@@ -69,12 +69,6 @@ Route::post('/gerercampagne/modifierCampagneMesure/{id}', [App\Http\Controllers\
 Route::get('/gerercampagne/creationCampagneMesure', [App\Http\Controllers\gestioncampagnemesureController::class, 'creationCampagneMesure'])->name('creationCampagneMesure_path');
 Route::post('/gerercampagne/creationCampagneMesure', [App\Http\Controllers\gestioncampagnemesureController::class, 'ajouterCampagneMesure'])->name('creationCampagneMesure_path');
 
-Route::get('/test', function () {
-    return view('/test');
-})->name('test');
-
-Route::post('/test/coordonne', [App\Http\Controllers\gestioncampagnemesureController::class, 'get_lat_lng'])->name('coordonnes_patch');
-
 //
 //
 // Gestion Boitier
@@ -104,23 +98,6 @@ Route::get('/gererboitier/BoitierAlarmeBatterie/{id}', [App\Http\Controllers\ges
 Route::get('/gerercompte/ListeClient/alert/{alert}', [App\Http\Controllers\AlertController::class, 'listeClientalert'])->name('listeClientalert_path');
 Route::get('/gerercompte/ListeBoitier/alert/{alert}', [App\Http\Controllers\AlertController::class, 'listeboitieralert'])->name('listeboitieralert_path');
 Route::get('/gerercompte/ListeCampagneMesure/alert/{alert}', [App\Http\Controllers\AlertController::class, 'listecampagnemesurealert'])->name('listecampagnemesurealert_path');
-
-
-
-//
-//
-// Information Compte
-//
-//
-
-//
-//
-//Information Client
-//
-//
-Route::get('/Compte', [App\Http\Controllers\HomeController::class, 'informationCompte'])->name('informationCompte');
-Route::post('/Compte', [App\Http\Controllers\HomeController::class, 'informationCompteMAJ'])->name('informationCompte');
-
 
 //
 //

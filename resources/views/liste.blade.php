@@ -44,7 +44,7 @@
                 </svg></a>
             </div>
             <div class="col-md-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-search @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-search tx-black" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                 </svg>
             </div>
@@ -84,14 +84,14 @@
         </div>
         </div>
         </div>
-        <hr class="my-4 @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">
+        <hr class="my-4 tx-black">
 
         @foreach ($campagne as $campagne)
         <div class="navbar navbar-expand-lg navbar-dark" aria-label="Eighth navbar example">
-        <div class="container" style="border-bottom: 1px solid @if($campagne->statut == "fini") red @else green @endif">
+        <div class="container" style="border-bottom: 1px solid @if($campagne->statut == 'fini') red @else green @endif">
 
         <div class="col-md-4">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif"> {!! $campagne->adresseCampagne !!} <a href="{{ route('modifierCampagneMesure_path', ['id' => $campagne->id ])}}" style="color: #FCED00"><i class="far fa-edit"></i></a> <a onclick="return confirmdelete();" href="{{ route('listedeletecampagne', ['id' => $campagne->id ])}}" style="color: #FC0000"> <i class="fas fa-trash"></i></a> </label>
+              <label for="firstName" class="form-label tx-black"> {!! $campagne->adresseCampagne !!} <a href="{{ route('modifierCampagneMesure_path', ['id' => $campagne->id ])}}" style="color: #FCED00"><i class="far fa-edit"></i></a> <a onclick="return confirmdelete();" href="{{ route('listedeletecampagne', ['id' => $campagne->id ])}}" style="color: #FC0000"> <i class="fas fa-trash"></i></a> </label>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,7 +101,7 @@
         <div class="collapse navbar-collapse" id="navbarsExample">
         <div class="col-md-5">
               @if(!empty($campagne->id_boitier))
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">
+              <label for="firstName" class="form-label tx-black">
               @foreach($listeboitier as $listeboitiers)
                 @if($campagne->id_boitier == $listeboitiers->id)
                         {{ $listeboitiers->adrSigfox }}
@@ -127,7 +127,7 @@
         </div>
 
         <div class="col-md-5">
-              <label for="firstName" class="form-label @if(Auth::user()->preference == "theme_dark") tx-white @else tx-black @endif">
+              <label for="firstName" class="form-label tx-black">
               @if(!empty($campagne->id_user)) @foreach($listeclient as $listeclients)
                       @if($campagne->id_user == $listeclients->id)
                         {{$listeclients->name}} {{$listeclients->prenom}}
