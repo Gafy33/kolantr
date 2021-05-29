@@ -8,7 +8,7 @@
 
 @section('content')
 <main class="form-signin shadow p-3">
-    <h2 class="featurette-heading"><span class="text-muted"> <i class='fas fa-truck' width="75" height="75" fill="currentColor"></i> KOLANTR  <i class='fas fa-truck' width="75" height="75" fill="currentColor"></span></h2>
+    <h2 class="featurette-heading"><span class="text-muted"> KOLANTR </span></h2>
           <form method="POST" action="{{ route('login') }}">
           @csrf
             <hr class="featurette-divider">

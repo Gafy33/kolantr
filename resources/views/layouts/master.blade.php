@@ -58,10 +58,12 @@
     
     <!-- Custom styles for this template -->
     <link href="{{ asset('/bootstrap/signin.css')}}" rel="stylesheet">
+    <link href="{{ asset('/bootstrap/style_accueil.css')}}" rel="stylesheet">
   </head>
   <body class="text-center bg-light">
 
-  	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
 
 @yield('navbar')
