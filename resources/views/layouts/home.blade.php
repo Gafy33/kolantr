@@ -13,10 +13,10 @@
     <link rel="shortcut icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9i_4sX9b1uIV_QXHx9HmXOyJkftoM_LC94wQh0OOncqVh6DT9wsfa_xN_Nt4shAcdKgc&usqp=CAU" />
 
     <!-- Bootstrap core CSS -->
-  <link href="{{ asset('/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
   @if($title == "accueil")
   <link href="{{ asset('/bootstrap/navbar_accueil.css')}}" rel="stylesheet">
   @else
+  <link href="{{ asset('/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{ asset('/bootstrap/navbar.css')}}" rel="stylesheet">
   @endif
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">

@@ -40,21 +40,20 @@
             </div>
         </section>
 
-        <section class="about" style="background: #f7f7f7">
+        <section class="about background_gray">
             <div class="heading" >
                 <h2> Client </h2>
             </div>
             <div class="content">
-                
+                <div class="w50 center_content" >
+                    <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
+                </div>
                 <div class="contentBx w50 center" class="contentBx w50 center" >
                     <h3> Gérer les comptes clients Administrateur et technicien</h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
                         <button type="button" class="btn" name=""> <a href="{{ route('listeAdminTechnicien_path')}}" class="lien">Accéder </a></button>
                     </div>
-                </div>
-                <div class="w50 center_content" >
-                    <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
                 </div>
             </div>
         </section>
@@ -67,9 +66,6 @@
                 <h2> Campagne de mesure </h2>
             </div>
             <div class="content">
-                <div class="w50 center_content" >
-                    <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
-                </div>
                 <div class="contentBx w50 center" class="contentBx w50 center" >
                     <h3> Gérer les campagnes de mesure </h3>
                     <p> Créer, Modifier, Supprimer </p>
@@ -77,11 +73,14 @@
                         <button type="button" class="btn" name=""> <a href="{{ route('listeCampagneMesure_path') }}" class="lien">Accéder</a> </button>
                     </div>
                 </div>
+                                <div class="w50 center_content" >
+                    <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
+                </div>
             </div>
         </section>
 
 
-        <section class="about" id="boitier" style="background: #f7f7f7">
+        <section class="about background_gray" id="boitier">
             <div class="heading" >
                 <h2> Boitier </h2>
             </div>
@@ -194,7 +193,7 @@
                             <div class="shadow"></div>
                         </div>
                         <div class="box_route">
-                            <div class="square"> <img src="voiture.png" class="inverse"> </div>
+                            <div class="square"> <img src="{{ asset('image/voiture.png')}}" class="inverse"> </div>
                         </div>
                     </div>
                 </div>
@@ -203,6 +202,7 @@
                 </div>
             </div>
         </section>
+         @include('layouts.partials.footer')
 
 @stop
 
@@ -332,6 +332,8 @@
                 </div>
             </div>
         </section>
+
+        @include('layouts.partials.footer')
 @stop
 
 @endif
