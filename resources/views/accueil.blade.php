@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="servicesBx">
-                    <img src="{{ asset('image/icon2.png'}}">
+                    <img src="{{ asset('image/icon2.png')}}">
                     <h2>Campagnes de mesure</h2>
                     <div class="content">
                         <div class="infoBx">
@@ -141,7 +141,7 @@
                     </div>
                 </div>
                 <div class="servicesBx" >
-                    <img src="{{ asset('image/icon3.png'}}">
+                    <img src="{{ asset('image/icon3.png')}}">
                     <h2>Boitiers</h2>
                     <div class="content">
                         <div class="infoBx">
