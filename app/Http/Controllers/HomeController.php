@@ -85,11 +85,11 @@ class HomeController extends Controller
             foreach($user as $users)
             {
                 $nb_compte = $nb_compte + 1;
-                if ($users->role == 1) {
+                if ($users->role_id == 1) {
                     $nb_admin = $nb_admin + 1;
-                }else if($users->role == 2){
+                }else if($users->role_id == 3){
                     $nb_client = $nb_client + 1;
-                }else{
+                }else  if($users->role_id == 2){
                     $nb_technicien = $nb_technicien +1;
                 }
             }
