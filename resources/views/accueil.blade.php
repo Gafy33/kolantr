@@ -21,7 +21,7 @@
         </section>
 
 
-        @if (Auth::user()->hasRole('admin')
+        @if(Auth::user()->hasRole('admin'))
         <section class="about" id="client">
             <div class="heading" >
                 <h2> Client </h2>
