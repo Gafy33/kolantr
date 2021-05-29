@@ -4,21 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.79.0">
     <title> {{ $title }} </title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
     <link rel="shortcut icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9i_4sX9b1uIV_QXHx9HmXOyJkftoM_LC94wQh0OOncqVh6DT9wsfa_xN_Nt4shAcdKgc&usqp=CAU" />
 
     <!-- Bootstrap core CSS -->
-  @if($title == "accueil")
-  <link href="{{ asset('/bootstrap/navbar_accueil.css')}}" rel="stylesheet">
-  @else
   <link href="{{ asset('/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{ asset('/bootstrap/navbar.css')}}" rel="stylesheet">
-  @endif
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
@@ -271,14 +264,6 @@
   <body class="bg-light">
 
   @include('layouts.partials.navbar')
-
-  @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien'))
-
-    @if(!empty($alarme_popup))
-      @include('alertbatterie')
-    @endif
-
-  @endif
 
   @yield('content')
   

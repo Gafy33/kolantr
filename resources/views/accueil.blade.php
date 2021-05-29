@@ -1,17 +1,22 @@
-@extends('layouts.home', ['title' => 'Home'])
-
-@section('style')
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title> Accueil </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
     <link href="{{ asset('/bootstrap/style_accueil.css')}}" rel="stylesheet">
+    <link href="{{ asset('/bootstrap/navbar_accueil.css')}}" rel="stylesheet">
     <link href="{{ asset('/bootstrap/css_animation_route.css')}}" rel="stylesheet">
 
-@stop
+    </head>
+<body>
 
-@if (Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien') )
+@include('layouts.partials.navbar')
 
-@section('content')
-
-
+@if(Auth::user()->hasRole('admin') || Auth::user()->hasRole('technicien'))
 <section class="banner" id="home">
             <div class="textBx">
                 <h2 >Bienvenue sur <br><span>KOLANTR</span></h2>
@@ -57,7 +62,6 @@
                 </div>
             </div>
         </section>
-
         @endif
 
 
@@ -202,13 +206,10 @@
                 </div>
             </div>
         </section>
+
          @include('layouts.partials.footer')
 
-@stop
-
 @else
-
-@section('content')
   <section class="banner" id="home">
             <div class="textBx">
                 <h2 >Bienvenue sur <br><span>KOLANTR</span></h2>
@@ -334,6 +335,21 @@
         </section>
 
         @include('layouts.partials.footer')
-@stop
-
 @endif
+
+<script>
+            window.addEventListener('scroll', function(){
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var menu = document.querySelector('.menu');
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+        </script>
+
+    </body>
+</html>
