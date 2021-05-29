@@ -1,4 +1,4 @@
-<header class="header">
+<header>
             <a href="{{ route('accueil') }}" class="logo">KOLANTR</a>
             <div class="toggle" onclick="toggleMenu();"></div>
             <ul class="menu">
@@ -26,7 +26,7 @@
                 <li><a href="{{ route('clientmescampagnes_path') }}">Mes campagnes de mesures</a></li>
               @endif
 
-              <li><a href="{{ route('logout') }}" onclick="toggleMenu();" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout"><i class="fas fa-power-off"></i></a><form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout"><i class="fas fa-power-off"></i></a><form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                       </form> </li>
               @endauth

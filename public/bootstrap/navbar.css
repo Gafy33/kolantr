@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    overflow-x: hidden;
+}
+
 body::-webkit-scrollbar
 {
     width: 0.5em;
@@ -12,7 +29,66 @@ body::-webkit-scrollbar-thumb
     outline: 1px solid slategrey;
 }
 
-.header{
+section
+{
+    padding: 100px;
+}
+
+.banner
+{
+    position: relative;
+    min-height: 100vh;
+    background: url(banner3.gif);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner h2
+{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.banner h2 span
+{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner h3
+{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn
+{
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.btn:hover
+{
+    background: #1546f3;
+}
+
+header{
     position: fixed;
     top: 0;
     left: 0;
@@ -25,25 +101,25 @@ body::-webkit-scrollbar-thumb
     transition: 0.5s;
 }
 
-.header.sticky
+header.sticky
 {
     background: #fff;
     padding: 20px 100px;
     box-shadow: 0 5px 20px rgb(0,0,0,0.1);
 }
 
-.header.sticky .logo
+header.sticky .logo
 {
     color: #111;
 }
 
-.header.sticky ul li a
+header.sticky ul li a
 {
     color: #111;
 }
 
 
-.header .logo
+header .logo
 {
     color: #111;
     font-size: 24px;
@@ -53,24 +129,24 @@ body::-webkit-scrollbar-thumb
     letter-spacing: 2px;
 }
 
-.header ul
+header ul
 {   
     position: relative;
     display: flex;
 }
 
-.header ul li
+header ul li
 {
     position: relative;
     list-style: none;
 }
 
-.header ul li:hover
+header ul li:hover
 {
     font-weight: 700;
 }
 
-.header ul li a
+header ul li a
 {
     position: relative;
     display: inline-block;
@@ -79,20 +155,351 @@ body::-webkit-scrollbar-thumb
     text-decoration: none;
 }
 
-.header .logout:hover
+header .logout:hover
 {
     color: red;
 }
 
-.header .login:hover
+header .login:hover
 {
     color: green;
 }
 
+.heading
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.heading h2
+{
+    font-weight: 600;
+    font-size:  30px;
+} 
+
+.content
+{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.contentBx{
+    padding-right: 30px;
+}
+
+.contentBx h3
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contentBx p
+{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.contentBx .downloadBx
+{
+    margin-top: 85px;
+    padding: 40px 25px;
+}
+
+
+.contentBx .downloadBx button
+{
+    max-width: 250px;
+    background: #2196f3;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    transition: 0.5s;
+}
+
+.contentBx .downloadBx button:hover
+{
+    background: #1546f3;
+}
+
+.w50
+{
+    min-width: 50%;
+}
+
+.w50.center
+{
+    text-align: center;
+}
+
+.w50.center_content
+{
+    display: flex;
+    justify-content: center;
+}
+
+img
+{
+    max-width: 70%;
+}
+
+hr
+{
+    margin: 25px 5px;
+}
+.services
+{
+    background: #111;
+}
+
+.heading.white
+{
+    color: #fff;
+}
+
+.services .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .content .servicesBx
+{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    width: 400px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover
+{
+    background: #2196f3;
+}
+
+.services .content .servicesBx img
+{
+    max-width: 80px;
+    filter: invert(1);
+    padding-bottom: 15px;
+}
+
+.services .content .servicesBx h2
+{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.services .content .servicesBx p
+{
+    font-size: 20px;
+    font-weight: 150;
+    padding-bottom: 20px;
+}
+
+.services .content .infoBx
+{
+    padding: 40px 20px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.services .content .infoBx h2,
+.services .content .infoBx p,
+{
+    margin-top: 5px;
+}
+
+
+
+.work .content
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work .content .workBx
+{
+    width: 50%;
+    padding: 20px;
+}
+
+.work .content .workBx img 
+{
+    max-width: 100%;
+}
+
+.testimonial
+{
+    background: #f7f7f7;
+}
+
+.testimonial .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.testimonial .content .testimonialBx
+{
+    width: calc(50% - 40px);
+    padding: 60px 40px;
+    margin: 20px;
+    background: #2196f3;
+}
+
+.testimonial .content .testimonialBx p
+{
+    color: #fff;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.testimonial .content .testimonialBx h3
+{
+    margin-top: 40px;
+    text-align: end;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1em;
+}
+
+.testimonial .content .testimonialBx span
+{
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.contact
+{
+    background: #111;
+}
+
+.formBx
+{
+    min-width: 60%;
+}
+
+.formBx form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.formBx form input,
+.formBx form textarea
+{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #fff;
+    resize: none;
+}
+
+.formBx form textarea
+{
+    min-height: 200px;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder
+{
+    color: #999;
+}
+
+
+.formBx form input[type="submit"]
+{
+    max-width: 120px;
+    background: #2196f3;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contactInfo
+{
+    min-width: 40%;
+}
+
+.ContactInfoBx
+{
+    position: relative;
+}
+
+.ContactInfoBx .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.ContactInfoBx .box .icon
+{
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+}
+
+.ContactInfoBx .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.ContactInfoBx .box .text h3
+{
+    font-weight: 500;
+    color: #2196f3;
+    margin-bottom: 0;
+}
+
+.copyright
+{
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/*Responsive*/
 @media(max-width: 991px)
 {
-    .header,
-    .header.sticky
+    header,
+    header.sticky
     {
         padding: 20px 50px;
         z-index: 1000;
@@ -119,7 +526,7 @@ body::-webkit-scrollbar-thumb
         left: 0;
     }
 
-    .header ul li a
+    header ul li a
     {
         color: #111;
         font-size: 24px;
@@ -143,17 +550,95 @@ body::-webkit-scrollbar-thumb
         background-size: 25px;
         cursor: pointer;
     }
-    .header.sticky .toggle
+    header.sticky .toggle
     {
         filter: invert(1);
+    }
+    section
+    {
+        padding: 100px 50px;
+    }
+    .banner
+    {
+        padding: 150px 50px 100px;
+    }
+    .banner h2
+    {
+        font-size: 1.5em;
+    }
+    .banner h3
+    {
+        font-size: 1em;
+    }
+    .btn
+    {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .heading h2
+    {
+        font-size: 24px;
+    }
+    .contentBx h3
+    {
+        font-size: 20px;
+    }
+    .content
+    {
+        flex-direction: column;
+    }
+    .w50
+    {
+        margin-bottom: 20px;
+    }
+    .services .content .servicesBx
+    {
+        margin: 10px;
+    }
+    .work .content .workBx
+    {
+        width: 100%;
+        padding: 10px;
+    }
+    .testimonial .content .testimonialBx
+    {
+        width: calc(100% - 20px);
+        padding: 40px 20px;
+        margin: 10px;
+        background: #2196f3;
+    }
+    .testimonial .content .testimonialBx h3
+    {
+        margin-top: 20px
+    }
+    .contactInfo
+    {
+        margin: 20px 0;
+    }
+    .img_display_991
+    {
+        display: none;
     }
 }
 
 @media(max-width: 600px)
 {
-    .header,
-    .header.sticky
+    header,
+    header.sticky
     {
         padding: 20px 20px;
+    }
+    .banner
+    {
+        padding: 150px 20px 100px;
+    }
+    section
+    {
+        padding: 100px 20px;
+    }
+    .img_display_600
+    {
+        display: none;
     }
 }

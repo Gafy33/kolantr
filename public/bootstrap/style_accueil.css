@@ -38,7 +38,7 @@ section
 {
     position: relative;
     min-height: 100vh;
-    background: url(banner3.gif);
+    background: url(accueil.gif);
     background-size: cover;
     background-position: right;
     display: flex;
