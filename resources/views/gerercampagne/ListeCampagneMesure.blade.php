@@ -34,14 +34,6 @@
                 <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                 </svg></a>
             </div>
-            <div class="col-md-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-search tx-black" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg>
-            </div>
-            <div class="col-md-3">
-                  <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Rechercher" value="" required>
-            </div>
       </div>
     </div>
     </div>
@@ -65,7 +57,7 @@
               <label for="firstName" class="form-label text-muted">Route</label><br>
         </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample00" aria-controls="navbarsExample00" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler tx-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample00" aria-controls="navbarsExample00" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample00">
@@ -103,7 +95,7 @@
               <label for="firstName" class="form-label tx-black">{!! $campagne->numeroRoute !!}</label>
         </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample{!! $campagne->id !!}" aria-controls="navbarsExample{!! $campagne->id !!}" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler tx-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample{!! $campagne->id !!}" aria-controls="navbarsExample{!! $campagne->id !!}" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 

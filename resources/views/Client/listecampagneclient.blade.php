@@ -14,7 +14,7 @@
       <h2 class="mx-auto mb-1 py-5 featurette-heading"><span class="text-muted" ><i class="fas fa-route" width="75" height="75" fill="currentColor" ></i>  Mes campagnes de mesure <i class="fas fa-route" width="75" height="75" fill="currentColor" ></i> </span></h2>
 
     </div>
-    <hr>
+    <hr class="tx-white">
     <div class="row g-3   shadow p-3">
       <div class="col-md-7 col-lg-12 mx-auto ">
         <div class="row g-3">
@@ -30,7 +30,7 @@
               <label for="firstName" class="form-label text-muted">Ville</label><br>
         </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample00" aria-controls="navbarsExample00" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler tx-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample00" aria-controls="navbarsExample00" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample00">
@@ -65,7 +65,7 @@
               <label for="firstName" class="form-label tx-black"> {!! $listecampagne->ville !!} </label>
         </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample{{$listecampagne->id}}" aria-controls="navbarsExample{{$listecampagne->id}}" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler tx-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample{{$listecampagne->id}}" aria-controls="navbarsExample{{$listecampagne->id}}" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
