@@ -104,7 +104,7 @@ class HomeController extends Controller
             $nb_camp_cours = 0;
             $nb_camp_fini = 0;
 
-            $foreach($campagne as $campagnes){
+            foreach($campagne as $campagnes){
                 $nb_campagne = $nb_campagne + 1;
                 if($campagnes->statut == "en cours"){
                     $nb_camp_cours = $nb_camp_cours + 1;
