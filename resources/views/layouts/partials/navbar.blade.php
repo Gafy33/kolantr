@@ -9,14 +9,6 @@
               @auth
               @if (Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien') )
 
-                @if(Auth::user()->hasRole('admin') or Auth::user()->hasRole('technicien'))
-
-                @if(!empty($alarme_popup))
-                <ul class="navbar-nav me_auto mb-2 mb-lg-0" style="padding-right: 15px;">
-                  <a href="#popup1"> <div class="charging-container"></div> </a>
-                </ul>
-                @endif
-                @endif
                 @if (Auth::user()->hasRole('admin'))
                 <li><a href="{{ route('listeClient_path') }}" onclick="toggleMenu();">Client</a></li>
                 @endif

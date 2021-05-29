@@ -50,7 +50,7 @@
                     <h3> Gérer les comptes clients Administrateur et technicien</h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="{{ route('listeAdminTechnicien_path')}}" class="lien">Accéder </button>
+                        <button type="button" class="btn" name=""> <a href="{{ route('listeAdminTechnicien_path')}}" class="lien">Accéder </a></button>
                     </div>
                 </div>
                 <div class="w50 center_content" >
