@@ -84,7 +84,7 @@ class HomeController extends Controller
                 $nb_compte = $nb_compte + 1;
                 if ($users->role == 1) {
                     $nb_admin = $nb_admin + 1;
-                }else if($users->role == 2{
+                }else if($users->role == 2){
                     $nb_client = $nb_client + 1;
                 }else{
                     $nb_technicien = $nb_technicien +1;
@@ -112,7 +112,7 @@ class HomeController extends Controller
                     $nb_camp_fini = $nb_camp_fini + 1;
                 }
             }
-            return view('/accueil')->with('alarme', $alarme)->with('alarme_popup', $alarme_popup);
+            return view('/accueil')->with('alarme', $alarme)->with('alarme_popup', $alarme_popup)->with('nb_campagne', $nb_campagne)->with('nb_camp_cours', $nb_camp_cours)->with('nb_camp_fini', $nb_camp_fini);
         }
     }
 
