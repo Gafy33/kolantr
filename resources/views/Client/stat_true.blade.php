@@ -10,7 +10,7 @@
   <div class="container marketing">
 
     <!-- Three columns of text below the carousel -->
-  <hr class="p-3 mb-5">
+  <hr class="p-3 mb-5 tx-white">
     <div class="row featurette shadow p-3 mb-5">
       <div class="col-md-12">
         <h2 class="featurette-heading tx-black">Campagne de mesure </h2>
@@ -47,7 +47,7 @@
 		@endif
 		</h2>
         <br>
-		@if(empty($stats->typeV)) <p class="tx-black"> il n'y avait q'un seul capteur, on peut donc calculer que le nombre d'essieux </p> @endif
+		@if(empty($stats->typeV)) <p class="tx-black"> il n'y avait qu'un seul capteur, on peut donc calculer que le nombre d'essieux </p> @endif
         <p class="tx-black"> Date stat : @if(!empty($stats->created_at)) {{ $stats->created_at }} @endif </p>
         <nav class="navbar navbar-dark bg-light" aria-label="First navbar example">
     	<div class="container-fluid">

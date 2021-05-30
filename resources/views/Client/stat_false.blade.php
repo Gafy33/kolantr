@@ -10,7 +10,7 @@
   <div class="container marketing">
 
     <!-- Three columns of text below the carousel -->
-    <hr class="p-3 mb-5">
+    <hr class="p-3 mb-5 tx-white">
 
     <div class="row featurette shadow p-3 mb-5">
       <div class="col-md-12">

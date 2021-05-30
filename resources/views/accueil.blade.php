@@ -33,12 +33,14 @@
                 <li><a href="#information" onclick="toggleMenu();">Information</a></li>
                 <li><a href="#compte" onclick="toggleMenu();">Compte</a></li>
                 <li><a href="#Application" onclick="toggleMenu();">Application</a></li>
-                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
                 <li><a href="{{ route('liste') }}" onclick="toggleMenu();">Liste</a></li>
                 <!--<li><a href="" onclick="toggleMenu();" class="login"><i class="fa fa-user" aria-hidden="true"></i></a></li>-->
 
               @elseif(Auth::user()->hasRole('user'))
                 <li><a href="{{ route('clientmescampagnes_path') }}">Mes campagnes de mesures</a></li>
+                <li><a href="#information" onclick="toggleMenu();">Information</a></li>
+                <li><a href="#compte" onclick="toggleMenu();">Compte</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
               @endif
 
               <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout"><i class="fas fa-power-off"></i></a><form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -282,7 +284,7 @@
                         <div class="infoBx">
                             <h2> {{ $nb_campagne }} </h2>
                             <h2> {{ $nb_camp_cours }} </h2>
-                            <h2> {{ $nb_camp_fini }}. </h2>
+                            <h2> {{ $nb_camp_fini }} </h2>
                         </div>
                         <div class="infoBx">
                             <p> Mes campagnes </p>
