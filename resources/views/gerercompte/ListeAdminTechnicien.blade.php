@@ -53,7 +53,7 @@
         </div>
 
         <button class="navbar-toggler tx-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample00" aria-controls="navbarsExample00" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon  tx-black"></span>
+          <i class="fas fa-bars tx-black"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample00">
         <div class="col-md-6">
@@ -88,7 +88,7 @@
         </div>
 
         <button class="navbar-toggler tx-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample{!! $client->id !!}" aria-controls="navbarsExample{!! $client->id !!}" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon  tx-black"></span>
+          <i class="fas fa-bars tx-black"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExample{!! $client->id !!}">
