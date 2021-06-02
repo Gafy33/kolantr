@@ -19,8 +19,8 @@ Route::get('/popup', function () {
 })->name('popup');
 
 Route::get('/doxygen', function () {
-    return view('doxygen');
-})->name('doxygen');
+    return view('doxygen_accueil');
+})->name('doxygen_path');
 
 //
 //

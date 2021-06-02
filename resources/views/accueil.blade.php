@@ -34,7 +34,7 @@
                 <li><a href="#compte" onclick="toggleMenu();">Compte</a></li>
                 <li><a href="#Application" onclick="toggleMenu();">Application</a></li>
                 <li><a href="{{ route('liste') }}" onclick="toggleMenu();">Liste</a></li>
-                <li><a href="{{ route('doxygen') }}" onclick="toggleMenu();"><i class="fas fa-wrench"></i></a></li>
+                <li><a href="{{ route('doxygen_path') }}" onclick="toggleMenu();"><i class="fas fa-wrench"></i></a></li>
                 <!--<li><a href="" onclick="toggleMenu();" class="login"><i class="fa fa-user" aria-hidden="true"></i></a></li>-->
 
               @elseif(Auth::user()->hasRole('user'))
