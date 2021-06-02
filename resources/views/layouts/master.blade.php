@@ -58,7 +58,7 @@
 
     background:transparent;
 
-    position:absolute;
+    position:fixed;
 
     bottom:0;
 
