@@ -74,7 +74,7 @@
                     <div class="content">
                         <div class="infoBx">
                             <h2> Doxygen </h2>
-                            <h2> Tony TESTY </h2>
+                            <h2> Tony TESTA </h2>
                             <button type="button" class="btn" name=""> <a href="#" class="lien" target="_blank" disabled>Accéder</a> </button>
                         </div>
                     </div>
