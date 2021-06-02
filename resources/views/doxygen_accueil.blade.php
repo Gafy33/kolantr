@@ -31,7 +31,7 @@
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Arthur LABARRE </h2>
-                            <button type="button" class="btn" name=""> <a href="{{ asset('doxygen/doxygen_xavier/index.html')}}" class="lien" target="_blank">Accéder</a> </button>
+                            <button type="button" class="btn" name=""> <a href="{{ asset('doxygen/doxygen_arthur/index.html')}}" class="lien" target="_blank">Accéder</a> </button>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,40 @@
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Xavier HERVIER </h2>
-                            <button type="button" class="btn" name=""> <a href="{{ asset('doxygen/doxygen_arthur/index.html')}}" class="lien" target="_blank">Accéder</a> </button>
+                            <button type="button" class="btn" name=""> <a href="{{ asset('doxygen/doxygen_xavier/index.html')}}" class="lien" target="_blank">Accéder</a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicesBx">
+                    <img src="{{ asset('image/icon1.png')}}">
+                    <h2>Dossier</h2>
+                    <div class="content">
+                        <div class="infoBx">
+                            <h2> Doxygen </h2>
+                            <h2> Hugo CARRICART </h2>
+                            <button type="button" class="btn" name=""> <a href="#" class="lien" target="_blank">Accéder</a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicesBx">
+                    <img src="{{ asset('image/icon1.png')}}">
+                    <h2>Dossier</h2>
+                    <div class="content">
+                        <div class="infoBx">
+                            <h2> Doxygen </h2>
+                            <h2> Thibault  JOUANDOUDET</h2>
+                            <button type="button" class="btn" name=""> <a href="#" class="lien" target="_blank" disabled >Accéder</a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicesBx">
+                    <img src="{{ asset('image/icon1.png')}}">
+                    <h2>Dossier</h2>
+                    <div class="content">
+                        <div class="infoBx">
+                            <h2> Doxygen </h2>
+                            <h2> Tony TESTY </h2>
+                            <button type="button" class="btn" name=""> <a href="#" class="lien" target="_blank" disabled>Accéder</a> </button>
                         </div>
                     </div>
                 </div>
