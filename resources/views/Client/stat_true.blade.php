@@ -105,7 +105,7 @@
 			<h2 class=" tx-black" style="font-size: 1em;"> Nombre d'essieux </h2>
 			</div>
 			<div class="col-lg-4" style="width: 30%;">
-			<h2 class=" tx-black" style="font-size: 1em;"> {{ $stats->NbEssieux }} <img src="{{ asset('/image/essieux_bijour.png')}}" width="50" height="40"> </h2>
+			<h2 class=" tx-black" style="font-size: 1em;"> {{ $stats->NbEssieux }} <img src="{{ asset('/image/essieux_bijour.png')}}" width="40" height="30"> </h2>
 			</div>
 			<hr class="featurette-divider tx-white">
 			<div class="col-lg-4" style="width: 70%;">
