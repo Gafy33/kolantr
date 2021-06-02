@@ -37,10 +37,10 @@ canvas{
 display: block;
 text-align: center;
 }
-.iframe .h1_iframe {
+.iframe h1 {
   position: absolute;
   color: #fff;
-  top: 50%;
+  top: 66%;
   left: 50%;
   z-index: 1000;
   transform: translate(-50%, -50%);
@@ -51,9 +51,9 @@ text-align: center;
   user-select: none;
 }
 
-.iframe .h6_iframe {
+.iframe h6 {
   position: absolute;
-  top: 60%;
+  top: 68%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
