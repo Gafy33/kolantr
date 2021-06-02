@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['_7ecepaper_37',['~CEpaper',['../class_c_epaper.html#ae45648ab8beac476240ee9299cfb88c8',1,'CEpaper']]],
-  ['_7eecran_38',['~Ecran',['../class_ecran.html#a4405b236df3f818ec12d3bff0df63856',1,'Ecran']]],
-  ['_7eihm_39',['~IHM',['../class_i_h_m.html#af220622a4304f5a9ed1da28abb7da14d',1,'IHM']]],
-  ['_7eitem_40',['~Item',['../class_item.html#a11663c84075b78c3ae5e30fdfcd7c458',1,'Item']]],
-  ['_7evariable_41',['~Variable',['../class_variable.html#acfc14d0ad77af53025f890b4d3a7745a',1,'Variable']]]
+  ['plus_67',['plus',['../class_item.html#ab0d4e49b17a757964be7a8242a6b6fa4',1,'Item::plus()'],['../class_variable.html#a765e3e1d6094b6011cca491bbb03b2ab',1,'Variable::plus()'],['../main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca883acd43c77567e1c3baced84ccf6ed7',1,'PLUS():&#160;main.cpp']]]
 ];

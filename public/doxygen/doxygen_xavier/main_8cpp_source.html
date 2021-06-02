@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IHM_Kolantr: main.cpp Source File</title>
+<title>IHM_Kolantr: /home/x/xav.hervier/Documents/e-paper/mbed_miseEnOuvre_ePaper-version1/mbed_miseenouvre_epaper/main.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IHM_Kolantr
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -63,16 +63,16 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">main.cpp</div>  </div>
+<div class="title">/home/x/xav.hervier/Documents/e-paper/mbed_miseEnOuvre_ePaper-version1/mbed_miseenouvre_epaper/main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define COLORED      1</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define UNCOLORED    0</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="main_8cpp.html#a6dc8f5f6cd3fb1bdf454fe905019a666">    9</a></span>&#160;<span class="preprocessor">#define COLORED      1</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="main_8cpp.html#aa3a4fe91f0304c64711c2b91d6d24781">   10</a></span>&#160;<span class="preprocessor">#define UNCOLORED    0</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">enum class</span> BOUTON {HOME, MOINS,PLUS, SELECT } ;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bc">   12</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bc">BOUTON</a> {<a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca710533dd879dd1202e5c73b27705bf02">HOME</a>, <a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca76e0a518a83090ced9b8ec16dad72d13">MOINS</a>,<a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca883acd43c77567e1c3baced84ccf6ed7">PLUS</a>, <a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca63225f19fccb18e7c709f1fa11bc738e">SELECT</a> } ;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define SLEEP_TIME   1000 // (msec)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="main_8cpp.html#abe0b7b2a0ec4b64b92585808a051e1fa">   14</a></span>&#160;<span class="preprocessor">#define SLEEP_TIME   1000 // (msec)</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;mbed.h&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
@@ -83,32 +83,32 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;epd2in7/imagedata.h&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;epd2in7/epdpaint.h&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;CEpaper.hpp&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;IHM.hpp&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;Ecran.hpp&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;Item.hpp&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_epaper_8hpp.html">CEpaper.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_h_m_8hpp.html">IHM.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_ecran_8hpp.html">Ecran.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_item_8hpp.html">Item.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//affectation des broches pour la comunication spi</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;PinName _Mosi = PE_14 ; <span class="comment">//SPI4_MOSI;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;PinName _Miso = PE_13 ; <span class="comment">// SPI4_MISO non connecté</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;PinName _Sclk = PE_12 ; <span class="comment">// SPI4_SCK</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;PinName _Cs   = PE_11 ; <span class="comment">// SPI4_SC</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae31e208211e484b03646b325cdf013de">   32</a></span>&#160;PinName <a class="code" href="main_8cpp.html#ae31e208211e484b03646b325cdf013de">_Mosi</a> = PE_14 ; <span class="comment">//SPI4_MOSI;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae5256080ead33330eff08622548a352f">   33</a></span>&#160;PinName <a class="code" href="main_8cpp.html#ae5256080ead33330eff08622548a352f">_Miso</a> = PE_13 ; <span class="comment">// SPI4_MISO non connecté</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="main_8cpp.html#a4c90971578c7c6a25d71dbac0aaed9c6">   34</a></span>&#160;PinName <a class="code" href="main_8cpp.html#a4c90971578c7c6a25d71dbac0aaed9c6">_Sclk</a> = PE_12 ; <span class="comment">// SPI4_SCK</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="main_8cpp.html#acee39215291b1e7c1c5fc46fb62de69c">   35</a></span>&#160;PinName <a class="code" href="main_8cpp.html#acee39215291b1e7c1c5fc46fb62de69c">_Cs</a>   = PE_11 ; <span class="comment">// SPI4_SC</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//affectation des broches de controle de l&#39;afficheur</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;PinName _Rst  = PF_13 ;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;PinName _Dc   = PE_9 ;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;PinName _Busy = PF_12 ;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="main_8cpp.html#af2977f32f1795a10036b569654e3b30f">   37</a></span>&#160;PinName <a class="code" href="main_8cpp.html#af2977f32f1795a10036b569654e3b30f">_Rst</a>  = PF_13 ;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="main_8cpp.html#aeef152b4d0282e030312943b9d08517e">   38</a></span>&#160;PinName <a class="code" href="main_8cpp.html#aeef152b4d0282e030312943b9d08517e">_Dc</a>   = PE_9 ;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="main_8cpp.html#ad11d81c840dfc40291cf242b926fadea">   39</a></span>&#160;PinName <a class="code" href="main_8cpp.html#ad11d81c840dfc40291cf242b926fadea">_Busy</a> = PF_12 ;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;DigitalOut myledV(LED1);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;DigitalOut myledB(LED2);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;DigitalOut myledR(LED3);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;DigitalOut <a class="code" href="main_8cpp.html#aa5eb129f24b1aa501317fcb174d76110">myledV</a>(LED1);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;DigitalOut <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a>(LED2);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;DigitalOut <a class="code" href="main_8cpp.html#af1640e7f54e2763d172839eb47bc063a">myledR</a>(LED3);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;Timer debounce;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="main_8cpp.html#a5583bfa296db680d54af84b7175504d5">   45</a></span>&#160;Timer <a class="code" href="main_8cpp.html#a5583bfa296db680d54af84b7175504d5">debounce</a>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#define BT_HOME     PD_15</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define BT_PLUS     PD_14</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define BT_MOINS    PB_9</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define BT_SELECT   PB_8</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="main_8cpp.html#a194127b77a8d30e649f42f9a22ba03c8">   47</a></span>&#160;<span class="preprocessor">#define BT_HOME     PD_15</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="main_8cpp.html#a6a32ab32f2ee32943f51c36b4102eb40">   48</a></span>&#160;<span class="preprocessor">#define BT_PLUS     PD_14</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="main_8cpp.html#a19e888551c847054764c911bfadf435e">   49</a></span>&#160;<span class="preprocessor">#define BT_MOINS    PB_9</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="main_8cpp.html#aebd9e7a13ee9904b63859fbdcae52458">   50</a></span>&#160;<span class="preprocessor">#define BT_SELECT   PB_8</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//configuration des entrées en pullup pour les boutons</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// DigitalIn diHome(BT_HOME, PullUp) ;</span></div>
@@ -118,100 +118,100 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//Configuration des interruptions pour la détection de l&#39;appui des boutons</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;InterruptIn interruptHome(BT_HOME, PullUp) ;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;InterruptIn interruptPlus(BT_PLUS, PullUp) ;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;InterruptIn interruptMoins(BT_MOINS, PullUp) ;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;InterruptIn interruptSelect(BT_SELECT, PullUp) ;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;InterruptIn <a class="code" href="main_8cpp.html#a57d930a79b13e48c2078aa5d2bc602d1">interruptHome</a>(<a class="code" href="main_8cpp.html#a194127b77a8d30e649f42f9a22ba03c8">BT_HOME</a>, PullUp) ;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;InterruptIn <a class="code" href="main_8cpp.html#ab013223eda9fb18d24c85021c53c5acc">interruptPlus</a>(<a class="code" href="main_8cpp.html#a6a32ab32f2ee32943f51c36b4102eb40">BT_PLUS</a>, PullUp) ;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;InterruptIn <a class="code" href="main_8cpp.html#a034432d33d74ea362708a2b472b1efc8">interruptMoins</a>(<a class="code" href="main_8cpp.html#a19e888551c847054764c911bfadf435e">BT_MOINS</a>, PullUp) ;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;InterruptIn <a class="code" href="main_8cpp.html#af5574be70e4f4dbae929f3fbdfe49900">interruptSelect</a>(<a class="code" href="main_8cpp.html#aebd9e7a13ee9904b63859fbdcae52458">BT_SELECT</a>, PullUp) ;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;IHM *IHMpt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">   65</a></span>&#160;<a class="code" href="class_i_h_m.html">IHM</a> *<a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">void</span> afficherMenu(BOUTON btn)</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="main_8cpp.html#a1799b73e6ed910d424f89cc33d953c68">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8cpp.html#a1799b73e6ed910d424f89cc33d953c68">afficherMenu</a>(<a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bc">BOUTON</a> btn)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (btn == BOUTON::PLUS){</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        IHMpt-&gt;btnPlus();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    } <span class="keywordflow">if</span> (btn == BOUTON::MOINS){</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        IHMpt-&gt;btnMoins();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    } <span class="keywordflow">if</span> (btn == BOUTON::SELECT){</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        IHMpt-&gt;btnValid();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    } <span class="keywordflow">if</span> (btn == BOUTON::HOME){</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        IHMpt-&gt;btnHome();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (btn == <a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca883acd43c77567e1c3baced84ccf6ed7">BOUTON::PLUS</a>){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a>-&gt;<a class="code" href="class_i_h_m.html#ab6c08657f14c98fffd438f65d4d39cfc">btnPlus</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    } <span class="keywordflow">if</span> (btn == <a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca76e0a518a83090ced9b8ec16dad72d13">BOUTON::MOINS</a>){</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a>-&gt;<a class="code" href="class_i_h_m.html#a7b966eb47f81b05c50d5ac6ee598f135">btnMoins</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    } <span class="keywordflow">if</span> (btn == <a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca63225f19fccb18e7c709f1fa11bc738e">BOUTON::SELECT</a>){</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a>-&gt;<a class="code" href="class_i_h_m.html#aa1e3b6236c8ac8313dc17ef69f67613a">btnValid</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    } <span class="keywordflow">if</span> (btn == <a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca710533dd879dd1202e5c73b27705bf02">BOUTON::HOME</a>){</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a>-&gt;<a class="code" href="class_i_h_m.html#a62f52971edeb53731c37bd1fd6666af7">btnHome</a>();</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    myledB = 0 ; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 0 ; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">bool</span> fctDebounce(<span class="keywordtype">void</span>){</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (debounce.read_ms()&gt;500){</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        debounce.reset();</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="main_8cpp.html#a9151febddcc9e04cb79c870aa6e59cfb">   82</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="main_8cpp.html#a9151febddcc9e04cb79c870aa6e59cfb">fctDebounce</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8cpp.html#a5583bfa296db680d54af84b7175504d5">debounce</a>.read_ms()&gt;500){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="main_8cpp.html#a5583bfa296db680d54af84b7175504d5">debounce</a>.reset();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> btHome(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="main_8cpp.html#a62cbf0545036742ae8287b43408c78ef">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8cpp.html#a62cbf0545036742ae8287b43408c78ef">btHome</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{ </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (fctDebounce())</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        myledB = 1 ; afficherMenu(BOUTON::HOME) ; myledB = 0 ;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8cpp.html#a9151febddcc9e04cb79c870aa6e59cfb">fctDebounce</a>())</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 1 ; <a class="code" href="main_8cpp.html#a1799b73e6ed910d424f89cc33d953c68">afficherMenu</a>(<a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca710533dd879dd1202e5c73b27705bf02">BOUTON::HOME</a>) ; <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 0 ;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span> btPlus(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="main_8cpp.html#aba03354435e776d7f6ca8cc5128b1c25">   95</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8cpp.html#aba03354435e776d7f6ca8cc5128b1c25">btPlus</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (fctDebounce())</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        myledB = 1 ; afficherMenu(BOUTON::PLUS) ; myledB = 0 ; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8cpp.html#a9151febddcc9e04cb79c870aa6e59cfb">fctDebounce</a>())</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 1 ; <a class="code" href="main_8cpp.html#a1799b73e6ed910d424f89cc33d953c68">afficherMenu</a>(<a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca883acd43c77567e1c3baced84ccf6ed7">BOUTON::PLUS</a>) ; <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 0 ; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span> btMoins(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="main_8cpp.html#a6aeeaeac85609170a61e5005800784ca">  101</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8cpp.html#a6aeeaeac85609170a61e5005800784ca">btMoins</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{ </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (fctDebounce())</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        myledB = 1 ; afficherMenu(BOUTON::MOINS) ; myledB = 0 ; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8cpp.html#a9151febddcc9e04cb79c870aa6e59cfb">fctDebounce</a>())</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 1 ; <a class="code" href="main_8cpp.html#a1799b73e6ed910d424f89cc33d953c68">afficherMenu</a>(<a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca76e0a518a83090ced9b8ec16dad72d13">BOUTON::MOINS</a>) ; <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 0 ; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span> btSelect(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="main_8cpp.html#a961c4a01da350bba30b970f6dc037081">  107</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8cpp.html#a961c4a01da350bba30b970f6dc037081">btSelect</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{ </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> (fctDebounce())</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        myledB = 1 ; afficherMenu(BOUTON::SELECT) ; myledB = 0 ; }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8cpp.html#a9151febddcc9e04cb79c870aa6e59cfb">fctDebounce</a>())</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 1 ; <a class="code" href="main_8cpp.html#a1799b73e6ed910d424f89cc33d953c68">afficherMenu</a>(<a class="code" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca63225f19fccb18e7c709f1fa11bc738e">BOUTON::SELECT</a>) ; <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 0 ; }</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keywordtype">int</span> main()</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">  113</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    myledB = 0 ; myledV = 0 ; myledR = 0 ;      </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> = 0 ; <a class="code" href="main_8cpp.html#aa5eb129f24b1aa501317fcb174d76110">myledV</a> = 0 ; <a class="code" href="main_8cpp.html#af1640e7f54e2763d172839eb47bc063a">myledR</a> = 0 ;      </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Epd * gEpd = <span class="keyword">new</span> Epd(_Mosi, _Miso, _Sclk, _Cs, _Dc, _Rst, _Busy);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    CEpaper *Epaper = <span class="keyword">new</span> CEpaper(gEpd); </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Epd * gEpd = <span class="keyword">new</span> Epd(<a class="code" href="main_8cpp.html#ae31e208211e484b03646b325cdf013de">_Mosi</a>, <a class="code" href="main_8cpp.html#ae5256080ead33330eff08622548a352f">_Miso</a>, <a class="code" href="main_8cpp.html#a4c90971578c7c6a25d71dbac0aaed9c6">_Sclk</a>, <a class="code" href="main_8cpp.html#acee39215291b1e7c1c5fc46fb62de69c">_Cs</a>, <a class="code" href="main_8cpp.html#aeef152b4d0282e030312943b9d08517e">_Dc</a>, <a class="code" href="main_8cpp.html#af2977f32f1795a10036b569654e3b30f">_Rst</a>, <a class="code" href="main_8cpp.html#ad11d81c840dfc40291cf242b926fadea">_Busy</a>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="class_c_epaper.html">CEpaper</a> *Epaper = <span class="keyword">new</span> <a class="code" href="class_c_epaper.html">CEpaper</a>(gEpd); </div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    IHMpt = <span class="keyword">new</span> IHM() ;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a> = <span class="keyword">new</span> <a class="code" href="class_i_h_m.html">IHM</a>() ;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">//initialisation epaper</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span> (gEpd-&gt;Init() != 0)</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        myledR = 1;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="main_8cpp.html#af1640e7f54e2763d172839eb47bc063a">myledR</a> = 1;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        myledV = 1; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="main_8cpp.html#aa5eb129f24b1aa501317fcb174d76110">myledV</a> = 1; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Epaper-&gt;rotate();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    Epaper-&gt;effacer() ;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Epaper-&gt;<a class="code" href="class_c_epaper.html#a0ae3b6722c6032e415de7e6636a8d8ec">rotate</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    Epaper-&gt;<a class="code" href="class_c_epaper.html#a293d812efd0b51d4cf1c2f5d9c78ea7e">effacer</a>() ;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    Ecran * EcranAc = <span class="keyword">new</span> Ecran(Epaper,<span class="stringliteral">&quot;Accueil&quot;</span>,<span class="keyword">true</span>,<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    Ecran * EcranPara = <span class="keyword">new</span> Ecran(Epaper,<span class="stringliteral">&quot;Parametre&quot;</span>,<span class="keyword">false</span>,<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    Ecran * EcranSta = <span class="keyword">new</span> Ecran(Epaper,<span class="stringliteral">&quot;Stats&quot;</span>,<span class="keyword">false</span>,<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    Ecran * EcranTes = <span class="keyword">new</span> Ecran(Epaper,<span class="stringliteral">&quot;Test&quot;</span>,<span class="keyword">false</span>,<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="class_ecran.html">Ecran</a> * EcranAc = <span class="keyword">new</span> <a class="code" href="class_ecran.html">Ecran</a>(Epaper,<span class="stringliteral">&quot;Accueil&quot;</span>,<span class="keyword">true</span>,<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="class_ecran.html">Ecran</a> * EcranPara = <span class="keyword">new</span> <a class="code" href="class_ecran.html">Ecran</a>(Epaper,<span class="stringliteral">&quot;Parametre&quot;</span>,<span class="keyword">false</span>,<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="class_ecran.html">Ecran</a> * EcranSta = <span class="keyword">new</span> <a class="code" href="class_ecran.html">Ecran</a>(Epaper,<span class="stringliteral">&quot;Stats&quot;</span>,<span class="keyword">false</span>,<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="class_ecran.html">Ecran</a> * EcranTes = <span class="keyword">new</span> <a class="code" href="class_ecran.html">Ecran</a>(Epaper,<span class="stringliteral">&quot;Test&quot;</span>,<span class="keyword">false</span>,<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    IHMpt-&gt;addEcran(EcranAc);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    EcranAc-&gt;addItem(<span class="keyword">new</span> Item (Epaper,<span class="stringliteral">&quot;Parametre&quot;</span>,<span class="keyword">true</span>));</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    EcranAc-&gt;addItem(<span class="keyword">new</span> Item (Epaper,<span class="stringliteral">&quot;Stats&quot;</span>,<span class="keyword">false</span>));</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    EcranAc-&gt;addItem(<span class="keyword">new</span> Item (Epaper,<span class="stringliteral">&quot;Test&quot;</span>,<span class="keyword">false</span>));</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a>-&gt;<a class="code" href="class_i_h_m.html#a86bde82227c1fd0d65483c78ac4ba8a9">addEcran</a>(EcranAc);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    EcranAc-&gt;<a class="code" href="class_ecran.html#a0b1b96059fd091255ff524786c72990f">addItem</a>(<span class="keyword">new</span> <a class="code" href="class_item.html">Item</a> (Epaper,<span class="stringliteral">&quot;Parametre&quot;</span>,<span class="keyword">true</span>));</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    EcranAc-&gt;<a class="code" href="class_ecran.html#a0b1b96059fd091255ff524786c72990f">addItem</a>(<span class="keyword">new</span> <a class="code" href="class_item.html">Item</a> (Epaper,<span class="stringliteral">&quot;Stats&quot;</span>,<span class="keyword">false</span>));</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    EcranAc-&gt;<a class="code" href="class_ecran.html#a0b1b96059fd091255ff524786c72990f">addItem</a>(<span class="keyword">new</span> <a class="code" href="class_item.html">Item</a> (Epaper,<span class="stringliteral">&quot;Test&quot;</span>,<span class="keyword">false</span>));</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    IHMpt-&gt;addEcran(EcranPara);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    EcranPara-&gt;addItem(<span class="keyword">new</span> Item (Epaper,<span class="stringliteral">&quot;Capteur&quot;</span>,<span class="keyword">true</span>, <span class="keyword">new</span> Variable(2,1,0,2)));</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    EcranPara-&gt;addItem(<span class="keyword">new</span> Item (Epaper,<span class="stringliteral">&quot;Vitesse&quot;</span>,<span class="keyword">false</span>, <span class="keyword">new</span> Variable(20,10,20,130)));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a>-&gt;<a class="code" href="class_i_h_m.html#a86bde82227c1fd0d65483c78ac4ba8a9">addEcran</a>(EcranPara);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    EcranPara-&gt;<a class="code" href="class_ecran.html#a0b1b96059fd091255ff524786c72990f">addItem</a>(<span class="keyword">new</span> <a class="code" href="class_item.html">Item</a> (Epaper,<span class="stringliteral">&quot;Capteur&quot;</span>,<span class="keyword">true</span>, <span class="keyword">new</span> <a class="code" href="class_variable.html">Variable</a>(2,1,0,2)));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    EcranPara-&gt;<a class="code" href="class_ecran.html#a0b1b96059fd091255ff524786c72990f">addItem</a>(<span class="keyword">new</span> <a class="code" href="class_item.html">Item</a> (Epaper,<span class="stringliteral">&quot;Vitesse&quot;</span>,<span class="keyword">false</span>, <span class="keyword">new</span> <a class="code" href="class_variable.html">Variable</a>(20,10,20,130)));</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    IHMpt-&gt;addEcran(EcranSta);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    EcranSta-&gt;addItem(<span class="keyword">new</span> Item (Epaper,<span class="stringliteral">&quot;Stats&quot;</span>,<span class="keyword">true</span>));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a>-&gt;<a class="code" href="class_i_h_m.html#a86bde82227c1fd0d65483c78ac4ba8a9">addEcran</a>(EcranSta);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    EcranSta-&gt;<a class="code" href="class_ecran.html#a0b1b96059fd091255ff524786c72990f">addItem</a>(<span class="keyword">new</span> <a class="code" href="class_item.html">Item</a> (Epaper,<span class="stringliteral">&quot;Stats&quot;</span>,<span class="keyword">true</span>));</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    IHMpt-&gt;addEcran(EcranTes);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    EcranTes-&gt;addItem(<span class="keyword">new</span> Item (Epaper,<span class="stringliteral">&quot;Mode Test&quot;</span>,<span class="keyword">true</span>));</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a>-&gt;<a class="code" href="class_i_h_m.html#a86bde82227c1fd0d65483c78ac4ba8a9">addEcran</a>(EcranTes);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    EcranTes-&gt;<a class="code" href="class_ecran.html#a0b1b96059fd091255ff524786c72990f">addItem</a>(<span class="keyword">new</span> <a class="code" href="class_item.html">Item</a> (Epaper,<span class="stringliteral">&quot;Mode Test&quot;</span>,<span class="keyword">true</span>));</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    btHome() ;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="main_8cpp.html#a62cbf0545036742ae8287b43408c78ef">btHome</a>() ;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">// Epaper-&gt;Ecrire(10, 10,&quot;kolantr&quot;,COLORED);</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// Epaper-&gt;Ecrire(10, 20,&quot;kolantr&quot;,COLORED);</span></div>
@@ -226,12 +226,12 @@ $(function() {
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    eventThread.start(callback(&amp;eventQueue, &amp;EventQueue::dispatch_forever));</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    debounce.start();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="main_8cpp.html#a5583bfa296db680d54af84b7175504d5">debounce</a>.start();</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    interruptHome.rise(eventQueue.event(callback(btHome))) ;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    interruptMoins.rise(eventQueue.event(callback(btPlus))) ;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    interruptPlus.rise(eventQueue.event(callback(btMoins))) ;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    interruptSelect.rise(eventQueue.event(callback(btSelect))) ;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="main_8cpp.html#a57d930a79b13e48c2078aa5d2bc602d1">interruptHome</a>.rise(eventQueue.event(callback(<a class="code" href="main_8cpp.html#a62cbf0545036742ae8287b43408c78ef">btHome</a>))) ;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="main_8cpp.html#a034432d33d74ea362708a2b472b1efc8">interruptMoins</a>.rise(eventQueue.event(callback(<a class="code" href="main_8cpp.html#aba03354435e776d7f6ca8cc5128b1c25">btPlus</a>))) ;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="main_8cpp.html#ab013223eda9fb18d24c85021c53c5acc">interruptPlus</a>.rise(eventQueue.event(callback(<a class="code" href="main_8cpp.html#a6aeeaeac85609170a61e5005800784ca">btMoins</a>))) ;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="main_8cpp.html#af5574be70e4f4dbae929f3fbdfe49900">interruptSelect</a>.rise(eventQueue.event(callback(<a class="code" href="main_8cpp.html#a961c4a01da350bba30b970f6dc037081">btSelect</a>))) ;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) </div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
@@ -253,6 +253,55 @@ $(function() {
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="amain_8cpp_html_aebd9e7a13ee9904b63859fbdcae52458"><div class="ttname"><a href="main_8cpp.html#aebd9e7a13ee9904b63859fbdcae52458">BT_SELECT</a></div><div class="ttdeci">#define BT_SELECT</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00050">main.cpp:50</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a961c4a01da350bba30b970f6dc037081"><div class="ttname"><a href="main_8cpp.html#a961c4a01da350bba30b970f6dc037081">btSelect</a></div><div class="ttdeci">void btSelect(void)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00107">main.cpp:107</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ae31e208211e484b03646b325cdf013de"><div class="ttname"><a href="main_8cpp.html#ae31e208211e484b03646b325cdf013de">_Mosi</a></div><div class="ttdeci">PinName _Mosi</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00032">main.cpp:32</a></div></div>
+<div class="ttc" id="aclass_ecran_html_a0b1b96059fd091255ff524786c72990f"><div class="ttname"><a href="class_ecran.html#a0b1b96059fd091255ff524786c72990f">Ecran::addItem</a></div><div class="ttdeci">void addItem(Item *item)</div><div class="ttdoc">Ajouter un objet Item.</div><div class="ttdef"><b>Definition:</b> <a href="_ecran_8cpp_source.html#l00044">Ecran.cpp:44</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a3d9a7d9e2486055053c2f13ad8dc55bca76e0a518a83090ced9b8ec16dad72d13"><div class="ttname"><a href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca76e0a518a83090ced9b8ec16dad72d13">BOUTON::MOINS</a></div><div class="ttdeci">@ MOINS</div></div>
+<div class="ttc" id="amain_8cpp_html_ab013223eda9fb18d24c85021c53c5acc"><div class="ttname"><a href="main_8cpp.html#ab013223eda9fb18d24c85021c53c5acc">interruptPlus</a></div><div class="ttdeci">InterruptIn interruptPlus(BT_PLUS, PullUp)</div></div>
+<div class="ttc" id="amain_8cpp_html_a9151febddcc9e04cb79c870aa6e59cfb"><div class="ttname"><a href="main_8cpp.html#a9151febddcc9e04cb79c870aa6e59cfb">fctDebounce</a></div><div class="ttdeci">bool fctDebounce(void)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00082">main.cpp:82</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a3d9a7d9e2486055053c2f13ad8dc55bca883acd43c77567e1c3baced84ccf6ed7"><div class="ttname"><a href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca883acd43c77567e1c3baced84ccf6ed7">BOUTON::PLUS</a></div><div class="ttdeci">@ PLUS</div></div>
+<div class="ttc" id="aclass_c_epaper_html"><div class="ttname"><a href="class_c_epaper.html">CEpaper</a></div><div class="ttdoc">Classe CEpaper : Classe qui paramètre l'affichage sur l'écran.</div><div class="ttdef"><b>Definition:</b> <a href="_c_epaper_8hpp_source.html#l00027">CEpaper.hpp:27</a></div></div>
+<div class="ttc" id="a_item_8hpp_html"><div class="ttname"><a href="_item_8hpp.html">Item.hpp</a></div></div>
+<div class="ttc" id="a_ecran_8hpp_html"><div class="ttname"><a href="_ecran_8hpp.html">Ecran.hpp</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ad11d81c840dfc40291cf242b926fadea"><div class="ttname"><a href="main_8cpp.html#ad11d81c840dfc40291cf242b926fadea">_Busy</a></div><div class="ttdeci">PinName _Busy</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00039">main.cpp:39</a></div></div>
+<div class="ttc" id="aclass_i_h_m_html"><div class="ttname"><a href="class_i_h_m.html">IHM</a></div><div class="ttdoc">Classe IHM : Classe affichage de l'IHM.</div><div class="ttdef"><b>Definition:</b> <a href="_i_h_m_8hpp_source.html#l00017">IHM.hpp:17</a></div></div>
+<div class="ttc" id="aclass_i_h_m_html_a62f52971edeb53731c37bd1fd6666af7"><div class="ttname"><a href="class_i_h_m.html#a62f52971edeb53731c37bd1fd6666af7">IHM::btnHome</a></div><div class="ttdeci">void btnHome()</div><div class="ttdoc">Fonction du Bouton Home qui permet le retour à l'accueil.</div><div class="ttdef"><b>Definition:</b> <a href="_i_h_m_8cpp_source.html#l00029">IHM.cpp:29</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a1799b73e6ed910d424f89cc33d953c68"><div class="ttname"><a href="main_8cpp.html#a1799b73e6ed910d424f89cc33d953c68">afficherMenu</a></div><div class="ttdeci">void afficherMenu(BOUTON btn)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00067">main.cpp:67</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ae5256080ead33330eff08622548a352f"><div class="ttname"><a href="main_8cpp.html#ae5256080ead33330eff08622548a352f">_Miso</a></div><div class="ttdeci">PinName _Miso</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00033">main.cpp:33</a></div></div>
+<div class="ttc" id="aclass_c_epaper_html_a293d812efd0b51d4cf1c2f5d9c78ea7e"><div class="ttname"><a href="class_c_epaper.html#a293d812efd0b51d4cf1c2f5d9c78ea7e">CEpaper::effacer</a></div><div class="ttdeci">void effacer()</div><div class="ttdoc">Permet d'effacer ou nettoyer l'affichage.</div><div class="ttdef"><b>Definition:</b> <a href="_c_epaper_8cpp_source.html#l00036">CEpaper.cpp:36</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aeef152b4d0282e030312943b9d08517e"><div class="ttname"><a href="main_8cpp.html#aeef152b4d0282e030312943b9d08517e">_Dc</a></div><div class="ttdeci">PinName _Dc</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00038">main.cpp:38</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aa5eb129f24b1aa501317fcb174d76110"><div class="ttname"><a href="main_8cpp.html#aa5eb129f24b1aa501317fcb174d76110">myledV</a></div><div class="ttdeci">DigitalOut myledV(LED1)</div></div>
+<div class="ttc" id="aclass_i_h_m_html_ab6c08657f14c98fffd438f65d4d39cfc"><div class="ttname"><a href="class_i_h_m.html#ab6c08657f14c98fffd438f65d4d39cfc">IHM::btnPlus</a></div><div class="ttdeci">void btnPlus()</div><div class="ttdoc">Fonction du Bouton Plus qui permet le passage à l'item suivant.</div><div class="ttdef"><b>Definition:</b> <a href="_i_h_m_8cpp_source.html#l00035">IHM.cpp:35</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00113">main.cpp:113</a></div></div>
+<div class="ttc" id="aclass_ecran_html"><div class="ttname"><a href="class_ecran.html">Ecran</a></div><div class="ttdoc">Classe Ecran : Classe des différents écran.</div><div class="ttdef"><b>Definition:</b> <a href="_ecran_8hpp_source.html#l00023">Ecran.hpp:23</a></div></div>
+<div class="ttc" id="aclass_c_epaper_html_a0ae3b6722c6032e415de7e6636a8d8ec"><div class="ttname"><a href="class_c_epaper.html#a0ae3b6722c6032e415de7e6636a8d8ec">CEpaper::rotate</a></div><div class="ttdeci">void rotate()</div><div class="ttdoc">Permet la rotation de l'affichage.</div><div class="ttdef"><b>Definition:</b> <a href="_c_epaper_8cpp_source.html#l00029">CEpaper.cpp:29</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a034432d33d74ea362708a2b472b1efc8"><div class="ttname"><a href="main_8cpp.html#a034432d33d74ea362708a2b472b1efc8">interruptMoins</a></div><div class="ttdeci">InterruptIn interruptMoins(BT_MOINS, PullUp)</div></div>
+<div class="ttc" id="amain_8cpp_html_aba03354435e776d7f6ca8cc5128b1c25"><div class="ttname"><a href="main_8cpp.html#aba03354435e776d7f6ca8cc5128b1c25">btPlus</a></div><div class="ttdeci">void btPlus(void)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00095">main.cpp:95</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a3d9a7d9e2486055053c2f13ad8dc55bca63225f19fccb18e7c709f1fa11bc738e"><div class="ttname"><a href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca63225f19fccb18e7c709f1fa11bc738e">BOUTON::SELECT</a></div><div class="ttdeci">@ SELECT</div></div>
+<div class="ttc" id="aclass_i_h_m_html_aa1e3b6236c8ac8313dc17ef69f67613a"><div class="ttname"><a href="class_i_h_m.html#aa1e3b6236c8ac8313dc17ef69f67613a">IHM::btnValid</a></div><div class="ttdeci">void btnValid()</div><div class="ttdoc">Fonction du Bouton Valid qui permet l'entrée dans un ecran soit mettre actif un ecran.</div><div class="ttdef"><b>Definition:</b> <a href="_i_h_m_8cpp_source.html#l00053">IHM.cpp:53</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a57d930a79b13e48c2078aa5d2bc602d1"><div class="ttname"><a href="main_8cpp.html#a57d930a79b13e48c2078aa5d2bc602d1">interruptHome</a></div><div class="ttdeci">InterruptIn interruptHome(BT_HOME, PullUp)</div></div>
+<div class="ttc" id="amain_8cpp_html_a19e888551c847054764c911bfadf435e"><div class="ttname"><a href="main_8cpp.html#a19e888551c847054764c911bfadf435e">BT_MOINS</a></div><div class="ttdeci">#define BT_MOINS</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00049">main.cpp:49</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a4c90971578c7c6a25d71dbac0aaed9c6"><div class="ttname"><a href="main_8cpp.html#a4c90971578c7c6a25d71dbac0aaed9c6">_Sclk</a></div><div class="ttdeci">PinName _Sclk</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00034">main.cpp:34</a></div></div>
+<div class="ttc" id="aclass_item_html"><div class="ttname"><a href="class_item.html">Item</a></div><div class="ttdoc">Classe Item : Classe qui permet de gérer les différents.</div><div class="ttdef"><b>Definition:</b> <a href="_item_8hpp_source.html#l00020">Item.hpp:20</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a6aeeaeac85609170a61e5005800784ca"><div class="ttname"><a href="main_8cpp.html#a6aeeaeac85609170a61e5005800784ca">btMoins</a></div><div class="ttdeci">void btMoins(void)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00101">main.cpp:101</a></div></div>
+<div class="ttc" id="a_i_h_m_8hpp_html"><div class="ttname"><a href="_i_h_m_8hpp.html">IHM.hpp</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a194127b77a8d30e649f42f9a22ba03c8"><div class="ttname"><a href="main_8cpp.html#a194127b77a8d30e649f42f9a22ba03c8">BT_HOME</a></div><div class="ttdeci">#define BT_HOME</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00047">main.cpp:47</a></div></div>
+<div class="ttc" id="amain_8cpp_html_af1640e7f54e2763d172839eb47bc063a"><div class="ttname"><a href="main_8cpp.html#af1640e7f54e2763d172839eb47bc063a">myledR</a></div><div class="ttdeci">DigitalOut myledR(LED3)</div></div>
+<div class="ttc" id="amain_8cpp_html_a6a32ab32f2ee32943f51c36b4102eb40"><div class="ttname"><a href="main_8cpp.html#a6a32ab32f2ee32943f51c36b4102eb40">BT_PLUS</a></div><div class="ttdeci">#define BT_PLUS</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00048">main.cpp:48</a></div></div>
+<div class="ttc" id="amain_8cpp_html_af5574be70e4f4dbae929f3fbdfe49900"><div class="ttname"><a href="main_8cpp.html#af5574be70e4f4dbae929f3fbdfe49900">interruptSelect</a></div><div class="ttdeci">InterruptIn interruptSelect(BT_SELECT, PullUp)</div></div>
+<div class="ttc" id="amain_8cpp_html_a3d9a7d9e2486055053c2f13ad8dc55bca710533dd879dd1202e5c73b27705bf02"><div class="ttname"><a href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca710533dd879dd1202e5c73b27705bf02">BOUTON::HOME</a></div><div class="ttdeci">@ HOME</div></div>
+<div class="ttc" id="a_c_epaper_8hpp_html"><div class="ttname"><a href="_c_epaper_8hpp.html">CEpaper.hpp</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a3d9a7d9e2486055053c2f13ad8dc55bc"><div class="ttname"><a href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bc">BOUTON</a></div><div class="ttdeci">BOUTON</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00012">main.cpp:12</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a694f16040a7f7b53315a70bad121d9b6"><div class="ttname"><a href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a></div><div class="ttdeci">DigitalOut myledB(LED2)</div></div>
+<div class="ttc" id="amain_8cpp_html_acee39215291b1e7c1c5fc46fb62de69c"><div class="ttname"><a href="main_8cpp.html#acee39215291b1e7c1c5fc46fb62de69c">_Cs</a></div><div class="ttdeci">PinName _Cs</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00035">main.cpp:35</a></div></div>
+<div class="ttc" id="aclass_i_h_m_html_a7b966eb47f81b05c50d5ac6ee598f135"><div class="ttname"><a href="class_i_h_m.html#a7b966eb47f81b05c50d5ac6ee598f135">IHM::btnMoins</a></div><div class="ttdeci">void btnMoins()</div><div class="ttdoc">Fonction du Bouton Moins qui permet le passage à l'item precedant.</div><div class="ttdef"><b>Definition:</b> <a href="_i_h_m_8cpp_source.html#l00044">IHM.cpp:44</a></div></div>
+<div class="ttc" id="aclass_variable_html"><div class="ttname"><a href="class_variable.html">Variable</a></div><div class="ttdoc">Classe Variable : Classe des Variable sur l'IHM.</div><div class="ttdef"><b>Definition:</b> <a href="_variable_8hpp_source.html#l00016">Variable.hpp:16</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a62cbf0545036742ae8287b43408c78ef"><div class="ttname"><a href="main_8cpp.html#a62cbf0545036742ae8287b43408c78ef">btHome</a></div><div class="ttdeci">void btHome(void)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00089">main.cpp:89</a></div></div>
+<div class="ttc" id="aclass_i_h_m_html_a86bde82227c1fd0d65483c78ac4ba8a9"><div class="ttname"><a href="class_i_h_m.html#a86bde82227c1fd0d65483c78ac4ba8a9">IHM::addEcran</a></div><div class="ttdeci">void addEcran(Ecran *ecran)</div><div class="ttdoc">Ajoute un ecran.</div><div class="ttdef"><b>Definition:</b> <a href="_i_h_m_8cpp_source.html#l00063">IHM.cpp:63</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aa51f5acfa6802e794744005431f32e08"><div class="ttname"><a href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a></div><div class="ttdeci">IHM * IHMpt</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00065">main.cpp:65</a></div></div>
+<div class="ttc" id="amain_8cpp_html_af2977f32f1795a10036b569654e3b30f"><div class="ttname"><a href="main_8cpp.html#af2977f32f1795a10036b569654e3b30f">_Rst</a></div><div class="ttdeci">PinName _Rst</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00037">main.cpp:37</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a5583bfa296db680d54af84b7175504d5"><div class="ttname"><a href="main_8cpp.html#a5583bfa296db680d54af84b7175504d5">debounce</a></div><div class="ttdeci">Timer debounce</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00045">main.cpp:45</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

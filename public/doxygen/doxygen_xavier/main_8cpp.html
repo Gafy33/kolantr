@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IHM_Kolantr: main.cpp File Reference</title>
+<title>IHM_Kolantr: /home/x/xav.hervier/Documents/e-paper/mbed_miseEnOuvre_ePaper-version1/mbed_miseenouvre_epaper/main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IHM_Kolantr
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">main.cpp File Reference</div>  </div>
+<div class="title">/home/x/xav.hervier/Documents/e-paper/mbed_miseEnOuvre_ePaper-version1/mbed_miseenouvre_epaper/main.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -80,119 +80,114 @@ $(function() {
 <code>#include &quot;epd2in7/epd2in7.h&quot;</code><br />
 <code>#include &quot;epd2in7/imagedata.h&quot;</code><br />
 <code>#include &quot;epd2in7/epdpaint.h&quot;</code><br />
-<code>#include &quot;CEpaper.hpp&quot;</code><br />
-<code>#include &quot;IHM.hpp&quot;</code><br />
-<code>#include &quot;Ecran.hpp&quot;</code><br />
-<code>#include &quot;Item.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="_c_epaper_8hpp_source.html">CEpaper.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i_h_m_8hpp_source.html">IHM.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_ecran_8hpp_source.html">Ecran.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_item_8hpp_source.html">Item.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#_2home_2x_2xav_8hervier_2_documents_2e-paper_2mbed__mise_en_ouvre__e_paper-version1_2mbed__miseenouvre__epaper_2main_8cpp" alt=""/></div>
+<map name="_2home_2x_2xav_8hervier_2_documents_2e-paper_2mbed__mise_en_ouvre__e_paper-version1_2mbed__miseenouvre__epaper_2main_8cpp" id="_2home_2x_2xav_8hervier_2_documents_2e-paper_2mbed__mise_en_ouvre__e_paper-version1_2mbed__miseenouvre__epaper_2main_8cpp">
+<area shape="rect" title="Mise en oeuvre module d&#39;affichage ePaper HAT de waveshare." alt="" coords="813,5,1084,76"/>
+<area shape="rect" title=" " alt="" coords="38,467,109,493"/>
+<area shape="rect" title=" " alt="" coords="403,467,470,493"/>
+<area shape="rect" title=" " alt="" coords="94,146,165,173"/>
+<area shape="rect" title=" " alt="" coords="629,467,772,493"/>
+<area shape="rect" title=" " alt="" coords="241,124,552,195"/>
+<area shape="rect" title=" " alt="" coords="576,124,888,195"/>
+<area shape="rect" title=" " alt="" coords="913,146,984,173"/>
+<area shape="rect" title=" " alt="" coords="864,467,1024,493"/>
+<area shape="rect" title=" " alt="" coords="1048,467,1195,493"/>
+<area shape="rect" href="_c_epaper_8hpp.html" title=" " alt="" coords="982,392,1085,419"/>
+<area shape="rect" href="_i_h_m_8hpp.html" title=" " alt="" coords="1186,146,1262,173"/>
+<area shape="rect" href="_ecran_8hpp.html" title=" " alt="" coords="1262,243,1349,269"/>
+<area shape="rect" href="_item_8hpp.html" title=" " alt="" coords="1451,317,1531,344"/>
+<area shape="rect" title=" " alt="" coords="1219,467,1278,493"/>
+<area shape="rect" title=" " alt="" coords="1344,467,1424,493"/>
+<area shape="rect" title=" " alt="" coords="1364,317,1426,344"/>
+<area shape="rect" href="_variable_8hpp.html" title=" " alt="" coords="1465,392,1568,419"/>
+</map>
+</div>
 </div>
 <p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a6dc8f5f6cd3fb1bdf454fe905019a666"><td class="memItemLeft" align="right" valign="top"><a id="a6dc8f5f6cd3fb1bdf454fe905019a666"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>COLORED</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a6dc8f5f6cd3fb1bdf454fe905019a666"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6dc8f5f6cd3fb1bdf454fe905019a666">COLORED</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a6dc8f5f6cd3fb1bdf454fe905019a666"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3a4fe91f0304c64711c2b91d6d24781"><td class="memItemLeft" align="right" valign="top"><a id="aa3a4fe91f0304c64711c2b91d6d24781"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>UNCOLORED</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:aa3a4fe91f0304c64711c2b91d6d24781"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa3a4fe91f0304c64711c2b91d6d24781">UNCOLORED</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:aa3a4fe91f0304c64711c2b91d6d24781"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0b7b2a0ec4b64b92585808a051e1fa"><td class="memItemLeft" align="right" valign="top"><a id="abe0b7b2a0ec4b64b92585808a051e1fa"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SLEEP_TIME</b>&#160;&#160;&#160;1000</td></tr>
+<tr class="memitem:abe0b7b2a0ec4b64b92585808a051e1fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abe0b7b2a0ec4b64b92585808a051e1fa">SLEEP_TIME</a>&#160;&#160;&#160;1000</td></tr>
 <tr class="separator:abe0b7b2a0ec4b64b92585808a051e1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a194127b77a8d30e649f42f9a22ba03c8"><td class="memItemLeft" align="right" valign="top"><a id="a194127b77a8d30e649f42f9a22ba03c8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BT_HOME</b>&#160;&#160;&#160;PD_15</td></tr>
+<tr class="memitem:a194127b77a8d30e649f42f9a22ba03c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a194127b77a8d30e649f42f9a22ba03c8">BT_HOME</a>&#160;&#160;&#160;PD_15</td></tr>
 <tr class="separator:a194127b77a8d30e649f42f9a22ba03c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a32ab32f2ee32943f51c36b4102eb40"><td class="memItemLeft" align="right" valign="top"><a id="a6a32ab32f2ee32943f51c36b4102eb40"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BT_PLUS</b>&#160;&#160;&#160;PD_14</td></tr>
+<tr class="memitem:a6a32ab32f2ee32943f51c36b4102eb40"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6a32ab32f2ee32943f51c36b4102eb40">BT_PLUS</a>&#160;&#160;&#160;PD_14</td></tr>
 <tr class="separator:a6a32ab32f2ee32943f51c36b4102eb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19e888551c847054764c911bfadf435e"><td class="memItemLeft" align="right" valign="top"><a id="a19e888551c847054764c911bfadf435e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BT_MOINS</b>&#160;&#160;&#160;PB_9</td></tr>
+<tr class="memitem:a19e888551c847054764c911bfadf435e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a19e888551c847054764c911bfadf435e">BT_MOINS</a>&#160;&#160;&#160;PB_9</td></tr>
 <tr class="separator:a19e888551c847054764c911bfadf435e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebd9e7a13ee9904b63859fbdcae52458"><td class="memItemLeft" align="right" valign="top"><a id="aebd9e7a13ee9904b63859fbdcae52458"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BT_SELECT</b>&#160;&#160;&#160;PB_8</td></tr>
+<tr class="memitem:aebd9e7a13ee9904b63859fbdcae52458"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aebd9e7a13ee9904b63859fbdcae52458">BT_SELECT</a>&#160;&#160;&#160;PB_8</td></tr>
 <tr class="separator:aebd9e7a13ee9904b63859fbdcae52458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a3d9a7d9e2486055053c2f13ad8dc55bc"><td class="memItemLeft" align="right" valign="top"><a id="a3d9a7d9e2486055053c2f13ad8dc55bc"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>BOUTON</b> { <b>HOME</b>, 
-<b>MOINS</b>, 
-<b>PLUS</b>, 
-<b>SELECT</b>
+<tr class="memitem:a3d9a7d9e2486055053c2f13ad8dc55bc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bc">BOUTON</a> { <a class="el" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca710533dd879dd1202e5c73b27705bf02">BOUTON::HOME</a>, 
+<a class="el" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca76e0a518a83090ced9b8ec16dad72d13">BOUTON::MOINS</a>, 
+<a class="el" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca883acd43c77567e1c3baced84ccf6ed7">BOUTON::PLUS</a>, 
+<a class="el" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bca63225f19fccb18e7c709f1fa11bc738e">BOUTON::SELECT</a>
  }</td></tr>
 <tr class="separator:a3d9a7d9e2486055053c2f13ad8dc55bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa5eb129f24b1aa501317fcb174d76110"><td class="memItemLeft" align="right" valign="top"><a id="aa5eb129f24b1aa501317fcb174d76110"></a>
-DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><b>myledV</b> (LED1)</td></tr>
+<tr class="memitem:aa5eb129f24b1aa501317fcb174d76110"><td class="memItemLeft" align="right" valign="top">DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa5eb129f24b1aa501317fcb174d76110">myledV</a> (LED1)</td></tr>
 <tr class="separator:aa5eb129f24b1aa501317fcb174d76110"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a694f16040a7f7b53315a70bad121d9b6"><td class="memItemLeft" align="right" valign="top"><a id="a694f16040a7f7b53315a70bad121d9b6"></a>
-DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><b>myledB</b> (LED2)</td></tr>
+<tr class="memitem:a694f16040a7f7b53315a70bad121d9b6"><td class="memItemLeft" align="right" valign="top">DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a694f16040a7f7b53315a70bad121d9b6">myledB</a> (LED2)</td></tr>
 <tr class="separator:a694f16040a7f7b53315a70bad121d9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1640e7f54e2763d172839eb47bc063a"><td class="memItemLeft" align="right" valign="top"><a id="af1640e7f54e2763d172839eb47bc063a"></a>
-DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><b>myledR</b> (LED3)</td></tr>
+<tr class="memitem:af1640e7f54e2763d172839eb47bc063a"><td class="memItemLeft" align="right" valign="top">DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af1640e7f54e2763d172839eb47bc063a">myledR</a> (LED3)</td></tr>
 <tr class="separator:af1640e7f54e2763d172839eb47bc063a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57d930a79b13e48c2078aa5d2bc602d1"><td class="memItemLeft" align="right" valign="top"><a id="a57d930a79b13e48c2078aa5d2bc602d1"></a>
-InterruptIn&#160;</td><td class="memItemRight" valign="bottom"><b>interruptHome</b> (BT_HOME, PullUp)</td></tr>
+<tr class="memitem:a57d930a79b13e48c2078aa5d2bc602d1"><td class="memItemLeft" align="right" valign="top">InterruptIn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a57d930a79b13e48c2078aa5d2bc602d1">interruptHome</a> (<a class="el" href="main_8cpp.html#a194127b77a8d30e649f42f9a22ba03c8">BT_HOME</a>, PullUp)</td></tr>
 <tr class="separator:a57d930a79b13e48c2078aa5d2bc602d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab013223eda9fb18d24c85021c53c5acc"><td class="memItemLeft" align="right" valign="top"><a id="ab013223eda9fb18d24c85021c53c5acc"></a>
-InterruptIn&#160;</td><td class="memItemRight" valign="bottom"><b>interruptPlus</b> (BT_PLUS, PullUp)</td></tr>
+<tr class="memitem:ab013223eda9fb18d24c85021c53c5acc"><td class="memItemLeft" align="right" valign="top">InterruptIn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ab013223eda9fb18d24c85021c53c5acc">interruptPlus</a> (<a class="el" href="main_8cpp.html#a6a32ab32f2ee32943f51c36b4102eb40">BT_PLUS</a>, PullUp)</td></tr>
 <tr class="separator:ab013223eda9fb18d24c85021c53c5acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a034432d33d74ea362708a2b472b1efc8"><td class="memItemLeft" align="right" valign="top"><a id="a034432d33d74ea362708a2b472b1efc8"></a>
-InterruptIn&#160;</td><td class="memItemRight" valign="bottom"><b>interruptMoins</b> (BT_MOINS, PullUp)</td></tr>
+<tr class="memitem:a034432d33d74ea362708a2b472b1efc8"><td class="memItemLeft" align="right" valign="top">InterruptIn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a034432d33d74ea362708a2b472b1efc8">interruptMoins</a> (<a class="el" href="main_8cpp.html#a19e888551c847054764c911bfadf435e">BT_MOINS</a>, PullUp)</td></tr>
 <tr class="separator:a034432d33d74ea362708a2b472b1efc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5574be70e4f4dbae929f3fbdfe49900"><td class="memItemLeft" align="right" valign="top"><a id="af5574be70e4f4dbae929f3fbdfe49900"></a>
-InterruptIn&#160;</td><td class="memItemRight" valign="bottom"><b>interruptSelect</b> (BT_SELECT, PullUp)</td></tr>
+<tr class="memitem:af5574be70e4f4dbae929f3fbdfe49900"><td class="memItemLeft" align="right" valign="top">InterruptIn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af5574be70e4f4dbae929f3fbdfe49900">interruptSelect</a> (<a class="el" href="main_8cpp.html#aebd9e7a13ee9904b63859fbdcae52458">BT_SELECT</a>, PullUp)</td></tr>
 <tr class="separator:af5574be70e4f4dbae929f3fbdfe49900"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1799b73e6ed910d424f89cc33d953c68"><td class="memItemLeft" align="right" valign="top"><a id="a1799b73e6ed910d424f89cc33d953c68"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>afficherMenu</b> (BOUTON btn)</td></tr>
+<tr class="memitem:a1799b73e6ed910d424f89cc33d953c68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1799b73e6ed910d424f89cc33d953c68">afficherMenu</a> (<a class="el" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bc">BOUTON</a> btn)</td></tr>
 <tr class="separator:a1799b73e6ed910d424f89cc33d953c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9151febddcc9e04cb79c870aa6e59cfb"><td class="memItemLeft" align="right" valign="top"><a id="a9151febddcc9e04cb79c870aa6e59cfb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>fctDebounce</b> (void)</td></tr>
+<tr class="memitem:a9151febddcc9e04cb79c870aa6e59cfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9151febddcc9e04cb79c870aa6e59cfb">fctDebounce</a> (void)</td></tr>
 <tr class="separator:a9151febddcc9e04cb79c870aa6e59cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62cbf0545036742ae8287b43408c78ef"><td class="memItemLeft" align="right" valign="top"><a id="a62cbf0545036742ae8287b43408c78ef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>btHome</b> (void)</td></tr>
+<tr class="memitem:a62cbf0545036742ae8287b43408c78ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a62cbf0545036742ae8287b43408c78ef">btHome</a> (void)</td></tr>
 <tr class="separator:a62cbf0545036742ae8287b43408c78ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba03354435e776d7f6ca8cc5128b1c25"><td class="memItemLeft" align="right" valign="top"><a id="aba03354435e776d7f6ca8cc5128b1c25"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>btPlus</b> (void)</td></tr>
+<tr class="memitem:aba03354435e776d7f6ca8cc5128b1c25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aba03354435e776d7f6ca8cc5128b1c25">btPlus</a> (void)</td></tr>
 <tr class="separator:aba03354435e776d7f6ca8cc5128b1c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aeeaeac85609170a61e5005800784ca"><td class="memItemLeft" align="right" valign="top"><a id="a6aeeaeac85609170a61e5005800784ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>btMoins</b> (void)</td></tr>
+<tr class="memitem:a6aeeaeac85609170a61e5005800784ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6aeeaeac85609170a61e5005800784ca">btMoins</a> (void)</td></tr>
 <tr class="separator:a6aeeaeac85609170a61e5005800784ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a961c4a01da350bba30b970f6dc037081"><td class="memItemLeft" align="right" valign="top"><a id="a961c4a01da350bba30b970f6dc037081"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>btSelect</b> (void)</td></tr>
+<tr class="memitem:a961c4a01da350bba30b970f6dc037081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a961c4a01da350bba30b970f6dc037081">btSelect</a> (void)</td></tr>
 <tr class="separator:a961c4a01da350bba30b970f6dc037081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae31e208211e484b03646b325cdf013de"><td class="memItemLeft" align="right" valign="top"><a id="ae31e208211e484b03646b325cdf013de"></a>
-PinName&#160;</td><td class="memItemRight" valign="bottom"><b>_Mosi</b> = PE_14</td></tr>
+<tr class="memitem:ae31e208211e484b03646b325cdf013de"><td class="memItemLeft" align="right" valign="top">PinName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae31e208211e484b03646b325cdf013de">_Mosi</a> = PE_14</td></tr>
 <tr class="separator:ae31e208211e484b03646b325cdf013de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5256080ead33330eff08622548a352f"><td class="memItemLeft" align="right" valign="top"><a id="ae5256080ead33330eff08622548a352f"></a>
-PinName&#160;</td><td class="memItemRight" valign="bottom"><b>_Miso</b> = PE_13</td></tr>
+<tr class="memitem:ae5256080ead33330eff08622548a352f"><td class="memItemLeft" align="right" valign="top">PinName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae5256080ead33330eff08622548a352f">_Miso</a> = PE_13</td></tr>
 <tr class="separator:ae5256080ead33330eff08622548a352f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c90971578c7c6a25d71dbac0aaed9c6"><td class="memItemLeft" align="right" valign="top"><a id="a4c90971578c7c6a25d71dbac0aaed9c6"></a>
-PinName&#160;</td><td class="memItemRight" valign="bottom"><b>_Sclk</b> = PE_12</td></tr>
+<tr class="memitem:a4c90971578c7c6a25d71dbac0aaed9c6"><td class="memItemLeft" align="right" valign="top">PinName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4c90971578c7c6a25d71dbac0aaed9c6">_Sclk</a> = PE_12</td></tr>
 <tr class="separator:a4c90971578c7c6a25d71dbac0aaed9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acee39215291b1e7c1c5fc46fb62de69c"><td class="memItemLeft" align="right" valign="top"><a id="acee39215291b1e7c1c5fc46fb62de69c"></a>
-PinName&#160;</td><td class="memItemRight" valign="bottom"><b>_Cs</b> = PE_11</td></tr>
+<tr class="memitem:acee39215291b1e7c1c5fc46fb62de69c"><td class="memItemLeft" align="right" valign="top">PinName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#acee39215291b1e7c1c5fc46fb62de69c">_Cs</a> = PE_11</td></tr>
 <tr class="separator:acee39215291b1e7c1c5fc46fb62de69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2977f32f1795a10036b569654e3b30f"><td class="memItemLeft" align="right" valign="top"><a id="af2977f32f1795a10036b569654e3b30f"></a>
-PinName&#160;</td><td class="memItemRight" valign="bottom"><b>_Rst</b> = PF_13</td></tr>
+<tr class="memitem:af2977f32f1795a10036b569654e3b30f"><td class="memItemLeft" align="right" valign="top">PinName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af2977f32f1795a10036b569654e3b30f">_Rst</a> = PF_13</td></tr>
 <tr class="separator:af2977f32f1795a10036b569654e3b30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef152b4d0282e030312943b9d08517e"><td class="memItemLeft" align="right" valign="top"><a id="aeef152b4d0282e030312943b9d08517e"></a>
-PinName&#160;</td><td class="memItemRight" valign="bottom"><b>_Dc</b> = PE_9</td></tr>
+<tr class="memitem:aeef152b4d0282e030312943b9d08517e"><td class="memItemLeft" align="right" valign="top">PinName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aeef152b4d0282e030312943b9d08517e">_Dc</a> = PE_9</td></tr>
 <tr class="separator:aeef152b4d0282e030312943b9d08517e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad11d81c840dfc40291cf242b926fadea"><td class="memItemLeft" align="right" valign="top"><a id="ad11d81c840dfc40291cf242b926fadea"></a>
-PinName&#160;</td><td class="memItemRight" valign="bottom"><b>_Busy</b> = PF_12</td></tr>
+<tr class="memitem:ad11d81c840dfc40291cf242b926fadea"><td class="memItemLeft" align="right" valign="top">PinName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad11d81c840dfc40291cf242b926fadea">_Busy</a> = PF_12</td></tr>
 <tr class="separator:ad11d81c840dfc40291cf242b926fadea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5583bfa296db680d54af84b7175504d5"><td class="memItemLeft" align="right" valign="top"><a id="a5583bfa296db680d54af84b7175504d5"></a>
-Timer&#160;</td><td class="memItemRight" valign="bottom"><b>debounce</b></td></tr>
+<tr class="memitem:a5583bfa296db680d54af84b7175504d5"><td class="memItemLeft" align="right" valign="top">Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5583bfa296db680d54af84b7175504d5">debounce</a></td></tr>
 <tr class="separator:a5583bfa296db680d54af84b7175504d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa51f5acfa6802e794744005431f32e08"><td class="memItemLeft" align="right" valign="top"><a id="aa51f5acfa6802e794744005431f32e08"></a>
-IHM *&#160;</td><td class="memItemRight" valign="bottom"><b>IHMpt</b></td></tr>
+<tr class="memitem:aa51f5acfa6802e794744005431f32e08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_h_m.html">IHM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa51f5acfa6802e794744005431f32e08">IHMpt</a></td></tr>
 <tr class="separator:aa51f5acfa6802e794744005431f32e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -202,7 +197,602 @@ IHM *&#160;</td><td class="memItemRight" valign="bottom"><b>IHMpt</b></td></tr>
 <dl class="section date"><dt>Date</dt><dd>09/11/2020 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a194127b77a8d30e649f42f9a22ba03c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194127b77a8d30e649f42f9a22ba03c8">&#9670;&nbsp;</a></span>BT_HOME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BT_HOME&#160;&#160;&#160;PD_15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00047">47</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a19e888551c847054764c911bfadf435e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e888551c847054764c911bfadf435e">&#9670;&nbsp;</a></span>BT_MOINS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BT_MOINS&#160;&#160;&#160;PB_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00049">49</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6a32ab32f2ee32943f51c36b4102eb40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a32ab32f2ee32943f51c36b4102eb40">&#9670;&nbsp;</a></span>BT_PLUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BT_PLUS&#160;&#160;&#160;PD_14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00048">48</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aebd9e7a13ee9904b63859fbdcae52458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd9e7a13ee9904b63859fbdcae52458">&#9670;&nbsp;</a></span>BT_SELECT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BT_SELECT&#160;&#160;&#160;PB_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00050">50</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6dc8f5f6cd3fb1bdf454fe905019a666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc8f5f6cd3fb1bdf454fe905019a666">&#9670;&nbsp;</a></span>COLORED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLORED&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00009">9</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abe0b7b2a0ec4b64b92585808a051e1fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0b7b2a0ec4b64b92585808a051e1fa">&#9670;&nbsp;</a></span>SLEEP_TIME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SLEEP_TIME&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00014">14</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa3a4fe91f0304c64711c2b91d6d24781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a4fe91f0304c64711c2b91d6d24781">&#9670;&nbsp;</a></span>UNCOLORED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNCOLORED&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00010">10</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a3d9a7d9e2486055053c2f13ad8dc55bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d9a7d9e2486055053c2f13ad8dc55bc">&#9670;&nbsp;</a></span>BOUTON</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bc">BOUTON</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3d9a7d9e2486055053c2f13ad8dc55bca710533dd879dd1202e5c73b27705bf02"></a>HOME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3d9a7d9e2486055053c2f13ad8dc55bca76e0a518a83090ced9b8ec16dad72d13"></a>MOINS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3d9a7d9e2486055053c2f13ad8dc55bca883acd43c77567e1c3baced84ccf6ed7"></a>PLUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3d9a7d9e2486055053c2f13ad8dc55bca63225f19fccb18e7c709f1fa11bc738e"></a>SELECT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00012">12</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a1799b73e6ed910d424f89cc33d953c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1799b73e6ed910d424f89cc33d953c68">&#9670;&nbsp;</a></span>afficherMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficherMenu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="main_8cpp.html#a3d9a7d9e2486055053c2f13ad8dc55bc">BOUTON</a>&#160;</td>
+          <td class="paramname"><em>btn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00067">67</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a62cbf0545036742ae8287b43408c78ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62cbf0545036742ae8287b43408c78ef">&#9670;&nbsp;</a></span>btHome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void btHome </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00089">89</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6aeeaeac85609170a61e5005800784ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aeeaeac85609170a61e5005800784ca">&#9670;&nbsp;</a></span>btMoins()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void btMoins </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00101">101</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aba03354435e776d7f6ca8cc5128b1c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba03354435e776d7f6ca8cc5128b1c25">&#9670;&nbsp;</a></span>btPlus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void btPlus </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00095">95</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a961c4a01da350bba30b970f6dc037081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961c4a01da350bba30b970f6dc037081">&#9670;&nbsp;</a></span>btSelect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void btSelect </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00107">107</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9151febddcc9e04cb79c870aa6e59cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9151febddcc9e04cb79c870aa6e59cfb">&#9670;&nbsp;</a></span>fctDebounce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fctDebounce </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00082">82</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a57d930a79b13e48c2078aa5d2bc602d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d930a79b13e48c2078aa5d2bc602d1">&#9670;&nbsp;</a></span>interruptHome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InterruptIn interruptHome </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="main_8cpp.html#a194127b77a8d30e649f42f9a22ba03c8">BT_HOME</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PullUp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a034432d33d74ea362708a2b472b1efc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034432d33d74ea362708a2b472b1efc8">&#9670;&nbsp;</a></span>interruptMoins()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InterruptIn interruptMoins </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="main_8cpp.html#a19e888551c847054764c911bfadf435e">BT_MOINS</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PullUp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab013223eda9fb18d24c85021c53c5acc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab013223eda9fb18d24c85021c53c5acc">&#9670;&nbsp;</a></span>interruptPlus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InterruptIn interruptPlus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="main_8cpp.html#a6a32ab32f2ee32943f51c36b4102eb40">BT_PLUS</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PullUp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5574be70e4f4dbae929f3fbdfe49900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5574be70e4f4dbae929f3fbdfe49900">&#9670;&nbsp;</a></span>interruptSelect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InterruptIn interruptSelect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="main_8cpp.html#aebd9e7a13ee9904b63859fbdcae52458">BT_SELECT</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PullUp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00113">113</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a694f16040a7f7b53315a70bad121d9b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a694f16040a7f7b53315a70bad121d9b6">&#9670;&nbsp;</a></span>myledB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DigitalOut myledB </td>
+          <td>(</td>
+          <td class="paramtype">LED2&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1640e7f54e2763d172839eb47bc063a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1640e7f54e2763d172839eb47bc063a">&#9670;&nbsp;</a></span>myledR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DigitalOut myledR </td>
+          <td>(</td>
+          <td class="paramtype">LED3&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5eb129f24b1aa501317fcb174d76110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5eb129f24b1aa501317fcb174d76110">&#9670;&nbsp;</a></span>myledV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DigitalOut myledV </td>
+          <td>(</td>
+          <td class="paramtype">LED1&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ad11d81c840dfc40291cf242b926fadea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11d81c840dfc40291cf242b926fadea">&#9670;&nbsp;</a></span>_Busy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PinName _Busy = PF_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00039">39</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acee39215291b1e7c1c5fc46fb62de69c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acee39215291b1e7c1c5fc46fb62de69c">&#9670;&nbsp;</a></span>_Cs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PinName _Cs = PE_11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00035">35</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeef152b4d0282e030312943b9d08517e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef152b4d0282e030312943b9d08517e">&#9670;&nbsp;</a></span>_Dc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PinName _Dc = PE_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00038">38</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae5256080ead33330eff08622548a352f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5256080ead33330eff08622548a352f">&#9670;&nbsp;</a></span>_Miso</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PinName _Miso = PE_13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00033">33</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae31e208211e484b03646b325cdf013de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31e208211e484b03646b325cdf013de">&#9670;&nbsp;</a></span>_Mosi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PinName _Mosi = PE_14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00032">32</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af2977f32f1795a10036b569654e3b30f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2977f32f1795a10036b569654e3b30f">&#9670;&nbsp;</a></span>_Rst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PinName _Rst = PF_13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00037">37</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c90971578c7c6a25d71dbac0aaed9c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c90971578c7c6a25d71dbac0aaed9c6">&#9670;&nbsp;</a></span>_Sclk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PinName _Sclk = PE_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00034">34</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5583bfa296db680d54af84b7175504d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5583bfa296db680d54af84b7175504d5">&#9670;&nbsp;</a></span>debounce</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Timer debounce</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00045">45</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa51f5acfa6802e794744005431f32e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51f5acfa6802e794744005431f32e08">&#9670;&nbsp;</a></span>IHMpt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_h_m.html">IHM</a>* IHMpt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00065">65</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['btnhome_4',['btnHome',['../class_i_h_m.html#a62f52971edeb53731c37bd1fd6666af7',1,'IHM']]],
-  ['btnmoins_5',['btnMoins',['../class_i_h_m.html#a7b966eb47f81b05c50d5ac6ee598f135',1,'IHM']]],
-  ['btnplus_6',['btnPlus',['../class_i_h_m.html#ab6c08657f14c98fffd438f65d4d39cfc',1,'IHM']]],
-  ['btnvalid_7',['btnValid',['../class_i_h_m.html#aa1e3b6236c8ac8313dc17ef69f67613a',1,'IHM']]]
+  ['addecran_7',['addEcran',['../class_i_h_m.html#a86bde82227c1fd0d65483c78ac4ba8a9',1,'IHM']]],
+  ['additem_8',['addItem',['../class_ecran.html#a0b1b96059fd091255ff524786c72990f',1,'Ecran']]],
+  ['affiche_9',['affiche',['../class_item.html#a60de890d812d38d74d28cfa9c8b210ea',1,'Item']]],
+  ['afficher_10',['afficher',['../class_ecran.html#ad56421e50fafca751dc76f3da5f0ef69',1,'Ecran::afficher()'],['../class_i_h_m.html#a67fc7c1fdf94ee2296d783da345fe9a5',1,'IHM::afficher()']]],
+  ['affichermenu_11',['afficherMenu',['../main_8cpp.html#a1799b73e6ed910d424f89cc33d953c68',1,'main.cpp']]]
 ];
