@@ -3,7 +3,7 @@
             <div class="toggle" onclick="toggleMenu();"></div>
             <ul class="menu">
               @guest
-                <li><a href="#Liste" onclick="toggleMenu();" class="login"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                <li><a href="{{ route('doxygen_path') }}">Doxygen</a></li>
               @endguest
 
               @auth
