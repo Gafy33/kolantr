@@ -1,0 +1,12 @@
+<map id="cscenario.h" name="cscenario.h">
+<area shape="rect" id="node1" title="Système de simulation Qt." alt="" coords="361,5,457,32"/>
+<area shape="rect" id="node2" href="$cdialoscenario_8h.html" title="Système de simulation Qt." alt="" coords="201,80,329,107"/>
+<area shape="rect" id="node8" href="$cscenario_8cpp.html" title="Système de simulation Qt." alt="" coords="353,80,464,107"/>
+<area shape="rect" id="node9" href="$cscenariomanager_8h.html" title="Système de simulation Qt." alt="" coords="488,80,641,107"/>
+<area shape="rect" id="node3" href="$cdialoscenario_8cpp.html" title="Système de simulation Qt." alt="" coords="5,155,148,181"/>
+<area shape="rect" id="node4" href="$dialogueconfigscenario_8h.html" title="Système de simulation Qt." alt="" coords="173,155,357,181"/>
+<area shape="rect" id="node6" href="$mainwindow_8h.html" title="Système de simulation Qt." alt="" coords="361,229,477,256"/>
+<area shape="rect" id="node5" href="$dialogueconfigscenario_8cpp.html" title="Système de simulation Qt." alt="" coords="139,229,337,256"/>
+<area shape="rect" id="node7" href="$mainwindow_8cpp.html" title="Système de simulation Qt." alt="" coords="354,304,485,331"/>
+<area shape="rect" id="node10" href="$cscenariomanager_8cpp.html" title="Système de simulation Qt." alt="" coords="482,155,650,181"/>
+</map>

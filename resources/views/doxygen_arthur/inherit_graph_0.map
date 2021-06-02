@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,208,80,235"/>
+<area shape="rect" id="node2" href="$class_c_dialo_scenario.html" title=" " alt="" coords="139,5,261,32"/>
+<area shape="rect" id="node3" href="$class_c_dialo_vehicule.html" title=" " alt="" coords="140,56,260,83"/>
+<area shape="rect" id="node4" href="$class_c_passage.html" title=" " alt="" coords="158,107,242,133"/>
+<area shape="rect" id="node5" href="$class_c_passage_manager.html" title=" " alt="" coords="129,157,271,184"/>
+<area shape="rect" id="node6" href="$class_c_scenario.html" title=" " alt="" coords="157,208,243,235"/>
+<area shape="rect" id="node7" href="$class_c_scenario_manager.html" title=" " alt="" coords="128,259,272,285"/>
+<area shape="rect" id="node8" href="$class_c_stats.html" title=" " alt="" coords="168,309,232,336"/>
+<area shape="rect" id="node9" href="$class_c_vehicule.html" title=" " alt="" coords="157,360,243,387"/>
+<area shape="rect" id="node10" href="$class_c_vehiculemanager.html" title=" " alt="" coords="128,411,272,437"/>
+</map>
