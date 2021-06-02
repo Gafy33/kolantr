@@ -31,7 +31,7 @@
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Arthur LABARRE </h2>
-                            <button type="button" class="btn" name=""> <a href="doxygen_arthur/index.html" class="lien" target="_blank">Accéder</a> </button>
+                            <button type="button" class="btn" name=""> <a href="{{ asset('doxygen/doxygen_arthur/index.html')}}" class="lien" target="_blank">Accéder</a> </button>
                         </div>
                     </div>
                 </div>
