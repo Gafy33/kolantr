@@ -70,7 +70,7 @@
                     <h3> Gérer les comptes clients </h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="{{ route('listeClient_path') }}" class="lien"> Accéder </a></button>
+                        <a href="{{ route('listeClient_path') }}" class="lien"><button type="button" class="btn" name="">Accéder</button></a>
                     </div>
                 </div>
                 <div class="w50 center_content">
@@ -91,7 +91,7 @@
                     <h3> Gérer les comptes clients Administrateur et technicien</h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="{{ route('listeAdminTechnicien_path')}}" class="lien">Accéder </a></button>
+                        <a href="{{ route('listeAdminTechnicien_path')}}" class="lien"><button type="button" class="btn" name=""> Accéder </button></a>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                     <h3> Gérer les campagnes de mesure </h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="{{ route('listeCampagneMesure_path') }}" class="lien">Accéder</a> </button>
+                         <a href="{{ route('listeCampagneMesure_path') }}" class="lien"><button type="button" class="btn" name="">Accéder </button></a>
                     </div>
                 </div>
                 <div class="w50 center_content" >
@@ -130,7 +130,7 @@
                     <h3> Gérer les boitiers </h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
-                        <button type="button" class="btn" name=""> <a href="{{ route('listeBoitier_path') }}" class="lien">Accéder</a> </button>
+                        <a href="{{ route('listeBoitier_path') }}" class="lien"><button type="button" class="btn" name=""> Accéder </button></a>
                     </div>
                 </div>
             </div>

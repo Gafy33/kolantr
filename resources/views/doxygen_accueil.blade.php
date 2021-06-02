@@ -31,7 +31,7 @@
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Arthur LABARRE </h2>
-                            <button type="button" class="btn" name=""> <a href="{{ asset('doxygen/doxygen_arthur/index.html')}}" class="lien" target="_blank">Accéder</a> </button>
+                             <a href="{{ asset('doxygen/doxygen_arthur/index.html')}}" class="lien" target="_blank"><button type="button" class="btn" name="">Accéder </button></a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Xavier HERVIER </h2>
-                            <button type="button" class="btn" name=""> <a href="{{ asset('doxygen/doxygen_xavier/index.html')}}" class="lien" target="_blank">Accéder</a> </button>
+                            <a href="{{ asset('doxygen/doxygen_xavier/index.html')}}" class="lien" target="_blank"><button type="button" class="btn" name=""> Accéder </button></a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Hugo CARRICART </h2>
-                            <button type="button" class="btn" name=""> <a href="#" class="lien" target="_blank">Accéder</a> </button>
+                             <a href="#" class="lien" target="_blank"><button type="button" class="btn" name="">Accéder</button></a> 
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Thibault  JOUANDOUDET</h2>
-                            <button type="button" class="btn" name=""> <a href="#" class="lien" target="_blank" disabled >Accéder</a> </button>
+                             <a href="#" class="lien" target="_blank" disabled ><button type="button" class="btn" name="">Accéder </button></a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Tony TESTA </h2>
-                            <button type="button" class="btn" name=""> <a href="#" class="lien" target="_blank" disabled>Accéder</a> </button>
+                             <a href="#" class="lien" target="_blank" disabled><button type="button" class="btn" name="">Accéder </button></a>
                         </div>
                     </div>
                 </div>
