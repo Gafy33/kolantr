@@ -14,7 +14,7 @@
 <body>
 
 <header>
-            <a href="{{ route('accueil') }}" class="logo">KOLANTR</a>
+            <a href="{{ route('accueil') }}" class="logo" style="color: #111">KOLANTR</a>
             <div class="toggle" onclick="toggleMenu();"></div>
 </header>
 
@@ -26,11 +26,22 @@
             <div class="content">
                 <div class="servicesBx">
                     <img src="{{ asset('image/icon1.png')}}">
-                    <h2>Clients</h2>
+                    <h2>Dossier</h2>
                     <div class="content">
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Arthur LABARRE </h2>
+                            <button type="button" class="btn" name=""> <a href="{{ asset('doxygen/doxygen_xavier/index.html')}}" class="lien" target="_blank">Accéder</a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicesBx">
+                    <img src="{{ asset('image/icon1.png')}}">
+                    <h2>Dossier</h2>
+                    <div class="content">
+                        <div class="infoBx">
+                            <h2> Doxygen </h2>
+                            <h2> Xavier HERVIER </h2>
                             <button type="button" class="btn" name=""> <a href="{{ asset('doxygen/doxygen_arthur/index.html')}}" class="lien" target="_blank">Accéder</a> </button>
                         </div>
                     </div>
