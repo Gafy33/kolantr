@@ -3,6 +3,10 @@
 @section('navbar')
 <header>
             <a href="#home" class="logo">KOLANTR</a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="menu">
+                <li><a href="{{ route('doxygen_path') }}">Doxygen</a></li>
+            </ul>
 </header>
 @stop
 
