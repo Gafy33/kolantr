@@ -19,9 +19,9 @@
 </header>
 
         <!-- Information -->
-        <section class="services" id="information" >
+        <section class="services" id="information" style="background: white;">
             <div class="heading white" >
-                <h2>Information</h2>
+                <h2>Doxygen</h2>
             </div>
             <div class="content">
                 <div class="servicesBx">
@@ -38,7 +38,6 @@
             </div>
         </section>
 
-         @include('layouts.partials.footer')
 
 <script>
             window.addEventListener('scroll', function(){
