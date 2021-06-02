@@ -53,9 +53,9 @@
 			background-color:#BA8989;
 		}
 
-    .footer_login{
+    . {
 
-    background:#ccc;
+    background:transparent;
 
     position:absolute;
 
