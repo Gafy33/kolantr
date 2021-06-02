@@ -18,6 +18,10 @@ Route::get('/popup', function () {
     return view('/Client/popup_highscore');
 })->name('popup');
 
+Route::get('/doxygen', function () {
+    return view('doxygen');
+})->name('doxygen');
+
 //
 //
 // Gestion Compte
