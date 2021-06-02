@@ -87,9 +87,9 @@ class HomeController extends Controller
                 $nb_compte = $nb_compte + 1;
                 if ($users->role_id == 1) {
                     $nb_admin = $nb_admin + 1;
-                }else if($users->role_id == 3){
+                }else if($users->role_id == 2){
                     $nb_client = $nb_client + 1;
-                }else  if($users->role_id == 2){
+                }else  if($users->role_id == 3){
                     $nb_technicien = $nb_technicien +1;
                 }
             }

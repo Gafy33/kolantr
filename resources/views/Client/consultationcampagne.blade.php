@@ -11,7 +11,7 @@
   .modal-window{
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 1000;
   left: 0;
   top: 0;
   right: 0;
@@ -37,7 +37,7 @@ canvas{
 display: block;
 text-align: center;
 }
-.iframe h1 {
+.iframe .h1_iframe {
   position: absolute;
   color: #fff;
   top: 50%;
@@ -50,7 +50,7 @@ text-align: center;
   user-select: none;
 }
 
-.iframe h6 {
+.iframe .h6_iframe {
   position: absolute;
   top: 60%;
   left: 50%;

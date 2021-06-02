@@ -2,8 +2,8 @@
 
 <div id="modal" class="modal-window">
     <div class="iframe">
-        <h1 style="color:white">La vitesse max est de </h1>
-        <h6 style="color:white"> {{ $vitmax }} km/h </h6>
+        <h1 class="h1_iframe">La vitesse max est de </h1>
+        <h6 class="h6_iframe"> {{ $vitmax }} km/h </h6>
         <canvas id="birthday"> </canvas>
         <a href="#" id="btn-close"> close </a>
     </div>
