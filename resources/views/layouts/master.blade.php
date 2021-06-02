@@ -53,7 +53,8 @@
 			background-color:#BA8989;
 		}
 
-    . {
+    .footer_login
+    {
 
     background:transparent;
 
