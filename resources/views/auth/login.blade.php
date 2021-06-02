@@ -49,5 +49,8 @@
                                           </a>
                                       @endif
           </form>
+          <footer class="footer_login">
+              <a href="{{ route('doxygen_path') }}">Doxygen</a>
+          </footer>
 </main>
 @endsection

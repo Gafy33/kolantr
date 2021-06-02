@@ -53,6 +53,21 @@
 			background-color:#BA8989;
 		}
 
+    .footer_login{
+
+    background:#ccc;
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    padding-top:50px;
+
+    height:50px;
+
+    }
     </style>
 
     
