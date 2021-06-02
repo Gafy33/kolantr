@@ -40,7 +40,7 @@ text-align: center;
 .iframe h1 {
   position: absolute;
   color: #fff;
-  top: 66%;
+  top: 50%;
   left: 50%;
   z-index: 1000;
   transform: translate(-50%, -50%);
@@ -53,7 +53,7 @@ text-align: center;
 
 .iframe h6 {
   position: absolute;
-  top: 68%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
