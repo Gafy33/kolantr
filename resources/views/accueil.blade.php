@@ -79,7 +79,7 @@
             </div>
         </section>
 
-        <section class="about background_gray">
+        <section class="about background_gray" style="color: #f7f7f7">
             <div class="heading" >
                 <h2> Administrateur et technicien </h2>
             </div>
@@ -118,7 +118,7 @@
         </section>
 
 
-        <section class="about background_gray" id="boitier">
+        <section class="about background_gray" id="boitier" style="color: #f7f7f7">
             <div class="heading" >
                 <h2> Boitier </h2>
             </div>
