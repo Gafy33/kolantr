@@ -18,7 +18,7 @@ Route::get('/popup', function () {
     return view('/Client/popup_highscore');
 })->name('popup');
 
-Route::get('/doxygen', function () {
+Route::get('/doxygen_accueil', function () {
     return view('doxygen_accueil');
 })->name('doxygen_path');
 
