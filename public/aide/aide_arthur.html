@@ -12,19 +12,79 @@
 <body>
 
 <header>
-            <a href="{{ route('accueil') }}" class="logo">KOLANTR</a>
+            <a href="http://kolantr.sn-kastler.fr:8000/" class="logo">KOLANTR</a>
             <div class="toggle" onclick="toggleMenu();"></div>
             <ul class="menu">
-                <li><a href="#Liste" onclick="toggleMenu();" class="login">A quoi sert-il ?</a></li>
-                <li><a href="#Liste" onclick="toggleMenu();" class="login">Comment cela fonctionne ?</i></a></li>
-                <li><a href="#Liste" onclick="toggleMenu();" class="login">Aide Json</i></a></li>
-                <li><a href="#Liste" onclick="toggleMenu();" class="login">Aide BDD</i></a></li>
+                <li><a href="#a_quoi_sert_il" onclick="toggleMenu();" class="login">A quoi sert-il ?</a></li>
+                <li><a href="#comment_cela_fonctionne" onclick="toggleMenu();" class="login">Comment cela fonctionne ?</i></a></li>
+                <li><a href="#json" onclick="toggleMenu();" class="login">Aide Json</i></a></li>
+                <li><a href="#bdd" onclick="toggleMenu();" class="login">Aide BDD</i></a></li>
             </ul>
 </header>
         <!-- Compte -->
-        <section class="testimonial" id="compte">
+        <section class="testimonial" id="a_quoi_sert_il">
             <div class="heading">
-                <h2>Compte</h2>
+                <h2>A quoi sert-il ?</h2>
+                <p>Retrouver vos informations de compte</p>
+            </div>
+            <div class="content">
+                <div class="testimonialBx">
+                    <p> Nom : <span> {{ Auth::user()->name }} </span></p>
+                    <p> Prénom : <span> {{ Auth::user()->prenom }} </span></p>
+                    <p> Identifiant : <span>{{ Auth::user()->identifiant }}</span></p>
+                    <p> Adresse Mail :<span> {{ Auth::user()->email }}</span></p>
+                    <p> Numéro téléphone : <span>{{ Auth::user()->numeroTel }}</span></p>
+                    <p> Adresse : <span>{{ Auth::user()->adresseClient }}</span></p>
+                    <p> Code Postal : <span>{{ Auth::user()->codePostal }}</span></p>
+                    <p> Région : <span>{{ Auth::user()->region }}</span></p>
+                    <p> Ville : <span>{{ Auth::user()->ville }}</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial" id="comment_cela_fonctionne">
+            <div class="heading">
+                <h2>A quoi sert-il ?</h2>
+                <p>Retrouver vos informations de compte</p>
+            </div>
+            <div class="content">
+                <div class="testimonialBx">
+                    <p> Nom : <span> {{ Auth::user()->name }} </span></p>
+                    <p> Prénom : <span> {{ Auth::user()->prenom }} </span></p>
+                    <p> Identifiant : <span>{{ Auth::user()->identifiant }}</span></p>
+                    <p> Adresse Mail :<span> {{ Auth::user()->email }}</span></p>
+                    <p> Numéro téléphone : <span>{{ Auth::user()->numeroTel }}</span></p>
+                    <p> Adresse : <span>{{ Auth::user()->adresseClient }}</span></p>
+                    <p> Code Postal : <span>{{ Auth::user()->codePostal }}</span></p>
+                    <p> Région : <span>{{ Auth::user()->region }}</span></p>
+                    <p> Ville : <span>{{ Auth::user()->ville }}</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial" id="json">
+            <div class="heading">
+                <h2>A quoi sert-il ?</h2>
+                <p>Retrouver vos informations de compte</p>
+            </div>
+            <div class="content">
+                <div class="testimonialBx">
+                    <p> Nom : <span> {{ Auth::user()->name }} </span></p>
+                    <p> Prénom : <span> {{ Auth::user()->prenom }} </span></p>
+                    <p> Identifiant : <span>{{ Auth::user()->identifiant }}</span></p>
+                    <p> Adresse Mail :<span> {{ Auth::user()->email }}</span></p>
+                    <p> Numéro téléphone : <span>{{ Auth::user()->numeroTel }}</span></p>
+                    <p> Adresse : <span>{{ Auth::user()->adresseClient }}</span></p>
+                    <p> Code Postal : <span>{{ Auth::user()->codePostal }}</span></p>
+                    <p> Région : <span>{{ Auth::user()->region }}</span></p>
+                    <p> Ville : <span>{{ Auth::user()->ville }}</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial" id="bdd">
+            <div class="heading">
+                <h2>A quoi sert-il ?</h2>
                 <p>Retrouver vos informations de compte</p>
             </div>
             <div class="content">
