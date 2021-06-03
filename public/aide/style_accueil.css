@@ -133,7 +133,7 @@ header.sticky ul li a
 
 header .logo
 {
-    color: #fff;
+    color: #111;
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
@@ -163,7 +163,7 @@ header ul li a
     position: relative;
     display: inline-block;
     margin: 0 15px;
-    color: #fff;
+    color: #111;
     text-decoration: none;
 }
 
@@ -183,6 +183,7 @@ header .login:hover
     text-align: center;
     margin-bottom: 30px;
     color: #111;
+    background: #f7f7f7;
 }
 
 .heading h2
@@ -351,7 +352,7 @@ hr
 
 .testimonial
 {
-    background: #f7f7f7;
+    background: #fff;
 }
 
 .testimonial .content
