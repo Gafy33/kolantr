@@ -370,6 +370,23 @@ hr
     background: #2196f3;
 }
 
+.testimonial .content .testimonialBx_2
+{
+    width: calc(50% - 40px);
+    padding: 60px 40px;
+    margin:  10px;
+    background: #transparent;
+}
+
+.testimonial .content .testimonialBx_2 p
+{
+    color: #111;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
 .testimonial .content .testimonialBx p
 {
     color: #fff;
