@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Kolantr: Référence de la classe Sigfox</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Généré par Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&nbsp;de&nbsp;nommage</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Liste&nbsp;des&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&nbsp;de&nbsp;classe</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Référence de la classe Sigfox</h1><!-- doxytag: class="Sigfox" --><code>#include &lt;<a class="el" href="_c_modem_sig_fox_8hpp-source.html">CModemSigFox.hpp</a>&gt;</code>
+<p>
+
+<p>
+<a href="class_sigfox-members.html">Liste de tous les membres</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Fonctions membres publiques</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sigfox.html#29e7f70c55088607ed7bc9fd3d1b5cfb">Sigfox</a> (<a class="el" href="class_printf_buffered_serial.html">PrintfBufferedSerial</a> *pUartModem, <a class="el" href="class_printf_buffered_serial.html">PrintfBufferedSerial</a> *pSerialDebug)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construit un objet <a class="el" href="class_sigfox.html">Sigfox</a>.  <a href="#29e7f70c55088607ed7bc9fd3d1b5cfb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sigfox.html#c13f67c6691cfda0458bd2752fb51952">~Sigfox</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destroy the <a class="el" href="class_sigfox.html">Sigfox</a>:: <a class="el" href="class_sigfox.html">Sigfox</a> object.  <a href="#c13f67c6691cfda0458bd2752fb51952"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sigfox.html#39058d9e99ea94ecbb0333bd0c60c159">commandeOk</a> (char *commande, float timeout)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Envoie une commande (AT) et attend une chaîne OK en retour.  <a href="#39058d9e99ea94ecbb0333bd0c60c159"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sigfox.html#d84f562957d4b6bb259635f062d8a693">initOK</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">teste le modem jusqu'à ce qu'il réponde OK  <a href="#d84f562957d4b6bb259635f062d8a693"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sigfox.html#08b33c88c93864564594b261904d7a53">setClePublique</a> (bool publique)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">positionne le modem sur clé publique ou privée  <a href="#08b33c88c93864564594b261904d7a53"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sigfox.html#0e8a5d12e6f46677d07e9c3dcb9b1269">getDeviceID</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">retourne le device ID  <a href="#0e8a5d12e6f46677d07e9c3dcb9b1269"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sigfox.html#13f81278e6459c3271d9c4fb66e2b207">sendMessage</a> (char *payload)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">envoie un message sigfox  <a href="#13f81278e6459c3271d9c4fb66e2b207"></a><br></td></tr>
+</table>
+<hr><h2>Documentation des constructeurs et destructeur</h2>
+<a class="anchor" name="29e7f70c55088607ed7bc9fd3d1b5cfb"></a><!-- doxytag: member="Sigfox::Sigfox" ref="29e7f70c55088607ed7bc9fd3d1b5cfb" args="(PrintfBufferedSerial *pUartModem, PrintfBufferedSerial *pSerialDebug)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sigfox::Sigfox           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_printf_buffered_serial.html">PrintfBufferedSerial</a> *&nbsp;</td>
+          <td class="paramname"> <em>pUartModem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_printf_buffered_serial.html">PrintfBufferedSerial</a> *&nbsp;</td>
+          <td class="paramname"> <em>pSerialDebug</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Construit un objet <a class="el" href="class_sigfox.html">Sigfox</a>. 
+<p>
+Construct a new <a class="el" href="class_sigfox.html">Sigfox</a>:: <a class="el" href="class_sigfox.html">Sigfox</a> object.<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pUartModem</em>&nbsp;</td><td>liaison série modeme <a class="el" href="class_sigfox.html">Sigfox</a> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pSerialDebug</em>&nbsp;</td><td>ls pour affichage infos debug</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pUartModem</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pSerialDebug</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c13f67c6691cfda0458bd2752fb51952"></a><!-- doxytag: member="Sigfox::~Sigfox" ref="c13f67c6691cfda0458bd2752fb51952" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sigfox::~Sigfox           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destroy the <a class="el" href="class_sigfox.html">Sigfox</a>:: <a class="el" href="class_sigfox.html">Sigfox</a> object. 
+<p>
+
+</div>
+</div><p>
+<hr><h2>Documentation des fonctions membres</h2>
+<a class="anchor" name="39058d9e99ea94ecbb0333bd0c60c159"></a><!-- doxytag: member="Sigfox::commandeOk" ref="39058d9e99ea94ecbb0333bd0c60c159" args="(char *commande, float timeout)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Sigfox::commandeOk           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>commande</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>timeout</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Envoie une commande (AT) et attend une chaîne OK en retour. 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>commande</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>timeout</em>&nbsp;</td><td>timeout en secondes </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Renvoie:</b></dt><dd>true si chaîne reçue commence par "OK"</dd></dl>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>commande</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>timeout</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Renvoie:</b></dt><dd>true <p>
+false </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0e8a5d12e6f46677d07e9c3dcb9b1269"></a><!-- doxytag: member="Sigfox::getDeviceID" ref="0e8a5d12e6f46677d07e9c3dcb9b1269" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * Sigfox::getDeviceID           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+retourne le device ID 
+<p>
+<dl class="return" compact><dt><b>Renvoie:</b></dt><dd>char*<p>
+char* </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d84f562957d4b6bb259635f062d8a693"></a><!-- doxytag: member="Sigfox::initOK" ref="d84f562957d4b6bb259635f062d8a693" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sigfox::initOK           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+teste le modem jusqu'à ce qu'il réponde OK 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="13f81278e6459c3271d9c4fb66e2b207"></a><!-- doxytag: member="Sigfox::sendMessage" ref="13f81278e6459c3271d9c4fb66e2b207" args="(char *payload)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Sigfox::sendMessage           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>payload</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+envoie un message sigfox 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>payload</em>&nbsp;</td><td>: contenu du message en hexa/ASCII. Max 12 octets = 24 chiffres Hexa </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Renvoie:</b></dt><dd>true si message envoyé OK</dd></dl>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>payload</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Renvoie:</b></dt><dd>true <p>
+false </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="08b33c88c93864564594b261904d7a53"></a><!-- doxytag: member="Sigfox::setClePublique" ref="08b33c88c93864564594b261904d7a53" args="(bool publique)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sigfox::setClePublique           </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>publique</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+positionne le modem sur clé publique ou privée 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>publique</em>&nbsp;</td><td>true = clé publique (simulateur) false = clé privée (réseau sigfox)</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>publique</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>C:/Users/a/Desktop/Prog/Include/<a class="el" href="_c_modem_sig_fox_8hpp-source.html">CModemSigFox.hpp</a><li>C:/Users/a/Desktop/Prog/Source/<a class="el" href="_c_modem_sig_fox_8cpp.html">CModemSigFox.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Généré le Thu Jun 3 11:24:03 2021 pour Kolantr par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

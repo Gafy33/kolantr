@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Kolantr:  Fichier source de C:/Users/a/Desktop/Prog/Include/CTrameStatsSigFox.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Généré par Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&nbsp;de&nbsp;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&nbsp;de&nbsp;fichier</span></a></li>
+    </ul>
+  </div>
+<h1>C:/Users/a/Desktop/Prog/Include/CTrameStatsSigFox.hpp</h1><a href="_c_trame_stats_sig_fox_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef CTRAMESTATSSIGFOX_HPP</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define CTRAMESTATSSIGFOX_HPP</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include "<a class="code" href="_c_stats_vehicule_8hpp.html">CStatsVehicule.hpp</a>"</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include "<a class="code" href="_struc_trame_stats_sig_fox_8h.html">StrucTrameStatsSigFox.h</a>"</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include "mbed.h"</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a><a class="code" href="class_c_trame_stats_sig_fox.html">00017</a> <span class="keyword">class </span><a class="code" href="class_c_trame_stats_sig_fox.html">CTrameStatsSigFox</a>
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 <span class="keyword">public</span>:
+<a name="l00025"></a>00025     <a class="code" href="class_c_trame_stats_sig_fox.html#7419cb85f551dc5c6c53844f7627908b" title="Construct a new CTrameStatsSigFox object.">CTrameStatsSigFox</a>();
+<a name="l00026"></a>00026 
+<a name="l00031"></a>00031     <a class="code" href="class_c_trame_stats_sig_fox.html#082e1de0687f902d1fb00411184b61f6" title="Destroy the CTrameStatsSigFox object.">~CTrameStatsSigFox</a>();
+<a name="l00032"></a>00032 
+<a name="l00038"></a>00038     <span class="keywordtype">char</span> *<a class="code" href="class_c_trame_stats_sig_fox.html#f00f66718c6f76488570aa2c18be1043" title="Get the Trame object.">getTrame</a>();
+<a name="l00039"></a>00039 
+<a name="l00045"></a>00045     <span class="keywordtype">void</span> <a class="code" href="class_c_trame_stats_sig_fox.html#0d7425daa3ac716431ba74136b835317">fabriquerTrame</a>(<a class="code" href="class_c_stats_vehicule.html">CStatsVehicule</a> *statsV);
+<a name="l00046"></a>00046 
+<a name="l00051"></a>00051     <span class="keywordtype">void</span> <a class="code" href="class_c_trame_stats_sig_fox.html#d0dd179d50196c0f32e896df6a37967b">conversionTrame</a>();
+<a name="l00052"></a>00052 
+<a name="l00058"></a>00058     <span class="keywordtype">void</span> <a class="code" href="class_c_trame_stats_sig_fox.html#0d7425daa3ac716431ba74136b835317">fabriquerTrame</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbreEssieu);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 <span class="keyword">private</span>:
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062     <a class="code" href="struct_struc_trame_stats_sig_fox.html" title="Trame Statisque.">StrucTrameStatsSigFox</a> _unk;
+<a name="l00063"></a>00063     <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> _trame[13];
+<a name="l00064"></a>00064     <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> _sTrame[25];
+<a name="l00065"></a>00065     <span class="keywordtype">char</span> *_eTrame;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 };
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="preprocessor">#endif //CTRAMESTATSSIGFOX_H</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Généré le Thu Jun 3 11:24:03 2021 pour Kolantr par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

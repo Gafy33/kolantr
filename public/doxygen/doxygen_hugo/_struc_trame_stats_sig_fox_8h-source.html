@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Kolantr:  Fichier source de C:/Users/a/Desktop/Prog/Include/StrucTrameStatsSigFox.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Généré par Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&nbsp;de&nbsp;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&nbsp;de&nbsp;fichier</span></a></li>
+    </ul>
+  </div>
+<h1>C:/Users/a/Desktop/Prog/Include/StrucTrameStatsSigFox.h</h1><a href="_struc_trame_stats_sig_fox_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef STRUCTTRAMESTATSIGFOX_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define STRUCTTRAMESTATSIGFOX_H</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 
+<a name="l00018"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html">00018</a> <span class="keyword">struct </span><a class="code" href="struct_struc_trame_stats_sig_fox.html" title="Trame Statisque.">StrucTrameStatsSigFox</a>
+<a name="l00019"></a>00019 {
+<a name="l00020"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#8ed3b6314a3bbc2013b897b7c225f19e">00020</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#8ed3b6314a3bbc2013b897b7c225f19e">typeStat</a>; <span class="comment">// 0 = Véhicule Léger / 1 = Véhicule Lourd (PL)</span>
+<a name="l00021"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#eb43dacba1f44aca0c57ec61b13c6061">00021</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#eb43dacba1f44aca0c57ec61b13c6061">nbrVehicule</a>; <span class="comment">// Total du nombre de véhicule compter</span>
+<a name="l00022"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#4a1f7134baa6251a7c17b6b2055cfe8a">00022</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#4a1f7134baa6251a7c17b6b2055cfe8a">nbrEssieu</a>;  <span class="comment">// Total du nombre d'essieu compter</span>
+<a name="l00023"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#fd91d2e493f6d5068f5d3c70984d50cb">00023</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#fd91d2e493f6d5068f5d3c70984d50cb">VitesseMoy</a>;  <span class="comment">// Vitesse Moyenne </span>
+<a name="l00024"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#5e6c0a167cdbe7440c64c84c5af4c2ca">00024</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#5e6c0a167cdbe7440c64c84c5af4c2ca">VitesseMax</a>;  <span class="comment">// HIGH SCORE / Vitesse maximum atteint</span>
+<a name="l00025"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#41e3bd57edcfac19dc31ea56bd729c25">00025</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#41e3bd57edcfac19dc31ea56bd729c25">nbrVitesseOK</a>;  <span class="comment">// Nombre de véhicule à la vitesse ou moins de la voie de circulation </span>
+<a name="l00026"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#f9b080fb875fce1beba8559a776c45a1">00026</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#f9b080fb875fce1beba8559a776c45a1">nbrLM20</a>; <span class="comment">// Nombre de véhicule au dessus (jusqu'à 20 km/h) de la limitation de la voie de circulation </span>
+<a name="l00027"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#f8a87edf17aa3419f327cf1c18a41626">00027</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#f8a87edf17aa3419f327cf1c18a41626">nbrLP20</a>; <span class="comment">// Nombre de véhicule au dessus des 20 km/h (jusqu'à 30 km/h) de la limitation de la voie de circulation </span>
+<a name="l00028"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#9a884e210b9d9e9a1b553a38ea8fc441">00028</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#9a884e210b9d9e9a1b553a38ea8fc441">nbrLP30</a>; <span class="comment">// Nombre de véhicule au dessus des 30 km/h (jusqu'à 40 km/h) de la limitation de la voie de circulation </span>
+<a name="l00029"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#dd9eb6e82bb925b2d22f2c080bdcedbf">00029</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#dd9eb6e82bb925b2d22f2c080bdcedbf">nbrLP40</a>; <span class="comment">// Nombre de véhicule au dessus des 40 km/h (jusqu'à 50 km/h) de la limitation de la voie de circulation </span>
+<a name="l00030"></a><a class="code" href="struct_struc_trame_stats_sig_fox.html#6465ffb7ba60a48742da89c35b99f244">00030</a>             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_struc_trame_stats_sig_fox.html#6465ffb7ba60a48742da89c35b99f244">nbrLP50</a>; <span class="comment">// Nombre de véhicule au dessus des 50 km/h et plus de la limitation de la voie de circulation </span>
+<a name="l00031"></a>00031 };
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 
+<a name="l00060"></a>00060 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Généré le Thu Jun 3 11:24:03 2021 pour Kolantr par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

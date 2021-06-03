@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Kolantr: Référence du fichier C:/Users/a/Desktop/Prog/Source/CStatsManager.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Généré par Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&nbsp;de&nbsp;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&nbsp;de&nbsp;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Référence du fichier C:/Users/a/Desktop/Prog/Source/CStatsManager.cpp</h1><code>#include &quot;<a class="el" href="_c_stats_manager_8hpp-source.html">CStatsManager.hpp</a>&quot;</code><br>
+<code>#include &quot;CVehiculeDetecte.hpp&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Macros</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_stats_manager_8cpp.html#c237b6870305a0bf8f89e76f65caf732">SERIAL_DEBUG</a>&nbsp;&nbsp;&nbsp;USBTX,USBRX</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_stats_manager_8cpp.html#77532f08532495207c2d19dfc1296caa">BAUDS_DEBUG</a>&nbsp;&nbsp;&nbsp;115200</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_stats_manager_8cpp.html#aa1a8c0dbf28f1be84664b4b47a76733">SERIAL_SIGFOX</a>&nbsp;&nbsp;&nbsp;D1,D0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_stats_manager_8cpp.html#b6ee3c99c7bd47a4eb3a1a47241343ac">BAUDS_SIGFOX</a>&nbsp;&nbsp;&nbsp;9600</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_stats_manager_8cpp.html#6a0383da9f0b957dd0cd3612777915f4">SIGFOX_SIMUL</a>&nbsp;&nbsp;&nbsp;true</td></tr>
+
+<tr><td colspan="2"><br><h2>Variables</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_printf_buffered_serial.html">PrintfBufferedSerial</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_stats_manager_8cpp.html#3eae1953ee41e47d12076ba41dc12509">pc</a> (SERIAL_DEBUG)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_printf_buffered_serial.html">PrintfBufferedSerial</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_stats_manager_8cpp.html#2b1effa36b7e1ea12806e58aa41c7b85">uartSigfox</a> (SERIAL_SIGFOX)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Description détaillée</h2>
+<dl class="author" compact><dt><b>Auteur:</b></dt><dd>Hugo Carricart </dd></dl>
+<dl class="date" compact><dt><b>Date:</b></dt><dd>04/02/2021 </dd></dl>
+<dl class="version" compact><dt><b>Version:</b></dt><dd>1.0 </dd></dl>
+<hr><h2>Documentation des macros</h2>
+<a class="anchor" name="77532f08532495207c2d19dfc1296caa"></a><!-- doxytag: member="CStatsManager.cpp::BAUDS_DEBUG" ref="77532f08532495207c2d19dfc1296caa" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BAUDS_DEBUG&nbsp;&nbsp;&nbsp;115200          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="b6ee3c99c7bd47a4eb3a1a47241343ac"></a><!-- doxytag: member="CStatsManager.cpp::BAUDS_SIGFOX" ref="b6ee3c99c7bd47a4eb3a1a47241343ac" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BAUDS_SIGFOX&nbsp;&nbsp;&nbsp;9600          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="c237b6870305a0bf8f89e76f65caf732"></a><!-- doxytag: member="CStatsManager.cpp::SERIAL_DEBUG" ref="c237b6870305a0bf8f89e76f65caf732" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIAL_DEBUG&nbsp;&nbsp;&nbsp;USBTX,USBRX          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="aa1a8c0dbf28f1be84664b4b47a76733"></a><!-- doxytag: member="CStatsManager.cpp::SERIAL_SIGFOX" ref="aa1a8c0dbf28f1be84664b4b47a76733" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIAL_SIGFOX&nbsp;&nbsp;&nbsp;D1,D0          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="6a0383da9f0b957dd0cd3612777915f4"></a><!-- doxytag: member="CStatsManager.cpp::SIGFOX_SIMUL" ref="6a0383da9f0b957dd0cd3612777915f4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SIGFOX_SIMUL&nbsp;&nbsp;&nbsp;true          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Documentation des variables</h2>
+<a class="anchor" name="3eae1953ee41e47d12076ba41dc12509"></a><!-- doxytag: member="CStatsManager.cpp::pc" ref="3eae1953ee41e47d12076ba41dc12509" args="(SERIAL_DEBUG)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_printf_buffered_serial.html">PrintfBufferedSerial</a> <a class="el" href="_c_stats_manager_8cpp.html#3eae1953ee41e47d12076ba41dc12509">pc</a>(SERIAL_DEBUG)          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="2b1effa36b7e1ea12806e58aa41c7b85"></a><!-- doxytag: member="CStatsManager.cpp::uartSigfox" ref="2b1effa36b7e1ea12806e58aa41c7b85" args="(SERIAL_SIGFOX)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_printf_buffered_serial.html">PrintfBufferedSerial</a> <a class="el" href="_c_stats_manager_8cpp.html#2b1effa36b7e1ea12806e58aa41c7b85">uartSigfox</a>(SERIAL_SIGFOX)          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Généré le Thu Jun 3 11:24:03 2021 pour Kolantr par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

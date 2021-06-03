@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Kolantr:  Fichier source de C:/Users/a/Desktop/Prog/Include/CStatsManager.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Généré par Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&nbsp;de&nbsp;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&nbsp;de&nbsp;fichier</span></a></li>
+    </ul>
+  </div>
+<h1>C:/Users/a/Desktop/Prog/Include/CStatsManager.hpp</h1><a href="_c_stats_manager_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef CSTATSMANAGER_HPP</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define CSTATSMANAGER_HPP</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include "<a class="code" href="_c_trame_stats_sig_fox_8hpp.html">CTrameStatsSigFox.hpp</a>"</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include "<a class="code" href="_c_modem_sig_fox_8hpp.html">CModemSigfox.hpp</a>"</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include "<a class="code" href="_c_stats_essieu_8hpp.html">CStatsEssieu.hpp</a>"</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="_c_stats_vehicule_8hpp.html">CStatsVehicule.hpp</a>"</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include "mbed.h"</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include "CDetecteurPassage.hpp"</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="class_c_stats_manager.html">00020</a> <span class="keyword">class </span><a class="code" href="class_c_stats_manager.html">CStatsManager</a>
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022 <span class="keyword">public</span>:
+<a name="l00023"></a>00023 
+<a name="l00028"></a>00028 <a class="code" href="class_c_stats_manager.html#3e4f9fac9a263e5832601c760f99d09d" title="Construct a new CStatsManager object.">CStatsManager</a>();
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 
+<a name="l00035"></a>00035 <a class="code" href="class_c_stats_manager.html#50a3b875cae63ad3557555afc7bb7c31" title="Destroy the CStatsManager object.">~CStatsManager</a>();
+<a name="l00036"></a>00036 
+<a name="l00042"></a>00042 <span class="keywordtype">void</span> <a class="code" href="class_c_stats_manager.html#527ebc2fc2848c902e1ad574598fd602" title="Set the Vitesse Tronc object.">setVitesseTronc</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value);
+<a name="l00043"></a>00043 
+<a name="l00049"></a>00049 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_c_stats_manager.html#b610f5170ff312fab0b74328ead965e6" title="Get the Vitesse Tronc object.">getVitesseTronc</a>();
+<a name="l00050"></a>00050 
+<a name="l00056"></a>00056 <span class="keywordtype">void</span> <a class="code" href="class_c_stats_manager.html#a8e8cfe33763aeefff485235528c757b" title="Set the Nombre Capteur object.">setNombreCapteur</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value);
+<a name="l00057"></a>00057 
+<a name="l00063"></a>00063 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_c_stats_manager.html#23ca2c709724ae13e36fdb854edabe26" title="Get the Nombre Capteur object.">getNombreCapteur</a>();
+<a name="l00064"></a>00064 
+<a name="l00070"></a>00070 <span class="keywordtype">void</span> <a class="code" href="class_c_stats_manager.html#4def39ec7ca8598082881357dc61671a" title="Set the Mode Test object.">setModeTest</a>(<span class="keywordtype">bool</span> value);
+<a name="l00071"></a>00071 
+<a name="l00078"></a>00078 <span class="keywordtype">bool</span> <a class="code" href="class_c_stats_manager.html#70e763132c4ec15bd788410b89df56b2" title="Get the Mode Test object.">getModeTest</a>();
+<a name="l00079"></a>00079 
+<a name="l00084"></a>00084 <span class="keywordtype">void</span> <a class="code" href="class_c_stats_manager.html#d79cb886c1ee6ae03871d93dc5eacde2">start</a>();
+<a name="l00085"></a>00085 
+<a name="l00090"></a>00090 <span class="keywordtype">void</span> <a class="code" href="class_c_stats_manager.html#fd06cb79f8533e1e18ba5418b21bb073">initModem</a>();
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="keyword">private</span>:
+<a name="l00093"></a>00093 
+<a name="l00099"></a>00099 <a class="code" href="class_sigfox.html">Sigfox</a> _modemSigFox;
+<a name="l00100"></a>00100 
+<a name="l00105"></a>00105 <a class="code" href="class_c_trame_stats_sig_fox.html">CTrameStatsSigFox</a> _trameStatsVL;
+<a name="l00106"></a>00106 
+<a name="l00111"></a>00111 <a class="code" href="class_c_trame_stats_sig_fox.html">CTrameStatsSigFox</a> _trameStatsPL;
+<a name="l00112"></a>00112 
+<a name="l00118"></a>00118 <a class="code" href="class_c_stats_vehicule.html">CStatsVehicule</a> _statsVL;
+<a name="l00119"></a>00119 
+<a name="l00125"></a>00125 <a class="code" href="class_c_stats_vehicule.html">CStatsVehicule</a> _statsPL;
+<a name="l00126"></a>00126 
+<a name="l00132"></a>00132 <a class="code" href="class_c_stats_essieu.html">CStatsEssieu</a> _statsEssieu;
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _vitesseTronc;  <span class="comment">// CItem // CStatVehicule</span>
+<a name="l00135"></a>00135 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _nbrCapteur; <span class="comment">// CItem</span>
+<a name="l00136"></a>00136 <span class="keywordtype">bool</span> _modeTest;  <span class="comment">// CItem</span>
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138 };
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Généré le Thu Jun 3 11:24:03 2021 pour Kolantr par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

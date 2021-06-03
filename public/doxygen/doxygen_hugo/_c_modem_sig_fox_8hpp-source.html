@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Kolantr:  Fichier source de C:/Users/a/Desktop/Prog/Include/CModemSigFox.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Généré par Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&nbsp;de&nbsp;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&nbsp;de&nbsp;fichier</span></a></li>
+    </ul>
+  </div>
+<h1>C:/Users/a/Desktop/Prog/Include/CModemSigFox.hpp</h1><a href="_c_modem_sig_fox_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00012"></a>00012 <span class="preprocessor">#pragma once</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include "mbed.h"</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="_printf_buffered_serial_8hpp.html">PrintfBufferedSerial.hpp</a>"</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="comment">/* Niveaux de debug 0:aucun 1:bref 2:détaillé */</span>
+<a name="l00019"></a><a class="code" href="_c_modem_sig_fox_8hpp.html#da68ee8a4edebf79473c6c1990e58850">00019</a> <span class="preprocessor">#define DEBUG_SIGFOX 2</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00021"></a><a class="code" href="class_sigfox.html">00021</a> <span class="keyword">class </span><a class="code" href="class_sigfox.html">Sigfox</a> {
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">public</span>:
+<a name="l00030"></a>00030     <a class="code" href="class_sigfox.html#29e7f70c55088607ed7bc9fd3d1b5cfb" title="Construit un objet Sigfox.">Sigfox</a>(<a class="code" href="class_printf_buffered_serial.html" title="BufferedSerial enrichie.">PrintfBufferedSerial</a> *pUartModem, <a class="code" href="class_printf_buffered_serial.html" title="BufferedSerial enrichie.">PrintfBufferedSerial</a> *pSerialDebug);
+<a name="l00031"></a>00031     <a class="code" href="class_sigfox.html#c13f67c6691cfda0458bd2752fb51952" title="Destroy the Sigfox:: Sigfox object.">~Sigfox</a>();
+<a name="l00032"></a>00032 
+<a name="l00040"></a>00040     <span class="keywordtype">bool</span> <a class="code" href="class_sigfox.html#39058d9e99ea94ecbb0333bd0c60c159" title="Envoie une commande (AT) et attend une chaîne OK en retour.">commandeOk</a>(<span class="keywordtype">char</span> * commande, <span class="keywordtype">float</span> timeout);
+<a name="l00041"></a>00041 
+<a name="l00046"></a>00046     <span class="keywordtype">void</span> <a class="code" href="class_sigfox.html#d84f562957d4b6bb259635f062d8a693" title="teste le modem jusqu&amp;#39;à ce qu&amp;#39;il réponde OK">initOK</a>();
+<a name="l00047"></a>00047 
+<a name="l00054"></a>00054     <span class="keywordtype">void</span> <a class="code" href="class_sigfox.html#08b33c88c93864564594b261904d7a53" title="positionne le modem sur clé publique ou privée">setClePublique</a>(<span class="keywordtype">bool</span> publique);
+<a name="l00055"></a>00055 
+<a name="l00061"></a>00061     <span class="keywordtype">char</span> * <a class="code" href="class_sigfox.html#0e8a5d12e6f46677d07e9c3dcb9b1269" title="retourne le device ID">getDeviceID</a>();
+<a name="l00062"></a>00062 
+<a name="l00069"></a>00069     <span class="keywordtype">bool</span> <a class="code" href="class_sigfox.html#13f81278e6459c3271d9c4fb66e2b207" title="envoie un message sigfox">sendMessage</a>(<span class="keywordtype">char</span> *payload);
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="keyword">private</span>:
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073     <span class="comment">// port série modem SIGFOX</span>
+<a name="l00074"></a>00074     <a class="code" href="class_printf_buffered_serial.html" title="BufferedSerial enrichie.">PrintfBufferedSerial</a> *_pUartModem;
+<a name="l00075"></a>00075     <span class="comment">// port série USB SERIAL</span>
+<a name="l00076"></a>00076     <a class="code" href="class_printf_buffered_serial.html" title="BufferedSerial enrichie.">PrintfBufferedSerial</a> *_pSerialDebug;
+<a name="l00077"></a>00077     <span class="comment">// tampon réception modem</span>
+<a name="l00078"></a>00078     <span class="keywordtype">char</span> tamponRx[30];
+<a name="l00079"></a>00079     Timer timer;
+<a name="l00080"></a>00080 };
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Généré le Thu Jun 3 11:24:03 2021 pour Kolantr par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

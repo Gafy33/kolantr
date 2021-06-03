@@ -53,7 +53,7 @@
                         <div class="infoBx">
                             <h2> Doxygen </h2>
                             <h2> Hugo CARRICART </h2>
-                             <a href="#" class="lien" target="_blank"><button type="button" class="btn" name="">Accéder</button></a> 
+                             <a href="{{ asset('doxygen/doxygen_hugo/index.html')}}" class="lien" target="_blank"><button type="button" class="btn" name="">Accéder</button></a> 
                         </div>
                     </div>
                 </div>
