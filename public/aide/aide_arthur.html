@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title> Accueil </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+    <link href="{{ asset('/bootstrap/style_accueil.css')}}" rel="stylesheet">
+    <link href="{{ asset('/bootstrap/css_animation_route.css')}}" rel="stylesheet">
+
+    </head>
+<body>
+
+<header>
+            <a href="{{ route('accueil') }}" class="logo">KOLANTR</a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="menu">
+                <li><a href="#Liste" onclick="toggleMenu();" class="login">A quoi sert-il ?</a></li>
+                <li><a href="#Liste" onclick="toggleMenu();" class="login">Comment cela fonctionne ?</i></a></li>
+                <li><a href="#Liste" onclick="toggleMenu();" class="login">Aide Json</i></a></li>
+                <li><a href="#Liste" onclick="toggleMenu();" class="login">Aide BDD</i></a></li>
+            </ul>
+</header>
+        <!-- Compte -->
+        <section class="testimonial" id="compte">
+            <div class="heading">
+                <h2>Compte</h2>
+                <p>Retrouver vos informations de compte</p>
+            </div>
+            <div class="content">
+                <div class="testimonialBx">
+                    <p> Nom : <span> {{ Auth::user()->name }} </span></p>
+                    <p> Prénom : <span> {{ Auth::user()->prenom }} </span></p>
+                    <p> Identifiant : <span>{{ Auth::user()->identifiant }}</span></p>
+                    <p> Adresse Mail :<span> {{ Auth::user()->email }}</span></p>
+                    <p> Numéro téléphone : <span>{{ Auth::user()->numeroTel }}</span></p>
+                    <p> Adresse : <span>{{ Auth::user()->adresseClient }}</span></p>
+                    <p> Code Postal : <span>{{ Auth::user()->codePostal }}</span></p>
+                    <p> Région : <span>{{ Auth::user()->region }}</span></p>
+                    <p> Ville : <span>{{ Auth::user()->ville }}</span></p>
+                </div>
+            </div>
+        </section>
+
+        @include('layouts.partials.footer')
+
+<script>
+            window.addEventListener('scroll', function(){
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var menu = document.querySelector('.menu');
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+        </script>
+
+    </body>
+</html>
