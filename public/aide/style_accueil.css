@@ -366,6 +366,7 @@ hr
 {
     width: calc(100% - 40px);
     padding: 60px 40px;
+    margin:  10px;
     background: #2196f3;
 }
 

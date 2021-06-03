@@ -21,51 +21,49 @@
                 <li><a href="#bdd" onclick="toggleMenu();" class="login">Aide BDD</i></a></li>
             </ul>
 </header>
+
+        <section class="testimonial" >
+            <div class="heading" >
+                <h2> Description projet : </h2>
+            </div>
+            <div class="content">
+                <div class="testimonialBx" >
+                    <p> Ce projet est une reprise du projet SNET (Système d’analyse de trafic) réalisé en 2020, ce projet était basé sur une architecture Raspberry pi, ce projet a donc été porté sur une architecture MBED avec des cartes Nucléo F746ZG dans un souci d’économie d’énergie et pour les performances de mesure de vitesse des véhicules </p>
+                </div>
+            </div>
+        </section>
+
         <!-- Compte -->
         <section class="testimonial" id="a_quoi_sert_il">
             <div class="heading">
-                <h2>A quoi sert-il ?</h2>
-                <p>Retrouver vos informations de compte</p>
+                <h2>A quoi sert l’application config Kolantr :</h2>
             </div>
             <div class="content">
                 <div class="testimonialBx">
-                    <p> Nom : <span> {{ Auth::user()->name }} </span></p>
-                    <p> Prénom : <span> {{ Auth::user()->prenom }} </span></p>
-                    <p> Identifiant : <span>{{ Auth::user()->identifiant }}</span></p>
-                    <p> Adresse Mail :<span> {{ Auth::user()->email }}</span></p>
-                    <p> Numéro téléphone : <span>{{ Auth::user()->numeroTel }}</span></p>
-                    <p> Adresse : <span>{{ Auth::user()->adresseClient }}</span></p>
-                    <p> Code Postal : <span>{{ Auth::user()->codePostal }}</span></p>
-                    <p> Région : <span>{{ Auth::user()->region }}</span></p>
-                    <p> Ville : <span>{{ Auth::user()->ville }}</span></p>
+                    <p> Sous système de simulation sert à simuler un trafic routier afin de tester et valider le sous-système de collecte.
+                    But : Développer une application « Système de simulation trafic » qui vise à configurer un trafic routier afin de connaître ses statistiques.
+                    Les trafics routiers sont appelés scénario. Cette application permet de créer différents scénarios de passages de véhicules. Elle interagit sur une base de données ayant 3 tables : les scenarios, les passages et les véhicules.
+                    Les scénarios portent un nom. Les passages ont une vitesse et un temps véhiculaire. Les véhicules possèdent un nom, un type (poids-lourd ou véhicules léger), un nombre d’essieux et la taille d’empattement par essieux. Un véhicule est affecté à un passage et, les passages sont affectés à un scénario.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="testimonial" id="comment_cela_fonctionne">
             <div class="heading">
-                <h2>A quoi sert-il ?</h2>
-                <p>Retrouver vos informations de compte</p>
+                <h2>Comment fonctionne l’application config Kolantr :</h2>
             </div>
             <div class="content">
                 <div class="testimonialBx">
-                    <p> Nom : <span> {{ Auth::user()->name }} </span></p>
-                    <p> Prénom : <span> {{ Auth::user()->prenom }} </span></p>
-                    <p> Identifiant : <span>{{ Auth::user()->identifiant }}</span></p>
-                    <p> Adresse Mail :<span> {{ Auth::user()->email }}</span></p>
-                    <p> Numéro téléphone : <span>{{ Auth::user()->numeroTel }}</span></p>
-                    <p> Adresse : <span>{{ Auth::user()->adresseClient }}</span></p>
-                    <p> Code Postal : <span>{{ Auth::user()->codePostal }}</span></p>
-                    <p> Région : <span>{{ Auth::user()->region }}</span></p>
-                    <p> Ville : <span>{{ Auth::user()->ville }}</span></p>
+                    <p> Exemple pour ajouter un véhicule</p>
+                    <img src=""/>
                 </div>
             </div>
         </section>
 
         <section class="testimonial" id="json">
             <div class="heading">
-                <h2>A quoi sert-il ?</h2>
-                <p>Retrouver vos informations de compte</p>
+                <h2>Aide Json</h2>
             </div>
             <div class="content">
                 <div class="testimonialBx">
@@ -84,8 +82,7 @@
 
         <section class="testimonial" id="bdd">
             <div class="heading">
-                <h2>A quoi sert-il ?</h2>
-                <p>Retrouver vos informations de compte</p>
+                <h2>Aide Bdd</h2>
             </div>
             <div class="content">
                 <div class="testimonialBx">
