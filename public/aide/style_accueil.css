@@ -643,7 +643,11 @@ hr
         width: calc(100% - 20px);
         padding: 40px 20px;
         margin: 10px;
-        background: #2196f3;
+    }
+
+    .testimonial .content .testimonialBx_2 img
+    {
+        width: 100%;
     }
 
     .testimonial .content .testimonialBx_2 h3

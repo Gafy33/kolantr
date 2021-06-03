@@ -223,7 +223,7 @@
 
                     <div class="downloadBx">
                         <p> Version : <span> 0.0.1 </span> </p>
-                        <button type="button" class="btn" name=""> <a href="{{ asset('application_simulation_kolantr/Application_simulation_kolantr.rar')}}" download class="lien"> Télécharger </a></button>
+                        <button type="button" class="btn" name=""> <a href="{{ asset('application_simulation_kolantr/install_application_config_simulation.exe')}}" download class="lien"> Télécharger </a></button>
                     </div>
 
                     <div class="container">
