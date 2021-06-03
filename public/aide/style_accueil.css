@@ -357,7 +357,7 @@ hr
 .testimonial .content
 {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -637,6 +637,20 @@ hr
         margin: 10px;
         background: #2196f3;
     }
+
+    .testimonial .content .testimonialBx_2
+    {
+        width: calc(100% - 20px);
+        padding: 40px 20px;
+        margin: 10px;
+        background: #2196f3;
+    }
+
+    .testimonial .content .testimonialBx_2 h3
+    {
+        margin-top: 20px
+    }
+
     .testimonial .content .testimonialBx h3
     {
         margin-top: 20px
