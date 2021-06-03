@@ -357,14 +357,14 @@ hr
 .testimonial .content
 {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
 .testimonial .content .testimonialBx
 {
-    width: calc(50% - 40px);
+    width: calc(80% - 40px);
     padding: 60px 40px;
     margin: 20px;
     background: #2196f3;
