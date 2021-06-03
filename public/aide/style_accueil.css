@@ -364,7 +364,7 @@ hr
 
 .testimonial .content .testimonialBx
 {
-    width: calc(80% - 40px);
+    width: calc(100% - 40px);
     padding: 60px 40px;
     background: #2196f3;
 }
