@@ -180,10 +180,9 @@ header .login:hover
 .heading
 {
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     color: #111;
-    background: #f7f7f7;
 }
 
 .heading h2
