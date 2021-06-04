@@ -387,6 +387,11 @@ hr
     margin-bottom: 5px;
 }
 
+.testimonial .content .testimonialBx_2 .image_arthur
+{
+        width: 100%;
+}
+
 .testimonial .content .testimonialBx p
 {
     color: #fff;
@@ -645,7 +650,7 @@ hr
         margin: 10px;
     }
 
-    .testimonial .content .testimonialBx_2 img
+    .testimonial .content .testimonialBx_2 .image_arthur
     {
         width: 100%;
     }
@@ -687,5 +692,9 @@ hr
     .img_display_600
     {
         display: none;
+    }
+    .testimonial .content .testimonialBx_2 .image_arthur
+    {
+        width: 100%;
     }
 }
