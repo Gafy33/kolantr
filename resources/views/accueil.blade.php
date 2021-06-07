@@ -53,7 +53,11 @@
 @if(Auth::user()->hasRole('admin') || Auth::user()->hasRole('technicien'))
 <section class="banner" id="home">
             <div class="textBx">
-                <h2 >Bienvenue sur <br><span>KOLANTR</span></h2>
+                @if(Auth::user()->identifiant == "a/t22kumo1etci8410")
+                    <h2> N'oublie pas de montrer le <span>DOXYGEN</span></h2>
+                @else
+                    <h2 >Bienvenue sur <br><span>KOLANTR</span></h2>
+                @endif
                 <!--<h3>Développeur Web Front end.</h3>-->
                 <a href="#client" class="btn"> C'est parti </a>
             </div>
