@@ -20,7 +20,7 @@
 
         <!-- Information -->
         <section class="services" id="information" style="background: white;">
-            <div class="heading white" >
+            <div class="heading" >
                 <h2>Doxygen</h2>
             </div>
             <div class="content">
@@ -76,6 +76,34 @@
                             <h2> Doxygen </h2>
                             <h2> Tony TESTA </h2>
                              <a href="#" class="lien" target="_blank" disabled><button type="button" class="btn" name="">Accéder </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="information" style="background: white;">
+            <div class="heading" >
+                <h2>Dossier Technique</h2>
+            </div>
+            <div class="content">
+                <div class="servicesBx">
+                    <img src="{{ asset('image/icon1.png')}}">
+                    <h2>Dossier</h2>
+                    <div class="content">
+                        <div class="infoBx">
+                            <h2> Dossier Tecnique </h2>
+                             <a href="{{ asset('Dossier_technique/Dossier_Technique_Kolantr_2021.pdf')}}" class="lien" target="_blank"><button type="button" class="btn" name="">Accéder </button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicesBx">
+                    <img src="{{ asset('image/icon1.png')}}">
+                    <h2>Dossier</h2>
+                    <div class="content">
+                        <div class="infoBx">
+                            <h2> Annexes </h2>
+                            <a href="{{ asset('Dossier_technique/ANNEXE_DossierTechnique.pdf')}}" class="lien" target="_blank"><button type="button" class="btn" name=""> Accéder </button></a>
                         </div>
                     </div>
                 </div>

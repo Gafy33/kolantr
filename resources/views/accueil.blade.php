@@ -91,7 +91,7 @@
                 <div class="w50 center_content" >
                     <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
                 </div>
-                <div class="contentBx w50 center" class="contentBx w50 center" >
+                <div class="contentBx w50 center" >
                     <h3> Gérer les comptes clients Administrateur et technicien</h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
@@ -108,7 +108,7 @@
                 <h2> Campagne de mesure </h2>
             </div>
             <div class="content">
-                <div class="contentBx w50 center" class="contentBx w50 center" >
+                <div class="contentBx w50 center">
                     <h3> Gérer les campagnes de mesure </h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
@@ -130,7 +130,7 @@
                 <div class="w50 center_content">
                     <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
                 </div>
-                <div class="contentBx w50 center" class="contentBx w50 center" >
+                <div class="contentBx w50 center" >
                     <h3> Gérer les boitiers </h3>
                     <p> Créer, Modifier, Supprimer </p>
                     <div class="downloadBx">
