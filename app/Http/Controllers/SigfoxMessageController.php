@@ -143,6 +143,9 @@ class SigfoxMessageController extends Controller
             } else {
                 $type_vehicule = "camion";
             }
+
+            date_default_timezone_set('Europe/Paris');
+
             // création du relevé
             $stat = Statistique::create([
                 'campagneId' => $campagne->id,
