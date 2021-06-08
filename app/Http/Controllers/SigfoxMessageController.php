@@ -113,7 +113,7 @@ class SigfoxMessageController extends Controller
             $VitesseLimitPlus40 = extraitChampBinaire($binData, 82, 7);
             $VitesseLimitPlus50 = extraitChampBinaire($binData, 89, 7); //96
 
-            $typeV = dechex($typeV);
+            /*$typeV = dechex($typeV);
             $NbVehicule = dechex($NbVehicule);
             $NbEssieu = dechex($NbEssieu);
             $VitMoyenne = dechex($VitMoyenne);
@@ -123,7 +123,7 @@ class SigfoxMessageController extends Controller
             $VitesseLimitPlus20 = dechex($VitesseLimitPlus20);
             $VitesseLimitPlus30 = dechex($VitesseLimitPlus30);
             $VitesseLimitPlus40 = dechex($VitesseLimitPlus40);
-            $VitesseLimitPlus50 = dechex($VitesseLimitPlus50);
+            $VitesseLimitPlus50 = dechex($VitesseLimitPlus50);*/
 
             $boitier = boitier::where('adrSigfox', $sigfoxMessage->device)->first();
 
