@@ -14,7 +14,7 @@
                 @endif
 
                 <li><a href="{{ route('listeCampagneMesure_path') }}" onclick="toggleMenu();">Campagne de mesure</a></li>
-                <li>@if(!empty(alarme_popup)) <a href="{{ route('listeBoitier_path') }}" onclick="toggleMenu();" style="color: red"> <i class="fas fa-exclamation"></i> Boitier <i class="fas fa-exclamation"></i></a> @else<a href="{{ route('listeBoitier_path') }}" onclick="toggleMenu();">Boitier</a>@endif</li>
+                <li>@if(!empty($alarme_popup)) <a href="{{ route('listeBoitier_path') }}" onclick="toggleMenu();" style="color: red"> <i class="fas fa-exclamation"></i> Boitier <i class="fas fa-exclamation"></i></a> @else<a href="{{ route('listeBoitier_path') }}" onclick="toggleMenu();">Boitier</a>@endif</li>
                 <li><a href="{{ route('liste') }}" onclick="toggleMenu();">Liste</a></li>
                 <!--<li><a href="" onclick="toggleMenu();" class="login"><i class="fa fa-user" aria-hidden="true"></i></a></li>-->
 
