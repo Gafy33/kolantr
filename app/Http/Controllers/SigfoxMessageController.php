@@ -67,7 +67,7 @@ class SigfoxMessageController extends Controller
 
 	                    foreach($users as $users)
 	                    {
-	                        if($users->role_id == 1 || $users->role_id == 2)
+	                        if($users->role_id == 1 || $users->role_id == 3)
 	                            {
 	                                Mail::to($users)->bcc("kolantr2021snir@gmail.com")
 	                                        ->queue(new MessageGoogle('Une batterie est faible : ' . $info2));
