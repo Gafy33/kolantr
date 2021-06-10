@@ -78,18 +78,18 @@
                     </div>
                 </div>
                 <div class="w50 center_content">
-                    <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
+                    <img src="{{ asset('image/image1.jpg')}}" class="img img_display_600">
                 </div>
             </div>
         </section>
 
-        <section class="about background_gray" style="color: #f7f7f7">
+        <section class="about background_gray" style="background:#f7f7f7">
             <div class="heading" >
                 <h2> Administrateur et technicien </h2>
             </div>
             <div class="content">
                 <div class="w50 center_content" >
-                    <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
+                    <img src="{{ asset('image/image1.jpg')}}" class="img img_display_600">
                 </div>
                 <div class="contentBx w50 center" >
                     <h3> Gérer les comptes clients Administrateur et technicien</h3>
@@ -116,19 +116,19 @@
                     </div>
                 </div>
                 <div class="w50 center_content" >
-                    <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
+                    <img src="{{ asset('image/image2.jpg')}}" class="img img_display_600">
                 </div>
             </div>
         </section>
 
 
-        <section class="about background_gray" id="boitier" style="color: #f7f7f7">
+        <section class="about background_gray" id="boitier" style="background:#f7f7f7">
             <div class="heading" >
                 <h2> Boitier </h2>
             </div>
             <div class="content">
                 <div class="w50 center_content">
-                    <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
+                    <img src="{{ asset('image/image3.png')}}" class="img img_display_600">
                 </div>
                 <div class="contentBx w50 center" >
                     <h3> Gérer les boitiers </h3>
@@ -226,7 +226,6 @@
                     <p> Développé par Arthur Labarre </p>
 
                     <div class="downloadBx">
-                        <p> Version : <span> 0.0.1 </span> </p>
                         <button type="button" class="btn" name=""> <a href="{{ asset('application_simulation_kolantr/install_application_config_simulation.exe')}}" download class="lien"> Télécharger </a></button>
                     </div>
 
@@ -269,7 +268,7 @@
                     </div>
                 </div>
                 <div class="w50 center_content" >
-                    <img src="{{ asset('image/img1.jpg')}}" class="img img_display_600">
+                    <img src="{{ asset('image/image2.jpg')}}" class="img img_display_600">
                 </div>
             </div>
         </section>
