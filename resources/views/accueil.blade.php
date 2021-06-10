@@ -29,7 +29,7 @@
                 @endif
 
                 <li><a href="{{ route('listeCampagneMesure_path') }}" onclick="toggleMenu();">Campagne de mesure</a></li>
-                <li><a href="{{ route('listeBoitier_path') }}" onclick="toggleMenu();">Boitier</a></li>
+                <li>@if(!empty(alarme_popup)) <a href="{{ route('listeBoitier_path') }}" onclick="toggleMenu();" style="color: red"> <i class="fas fa-exclamation"></i> Boitier <i class="fas fa-exclamation"></i></a> @else<a href="{{ route('listeBoitier_path') }}" onclick="toggleMenu();">Boitier</a>@endif</li>
                 <li><a href="#information" onclick="toggleMenu();">Information</a></li>
                 <li><a href="#compte" onclick="toggleMenu();">Compte</a></li>
                 <li><a href="#Application" onclick="toggleMenu();">Application</a></li>
@@ -56,7 +56,7 @@
                 @if(Auth::user()->identifiant == "a/t22kumo1etci8410")
                     <h2> N'oublie pas de montrer le <span>DOXYGEN</span></h2>
                 @else
-                    <h2 >Bienvenue sur <br><span>KOLANTR</span></h2>
+                    <h2 >Bienvenue sur <br><span>KOLANTR</span>@if(!empty(alarme_popup))<br> <span style="color: RED"><i class="fas fa-exclamation"></i> Batterie faible<i class="fas fa-exclamation"></i></span>@endif </h2>
                 @endif
                 <!--<h3>Développeur Web Front end.</h3>-->
                 <a href="#client" class="btn"> C'est parti </a>
@@ -133,6 +133,7 @@
                 <div class="contentBx w50 center" >
                     <h3> Gérer les boitiers </h3>
                     <p> Créer, Modifier, Supprimer </p>
+                    @if(!empty(alarme_popup))<p style="color: red"> <i class="fas fa-exclamation"></i> Batterie faible <i class="fas fa-exclamation"></i></p>@endif
                     <div class="downloadBx">
                         <a href="{{ route('listeBoitier_path') }}" class="lien"><button type="button" class="btn" name=""> Accéder </button></a>
                     </div>
