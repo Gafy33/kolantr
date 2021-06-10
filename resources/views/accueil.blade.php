@@ -226,6 +226,7 @@
                     <p> Développé par Arthur Labarre </p>
 
                     <div class="downloadBx">
+                        <p> Version : <span> 3.80.1 </span> </p>
                         <button type="button" class="btn" name=""> <a href="{{ asset('application_simulation_kolantr/install_application_config_simulation.exe')}}" download class="lien"> Télécharger </a></button>
                     </div>
 
