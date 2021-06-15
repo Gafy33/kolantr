@@ -117,28 +117,28 @@
 			</div>
 			<hr class="featurette-divider tx-white">
 			<div class="col-lg-4" style="width: 70%;">
-			<h2 class=" tx-black" style="font-size: 1em;"> Nombre de véhicules entre {{ $campagne->limitationvitesse }} km/h et {{ $campagne->limitationvitesse  + 20 }} km/h: </h2>
+			<h2 class=" tx-black" style="font-size: 1em;"> Nombre de véhicules entre  [ {{ $campagne->limitationvitesse + 1}} ; {{ $campagne->limitationvitesse  + 19 }} ] km/h: </h2>
 			</div>
 			<div class="col-lg-4" style="width: 30%;">
 			<h2 class="tx-black" style="font-size: 1em;"> {{ $stats->VitesseLimitMoins20 }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
 			</div>
 			<hr class="featurette-divider tx-white ">
 			<div class="col-lg-4" style="width: 70%;">
-			<h2 class=" tx-black" style="font-size: 1em;"> Nombre de véhicules entre {{$campagne->limitationvitesse + 20 }} km/h et {{ $campagne->limitationvitesse + 30 }} km/h: </h2>
+			<h2 class=" tx-black" style="font-size: 1em;"> Nombre de véhicules entre [ {{$campagne->limitationvitesse + 20 }} ; {{ $campagne->limitationvitesse + 29 }} ] km/h: </h2>
 			</div>
 			<div class="col-lg-4" style="width: 30%;">
 			<h2 class=" tx-black" style="font-size: 1em;"> {{ $stats->VitesseLimitPlus20 }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
 			</div>
 			<hr class="featurette-divider tx-white">
 			<div class="col-lg-4" style="width: 70%;">
-			<h2 class=" tx-black" style="font-size: 1em;"> Nombre de véhicules entre {{$campagne->limitationvitesse + 30 }} km/h et {{ $campagne->limitationvitesse + 40 }} km/h: </h2>
+			<h2 class=" tx-black" style="font-size: 1em;"> Nombre de véhicules entre [ {{$campagne->limitationvitesse + 30 }} ; {{ $campagne->limitationvitesse + 39 }} ] km/h: </h2>
 			</div>
 			<div class="col-lg-4" style="width: 30%;">
 			<h2 class=" tx-black" style="font-size: 1em;"> {{ $stats->VitesseLimitPlus30 }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
 			</div>
 			<hr class="featurette-divider tx-white">
 			<div class="col-lg-4" style="width: 70%;">
-			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicules entre {{$campagne->limitationvitesse + 40 }} km/h et {{ $campagne->limitationvitesse + 50 }} km/h: </h2>
+			<h2 class=" @if(Auth::user()->preference == 'theme_dark') tx-white @else tx-black @endif" style="font-size: 1em;"> Nombre de véhicules entre [ {{$campagne->limitationvitesse + 40 }} ; {{ $campagne->limitationvitesse + 49 }} ] km/h: </h2>
 			</div>
 			<div class="col-lg-4" style="width: 30%;">
 			<h2 class=" tx-black" style="font-size: 1em;"> {{ $stats->VitesseLimitPlus40 }} @if($stats->typeV == "camion")<i class='fas fa-truck' width="40" height="40" fill="currentColor"></i> @else <i class='fas fa-car-side' width="40" height="40" fill="currentColor"></i>@endif</h2>
