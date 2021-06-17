@@ -79,17 +79,6 @@ Popup alarme batterie<br>
 
 kolantr2021snir@gmail.com
 
-## Env email 
-
-MAIL_MAILER=smtp<br>
-MAIL_HOST=smtp.googlemail.com<br>
-MAIL_PORT=465<br>
-MAIL_USERNAME=kolantr2021snir@gmail.com<br>
-MAIL_PASSWORD=bipnxvvaydpbjxfa<br>
-MAIL_ENCRYPTION=ssl<br>
-MAIL_FROM_ADDRESS=null<br>
-MAIL_FROM_NAME="${APP_NAME}"<br>
-
 ## Env database
 
 DB_CONNECTION=mysql<br>
